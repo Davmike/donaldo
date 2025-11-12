@@ -3,29 +3,31 @@ import { ShoppingCart, Menu, X, Globe } from 'lucide-react';
 
 function Header() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
+    const [activeIndex, setActiveIndex] = useState(0);
 
     const toggleMenu = () => {
         setIsMenuOpen(!isMenuOpen);
     };
 
     const menuItems = [
-        { text: 'მთავარი', color: 'text-orange-500' },
-        { text: 'დაბადების დღე', color: 'text-blue-600' },
-        { text: 'გმირები', color: 'text-blue-600' },
-        { text: 'მენიუ', color: 'text-blue-600' },
-        { text: 'სხვა პროგრამები', color: 'text-blue-600' },
-        { text: 'გალერეა', color: 'text-blue-600' },
+        'მთავარი',
+        'დაბადების დღე',
+        'გმირები',
+        'მენიუ',
+        'სხვა პროგრამები',
+        'გალერეა',
     ];
 
     return (
         <>
-            <header className="fixed top-0 left-0 right-0 z-50 backdrop-blur-sm p-2.5 text-guge">
+            <header className="fixed top-0 left-0 right-0 z-50  p-2.5 text-guge">
                 <div className="container mx-auto px-4">
                     {/* ცხელი ხაზი */}
                     <div className="flex justify-between items-center lg:block text-white text-sm ">
                         <span>ცხელი ხაზი: </span>
                         <span className="ml-2">+995 543 21 12 34</span>
                     </div>
+
                     <div className="flex items-center justify-between py-3">
                         {/* ლოგო */}
                         <div className="flex items-center gap-4">
@@ -34,23 +36,24 @@ function Header() {
                             </div>
                         </div>
 
+                        {/* Desktop მენიუ */}
                         <nav className="hidden lg:flex items-center gap-6">
-                            {menuItems.map((item, index) => (
-                                <a
+                            {menuItems.map((text, index) => (
+                                <button
                                     key={index}
-                                    href="#"
-                                    className={`${item.color} hover:opacity-80 transition-opacity text-sm`}
+                                    onClick={() => setActiveIndex(index)} // 👈 ვუთითებთ აქტიურს
+                                    className={`transition-colors text-sm ${activeIndex === index
+                                        ? 'text-orange-500'
+                                        : 'text-white hover:text-orange-400'
+                                        }`}
                                 >
-                                    {item.text}
-                                </a>
+                                    {text}
+                                </button>
                             ))}
                         </nav>
 
+                        {/* Actions */}
                         <div className="flex items-center gap-3">
-                            {/* <div className="hidden md:block text-white text-sm lg:hidden">
-                                +995 543 21 12 34
-                            </div> */}
-
                             <button className="hidden lg:flex items-center gap-2 px-4 py-2 border border-orange-500 text-white rounded-full hover:bg-orange-500/10 transition-colors">
                                 <Globe size={18} />
                                 <span>KA</span>
@@ -78,37 +81,46 @@ function Header() {
                     </div>
                 </div>
 
+                {/* --- მობილური მენიუ --- */}
                 <div
                     className={`lg:hidden overflow-hidden transition-all duration-300 ease-in-out ${isMenuOpen ? 'max-h-screen opacity-100' : 'max-h-0 opacity-0'
                         }`}
                 >
-                    <nav className="bg-white border-t rounded-2xl border-gray-200 py-4">
+                    <nav className="bg-white border-t rounded-2xl border-gray-200 py-4 relative z-50">
                         <div className="container mx-auto px-4">
-                            <div className="flex flex-col gap-1">
+                            <div className="flex flex-col gap-1 items-start">
                                 <div className="flex items-center justify-between mb-4">
-                                    {/* <button className="p-2 border-2 border-blue-600 rounded-lg">
-                                        <Menu className="text-blue-600" size={24} />
-                                    </button> */}
                                     <button className="flex items-center gap-2 px-4 py-2 border-2 border-orange-500 text-orange-500 rounded-lg">
                                         <Globe size={18} />
                                         <span>KA</span>
                                     </button>
                                 </div>
 
-                                {menuItems.map((item, index) => (
-                                    <a
+                                {menuItems.map((text, index) => (
+                                    <button
                                         key={index}
-                                        href="#"
-                                        className={`${item.color} py-3 text-lg hover:bg-gray-50 transition-colors`}
+                                        onClick={() => setActiveIndex(index)}
+                                        className={`py-3 text-lg transition-colors ${activeIndex === index
+                                            ? 'text-orange-500'
+                                            : 'text-gray-700 hover:text-orange-500'
+                                            }`}
                                     >
-                                        {item.text}
-                                    </a>
+                                        {text}
+                                    </button>
                                 ))}
                             </div>
                         </div>
                     </nav>
                 </div>
             </header>
+
+            {/* --- Overlay --- */}
+            {isMenuOpen && (
+                <div
+                    onClick={toggleMenu}
+                    className="fixed inset-0 z-40 bg-black/50 backdrop-blur-sm transition-opacity duration-300"
+                ></div>
+            )}
 
             <div className="h-16"></div>
         </>

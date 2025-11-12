@@ -11,10 +11,7 @@ function Home() {
                     playsInline
                     className="absolute inset-0 w-full h-full object-cover"
                 >
-                    <source
-                        src="https://www.w3schools.com/html/mov_bbb.mp4"
-                        type="video/mp4"
-                    />
+                    <source src="../../public/assets/intro.mp4" type="video/mp4" />
                 </video>
                 <div className="absolute inset-0 bg-black/50"></div>
 
