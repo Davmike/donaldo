@@ -1,10 +1,12 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { ShoppingCart, Menu, X, Globe } from 'lucide-react';
 
 function Header() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const [activeIndex, setActiveIndex] = useState(0);
     const [language, setLanguage] = useState('KA'); // 👈 არჩეული ენა
+    const [scrolled, setScrolled] = useState(false);
+
 
     const toggleMenu = () => {
         setIsMenuOpen(!isMenuOpen);
@@ -19,9 +21,24 @@ function Header() {
         'გალერეა',
     ];
 
+    // 👇 Scroll listener — როდესაც იუზერი ჩამოისქროლებს, იცვლება ფონი
+    useEffect(() => {
+        const handleScroll = () => {
+            if (window.scrollY > 50) {
+                setScrolled(true);
+            } else {
+                setScrolled(false);
+            }
+        };
+
+        window.addEventListener('scroll', handleScroll);
+        return () => window.removeEventListener('scroll', handleScroll);
+    }, []);
+
     return (
         <>
-            <header className="fixed top-0 left-0 right-0 z-50  p-2.5 text-guge">
+            <header className={`fixed top-0 left-0 right-0 z-50 p-2.5 text-guge transition-all duration-300 ${scrolled ? 'bg-black/80 backdrop-blur-md shadow-lg' : 'bg-transparent'
+                }`}>
                 <div className="container mx-auto px-4">
                     {/* ცხელი ხაზი */}
                     <div className="flex justify-between items-center lg:block text-white text-sm ">

@@ -323,7 +323,7 @@ function Services() {
                         }`}>
                         <div className="w-full h-40 bg-white rounded-xl mb-4 opacity-60"></div>
 
-                        <div className="flex items-center justify-between">
+                        <div className="flex items-center justify-between" onClick={() => handleServiceClick(services[currentSlide])}>
                             <div className="bg-red-500 text-white text-[20px] font-bold px-2 py-1 rounded-full inline-block mb-2">
                                 {services[currentSlide].discount}
                             </div>
