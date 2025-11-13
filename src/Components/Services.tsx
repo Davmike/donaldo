@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { ChevronLeft, ChevronRight, ArrowLeft, Check } from 'lucide-react';
 
 interface Service {
@@ -172,7 +172,7 @@ function Services() {
                     </h1>
                     <button
                         onClick={handleBack}
-                        className="flex items-center gap-2 text-[#1554A4] text-[24px] font-normal mb-8 cursor-pointer hover:text-orange-700 transition-colors cursor-pointer"
+                        className="flex items-center gap-2 text-[#1554A4] text-[24px] font-normal mb-8 cursor-pointer hover:text-orange-700 transition-colors"
                     >
                         <ArrowLeft size={20} />
                         უკან დაბრუნება

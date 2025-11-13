@@ -20,7 +20,7 @@ function HomeNext() {
     };
 
     return (
-        <section className="min-h-screen w-full bg-gradient-to-br px-4 py-16 md:py-24 overflow-hidden text-guge">
+        <section className="min-h-screen w-full bg-linear-to-br px-4 py-16 md:py-24 overflow-hidden text-guge">
             <div className="max-w-6xl mx-auto">
                 <div className="absolute top-20 left-10 w-20 h-20 bg-blue-200 rounded-full opacity-50 blur-xl"></div>
                 <div className="absolute top-40 right-20 w-32 h-32 bg-pink-200 rounded-full opacity-40 blur-2xl"></div>
@@ -28,12 +28,12 @@ function HomeNext() {
 
                 <div className="relative z-10">
                     <div className="mb-12 md:mb-16">
-                        <div className="relative bg-gradient-to-br max-w-[854px] mx-auto bg-[#1554A4] rounded-3xl p-6 md:p-8 shadow-xl overflow-hidden">
+                        <div className="relative bg-linear-to-br max-w-[854px] mx-auto bg-[#1554A4] rounded-3xl p-6 md:p-8 shadow-xl overflow-hidden">
                             <div className="absolute -top-8 -right-8 w-20 h-20 bg-yellow-400 transform rotate-45 rounded-lg"></div>
 
                             <div className="relative z-10">
                                 <div className="w-full h-40 md:h-48 bg-gray-100 rounded-2xl mb-6 flex items-center justify-center">
-                                    <div className="w-full h-full bg-gradient-to-br from-gray-200 to-gray-300 rounded-2xl opacity-40"></div>
+                                    <div className="w-full h-full bg-linear-to-br from-gray-200 to-gray-300 rounded-2xl opacity-40"></div>
                                 </div>
 
                                 <div className="bg-[#B4C4E5] rounded-full py-3 md:py-4 px-6 text-center">
@@ -54,7 +54,7 @@ function HomeNext() {
                             {cards.map((card) => (
                                 <div
                                     key={card.id}
-                                    className={`${card.color} rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 border-1 border-black`}
+                                    className={`${card.color} rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 border border-black`}
                                 >
                                     <div className="absolute -top-3 -right-3 bg-white rounded-full p-2 shadow-md">
                                         <Star size={20} className={`${card.textColor}`} fill="currentColor" />
@@ -91,7 +91,7 @@ function HomeNext() {
                                 <div className="flex items-center justify-between mt-6 gap-4">
                                     <button
                                         onClick={handlePrev}
-                                        className="flex-shrink-0 p-3 bg-white rounded-full shadow-lg hover:shadow-xl transition-shadow border-2 border-gray-200"
+                                        className="shrink-0 p-3 bg-white rounded-full shadow-lg hover:shadow-xl transition-shadow border-2 border-gray-200"
                                     >
                                         <ChevronLeft size={24} className="text-gray-700" />
                                     </button>
@@ -109,7 +109,7 @@ function HomeNext() {
 
                                     <button
                                         onClick={handleNext}
-                                        className="flex-shrink-0 p-3 bg-white rounded-full shadow-lg hover:shadow-xl transition-shadow border-2 border-gray-200"
+                                        className="shrink-0 p-3 bg-white rounded-full shadow-lg hover:shadow-xl transition-shadow border-2 border-gray-200"
                                     >
                                         <ChevronRight size={24} className="text-gray-700" />
                                     </button>
