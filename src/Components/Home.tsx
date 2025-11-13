@@ -1,8 +1,9 @@
-
+import HomeNext from "./HomeNext";
+import Services from "./Services";
 
 function Home() {
     return (
-        <div className="bg-black">
+        <div className="">
             <section className="h-screen w-full overflow-hidden flex flex-col items-center justify-center">
                 <video
                     autoPlay
@@ -31,6 +32,8 @@ function Home() {
                     </button>
                 </div>
             </section>
+            <HomeNext />
+            <Services />
         </div>
     );
 }

@@ -3,6 +3,18 @@
 body {
   margin: 0;
   padding: 0;
+  background-image: url("../public/assets/mobile.png");
+  background-size: cover;
+  background-position: center;
+  /* background-repeat: no-repeat; */
+  min-height: 100vh;
+}
+
+/* როცა ეკრანი იქნება 768px-ზე მეტი — გამოიყენე სხვა ფოტო */
+@media (min-width: 768px) {
+  body {
+    background-image: url('../public/assets/desktop.png');
+  }
 }
 
 @font-face {

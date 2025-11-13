@@ -4,6 +4,7 @@ import { ShoppingCart, Menu, X, Globe } from 'lucide-react';
 function Header() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const [activeIndex, setActiveIndex] = useState(0);
+    const [language, setLanguage] = useState('KA'); // 👈 არჩეული ენა
 
     const toggleMenu = () => {
         setIsMenuOpen(!isMenuOpen);
@@ -41,7 +42,7 @@ function Header() {
                             {menuItems.map((text, index) => (
                                 <button
                                     key={index}
-                                    onClick={() => setActiveIndex(index)} // 👈 ვუთითებთ აქტიურს
+                                    onClick={() => setActiveIndex(index)}
                                     className={`transition-colors text-sm ${activeIndex === index
                                         ? 'text-orange-500'
                                         : 'text-white hover:text-orange-400'
@@ -54,10 +55,19 @@ function Header() {
 
                         {/* Actions */}
                         <div className="flex items-center gap-3">
-                            <button className="hidden lg:flex items-center gap-2 px-4 py-2 border border-orange-500 text-white rounded-full hover:bg-orange-500/10 transition-colors">
+                            {/* ენის არჩევა */}
+                            <div className="hidden lg:flex items-center gap-2 px-4 py-2 border border-orange-500 text-white rounded-full hover:bg-orange-500/10 transition-colors">
                                 <Globe size={18} />
-                                <span>KA</span>
-                            </button>
+                                <select
+                                    value={language}
+                                    onChange={(e) => setLanguage(e.target.value)}
+                                    className="bg-transparent focus:outline-none text-white text-sm cursor-pointer"
+                                >
+                                    <option value="KA">KA</option>
+                                    <option value="EN">EN</option>
+                                    <option value="RUS">RUS</option>
+                                </select>
+                            </div>
 
                             <button className="relative p-2 hover:bg-white/10 transition-colors border-2 bg-gray-400 border-gray-400 rounded-full">
                                 <ShoppingCart className="text-white" size={24} />
@@ -90,10 +100,19 @@ function Header() {
                         <div className="container mx-auto px-4">
                             <div className="flex flex-col gap-1 items-start">
                                 <div className="flex items-center justify-between mb-4">
-                                    <button className="flex items-center gap-2 px-4 py-2 border-2 border-orange-500 text-orange-500 rounded-lg">
+                                    {/* მობილურზე ენის არჩევა */}
+                                    <div className="flex items-center gap-2 px-4 py-2 border-2 border-orange-500 text-orange-500 rounded-lg">
                                         <Globe size={18} />
-                                        <span>KA</span>
-                                    </button>
+                                        <select
+                                            value={language}
+                                            onChange={(e) => setLanguage(e.target.value)}
+                                            className="bg-transparent focus:outline-none text-orange-500 text-sm cursor-pointer"
+                                        >
+                                            <option value="KA">KA</option>
+                                            <option value="EN">EN</option>
+                                            <option value="RUS">RUS</option>
+                                        </select>
+                                    </div>
                                 </div>
 
                                 {menuItems.map((text, index) => (
