@@ -165,86 +165,101 @@ function Services() {
 
     if (selectedService) {
         return (
-            <section className="min-h-screen w-full px-4 py-8 md:py-16">
+            <section className="min-h-screen w-full px-4 py-8 md:py-16 text-guge">
                 <div className="max-w-4xl mx-auto">
+                    <h1 className="text-ashesha text-[64px] font-bold text-[#F67524] mb-8 text-center">
+                        servisebi
+                    </h1>
                     <button
                         onClick={handleBack}
-                        className="flex items-center gap-2 text-orange-600 font-semibold mb-8 hover:text-orange-700 transition-colors"
+                        className="flex items-center gap-2 text-[#1554A4] text-[24px] font-normal mb-8 hover:text-orange-700 transition-colors"
                     >
                         <ArrowLeft size={20} />
                         უკან დაბრუნება
                     </button>
-
-                    <h1 className="text-ashesha text-[64px] font-bold text-[#F67524] mb-8 text-center">
-                        servisebi
-                    </h1>
-
-                    <div className="bg-blue-100 rounded-2xl p-4 md:p-6 mb-8">
-                        <p className="text-blue-900 text-sm md:text-base">
-                            • კითხვა და პასუხი <br />
-                            • ტექნიკური მხარდაჭერა და ინტეგრაცია 10-15 სამუშაო დღე
+                    <div className={`rounded-2xl p-4 md:p-6 mb-8 ${selectedService.color === 'yellow'
+                        ? 'bg-[#FDEBC5]'
+                        : 'bg-[#E0E4ED]'}`}>
+                        <h3 className='text-[#1554A4] text-[24px] text-center font-normal'>კურსის ხანგრძლივობა და ფასები</h3>
+                        <p className="text-[#5C6983] text-[16px] md:text-base mt-2.5">
+                            • ქრონიკული დაავადებების პროფილაქტიკისა და გამოჯანმრთელების მიზნით,  რეკომენდებულია <span className='text-[#F67524]'>10-15 სეანსიანი კურსი.</span>  <br />
+                            • 1 სეანსის ხანგრძლივობაა <span className='text-[#F67524]'>40 წუთი.</span>
                         </p>
                     </div>
 
-                    <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
-                        {selectedService.packages.map((pkg, idx) => (
-                            <div
-                                key={idx}
-                                className={`rounded-xl p-4 text-center ${pkg.color === 'yellow'
-                                    ? 'bg-[#FFD472] text-yellow-900'
-                                    : 'bg-blue-400 text-blue-900'
-                                    }`}
-                            >
-                                {pkg.discount && (
-                                    <div className="bg-red-500 text-white text-xs font-bold px-2 py-1 rounded-full inline-block mb-2">
-                                        {pkg.discount}
-                                    </div>
-                                )}
-                                <p className="text-xs md:text-sm font-semibold mb-1">{pkg.period}</p>
-                                <p className="text-lg md:text-2xl font-bold mb-1">{pkg.price}</p>
-                                {pkg.originalPrice && (
-                                    <p className="text-xs line-through opacity-70">{pkg.originalPrice}</p>
-                                )}
-                            </div>
-                        ))}
-                    </div>
+                    {/* <div
+                        className="mb-8 overflow-x-auto scrollbar-hide"
+                    >
+                        <div
+                            className="flex md:grid md:grid-cols-4 gap-4 px-1"
+                            style={{ scrollSnapType: "x mandatory" }}
+                        >
+                            {selectedService.packages.map((pkg, idx) => (
+                                <div
+                                    key={idx}
+                                    className={`min-w-[150px] md:min-w-0 flex-shrink-0 rounded-xl p-4 text-center scroll-snap-align-start ${pkg.color === "yellow"
+                                        ? "bg-[#FFD472] text-yellow-900"
+                                        : "bg-blue-400 text-blue-900"
+                                        }`}
+                                >
+                                    {pkg.discount && (
+                                        <div className="bg-red-500 text-white text-xs font-bold px-2 py-1 rounded-full inline-block mb-2">
+                                            {pkg.discount}
+                                        </div>
+                                    )}
+                                    <p className="text-xs md:text-sm font-semibold mb-1">{pkg.period}</p>
+                                    <p className="text-lg md:text-2xl font-bold mb-1">{pkg.price}</p>
+                                    {pkg.originalPrice && (
+                                        <p className="text-xs line-through opacity-70">{pkg.originalPrice}</p>
+                                    )}
+                                </div>
+                            ))}
+                        </div>
+                    </div> */}
+
 
                     <div
-                        className={`rounded-2xl p-6 md:p-8 mb-8 border-4 ${selectedService.color === 'yellow'
-                            ? 'bg-yellow-200 border-yellow-400'
-                            : 'bg-blue-200 border-blue-400'
+                        className={`rounded-2xl p-6 md:p-8 mb-8 border border-black ${selectedService.color === 'yellow'
+                            ? 'bg-[#FFD472]'
+                            : 'bg-blue-200'
                             }`}
                     >
-                        <h2 className="text-xl md:text-2xl font-bold mb-4 text-gray-900">
+                        <h2 className="text-[24px] md:text-2xl font-bold mb-4 text-[#1554A4]">
                             {selectedService.details}
                         </h2>
 
                         <div className="w-full h-48 md:h-64 bg-white rounded-xl mb-6 opacity-60"></div>
+                        <div className='bg-[#FDF7E9] p-5 rounded-2xl'>
+                            <h3 className="text-lg md:text-xl font-bold mb-4 text-[#1554A4]">
+                                რა მოიცავს ეს სერვისი?
+                            </h3>
 
-                        <h3 className="text-lg md:text-xl font-bold mb-4 text-gray-900">
-                            რა მოიცავს ეს სერვისი?
-                        </h3>
+                            <p className="text-[#56687F] mb-6 text-[16px] md:text-base">
+                                {selectedService.faqAnswer}
+                            </p>
 
-                        <p className="text-gray-700 mb-6 text-sm md:text-base">
-                            {selectedService.faqAnswer}
-                        </p>
+                            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
+                                {selectedService.benefits.map((benefit, idx) => (
+                                    <div key={idx} className="flex items-start gap-2">
+                                        <Check size={20} className="text-green-600 shrink-0 mt-1" />
+                                        <span className="text-[#56687F] text-[16px] md:text-base">{benefit}</span>
+                                    </div>
+                                ))}
+                            </div>
 
-                        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
-                            {selectedService.benefits.map((benefit, idx) => (
-                                <div key={idx} className="flex items-start gap-3">
-                                    <Check size={20} className="text-green-600 flex-shrink-0 mt-1" />
-                                    <span className="text-gray-700 text-sm md:text-base">{benefit}</span>
-                                </div>
-                            ))}
-                        </div>
-
-                        <div className="flex gap-4">
-                            <button className="flex-1 px-6 py-3 bg-white text-orange-600 font-bold rounded-full border-2 border-orange-600 hover:bg-orange-50 transition-colors">
-                                უკან დაბრუნება
-                            </button>
-                            <button className="flex-1 px-6 py-3 bg-[#F67524] text-white font-bold rounded-full hover:bg-orange-600 transition-colors">
-                                გააქტივე
-                            </button>
+                            <div className="flex gap-4">
+                                <button className={`flex-1 px-6 py-3 font-bold rounded-full border-2 hover:bg-orange-50 transition-colors ${selectedService.color === 'yellow'
+                                    ? 'text-[#F67524] border-[#F67524]'
+                                    : 'text-[#1554A4] border-[#1554A4]'}`}>
+                                    უკან დაბრუნება
+                                </button>
+                                <button className={`flex-1 px-6 py-3 text-white font-bold rounded-3xl hover:bg-orange-600 transition-colors border border-black ${selectedService.color === 'yellow'
+                                    ? 'bg-[#F67524'
+                                    : 'bg-[#1554A4]'
+                                    }`}>
+                                    დაჯავშნა
+                                </button>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -287,7 +302,7 @@ function Services() {
                             </p>
 
                             <button className={`w-full py-3 rounded-full font-bold text-white transition-all duration-300 hover:shadow-lg ${service.color === 'yellow'
-                                ? 'bg-[#F67524] hover:bg-orange-600'
+                                ? 'bg-[#FFD472] hover:bg-orange-600'
                                 : 'bg-blue-600 hover:bg-blue-700'
                                 }`}>
                                 {service.description}
@@ -336,7 +351,7 @@ function Services() {
                     <div className="flex items-center justify-between mt-6 gap-4">
                         <button
                             onClick={handlePrev}
-                            className="flex-shrink-0 p-3 bg-white rounded-full shadow-lg hover:shadow-xl transition-shadow border-2 border-gray-200"
+                            className="shrink-0 p-3 bg-white rounded-full shadow-lg hover:shadow-xl transition-shadow border-2 border-gray-200"
                         >
                             <ChevronLeft size={24} className="text-gray-700" />
                         </button>
@@ -348,6 +363,7 @@ function Services() {
                                     onClick={() => setCurrentSlide(idx)}
                                     className={`w-3 h-3 rounded-full transition-all ${idx === currentSlide ? 'bg-[#F67524] w-8' : 'bg-gray-300'
                                         }`}
+
                                 />
                             ))}
                         </div>
