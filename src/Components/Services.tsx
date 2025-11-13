@@ -34,9 +34,9 @@ const services: Service[] = [
         price: '80₾',
         originalPrice: '80₾',
         discount: '-20%',
-        buttonText: 'გააქტივე',
+        buttonText: 'ფოტო-ვიდეო',
         color: 'yellow',
-        details: 'პირველი სერვისი - ძირითადი მოხმარი პრიმარი',
+        details: 'ფოტო-ვიდეო გადაღება',
         benefits: [
             'ძირითადი ფუნქციონალობა',
             'ყოველდღიური დახმარება',
@@ -47,8 +47,8 @@ const services: Service[] = [
             'კომიუნიტი',
             'ტექნიკური მხარდაჭერა',
         ],
-        faq: 'რა არის პირველი სერვისი?',
-        faqAnswer: 'პირველი სერვისი არის ძირითადი პაკეტი, რომელიც მოიცავს ყველა საჭირო ფუნქციას მცირე ბიზნესებისთვის. ეს სერვისი გთავაზობთ სრულ მხარდაჭერას და რეგულარულ განახლებებს.',
+        faq: 'რა არის ფოტო-ვიდეო სერვისი?',
+        faqAnswer: 'საუკეთესო ფოტოგრაფი გვყავს დონალდოლენდში გიორგი თებიძე(GT Photography)',
         packages: [
             { name: 'ექვსი ნიშიერი', discount: '-20%', period: '6 ღრმან', price: '15 ₾', originalPrice: '20 ₾', color: 'blue' },
             { name: 'ექვსი ღრმ, ნაწილი', discount: '-20%', period: '6 ღრმ, ნაწილი', price: '15 ₾', originalPrice: '20 ₾', color: 'yellow' },
@@ -172,7 +172,7 @@ function Services() {
                     </h1>
                     <button
                         onClick={handleBack}
-                        className="flex items-center gap-2 text-[#1554A4] text-[24px] font-normal mb-8 hover:text-orange-700 transition-colors"
+                        className="flex items-center gap-2 text-[#1554A4] text-[24px] font-normal mb-8 cursor-pointer hover:text-orange-700 transition-colors cursor-pointer"
                     >
                         <ArrowLeft size={20} />
                         უკან დაბრუნება
@@ -180,10 +180,10 @@ function Services() {
                     <div className={`rounded-2xl p-4 md:p-6 mb-8 ${selectedService.color === 'yellow'
                         ? 'bg-[#FDEBC5]'
                         : 'bg-[#E0E4ED]'}`}>
-                        <h3 className='text-[#1554A4] text-[24px] text-center font-normal'>კურსის ხანგრძლივობა და ფასები</h3>
+                        <h3 className='text-[#1554A4] text-[24px] text-center font-normal'>სერვისის შესახებ მცირედი ინფორმაცია</h3>
                         <p className="text-[#5C6983] text-[16px] md:text-base mt-2.5">
-                            • ქრონიკული დაავადებების პროფილაქტიკისა და გამოჯანმრთელების მიზნით,  რეკომენდებულია <span className='text-[#F67524]'>10-15 სეანსიანი კურსი.</span>  <br />
-                            • 1 სეანსის ხანგრძლივობაა <span className='text-[#F67524]'>40 წუთი.</span>
+                            • გაეცანით ქვემოთ მითითებულ ინფორმაციას<span className='text-[#F67524]'>თქვენზე მორგებული შეთავაზებები.</span>  <br />
+                            • ასევე იხილავთ <span className='text-[#F67524]'>საუკეთესო ფასებს.</span>
                         </p>
                     </div>
 
@@ -248,13 +248,13 @@ function Services() {
                             </div>
 
                             <div className="flex gap-4">
-                                <button className={`flex-1 px-6 py-3 font-bold rounded-full border-2 hover:bg-orange-50 transition-colors ${selectedService.color === 'yellow'
+                                <button onClick={handleBack} className={`flex-1 px-6 py-3 font-bold rounded-full cursor-pointer border-2 hover:bg-orange-50 transition-colors ${selectedService.color === 'yellow'
                                     ? 'text-[#F67524] border-[#F67524]'
                                     : 'text-[#1554A4] border-[#1554A4]'}`}>
                                     უკან დაბრუნება
                                 </button>
-                                <button className={`flex-1 px-6 py-3 text-white font-bold rounded-3xl hover:bg-orange-600 transition-colors border border-black ${selectedService.color === 'yellow'
-                                    ? 'bg-[#F67524'
+                                <button className={`flex-1 px-6 py-3 text-white font-bold rounded-3xl cursor-pointer hover:bg-orange-600 transition-colors border border-black ${selectedService.color === 'yellow'
+                                    ? 'bg-[#F67524]'
                                     : 'bg-[#1554A4]'
                                     }`}>
                                     დაჯავშნა
@@ -268,7 +268,7 @@ function Services() {
     }
 
     return (
-        <section className="min-h-screen w-full px-4 py-16 md:py-24 overflow-hidden">
+        <section className="min-h-screen w-full px-4 py-16 md:py-24 overflow-hidden text-guge">
             <div className="max-w-6xl mx-auto">
                 <div className="absolute top-20 left-10 w-20 h-20 bg-blue-200 rounded-full opacity-50 blur-xl"></div>
                 <div className="absolute top-40 right-20 w-32 h-32 bg-pink-200 rounded-full opacity-40 blur-2xl"></div>
@@ -283,7 +283,7 @@ function Services() {
                         <div
                             key={service.id}
                             onClick={() => handleServiceClick(service)}
-                            className={`rounded-2xl p-6 cursor-pointer transform transition-all duration-300 hover:scale-105 hover:shadow-2xl border-4 ${service.color === 'yellow'
+                            className={`rounded-2xl p-6 cursor-pointer transform transition-all duration-300 hover:scale-105 hover:shadow-2xl border ${service.color === 'yellow'
                                 ? 'bg-[#FFD472] border-black'
                                 : 'bg-[#B4C4E5] border-black'
                                 }`}
@@ -291,19 +291,24 @@ function Services() {
                             <div className="w-full h-32 bg-white rounded-xl mb-4 opacity-60"></div>
 
                             <div className="flex items-center justify-between mb-3">
-                                <span className="text-sm text-gray-700">სერვის ხელმ →</span>
-                                <span className="text-sm text-gray-700">სერვის ხელმ →</span>
+                                <div className="bg-red-500 text-white text-[20px] font-bold px-2 py-1 rounded-full inline-block">
+                                    {services[currentSlide].discount}
+                                </div>
+                                <span className="text-[16px] text-[#1554A4] cursor-pointer">სრულად ნახვა→</span>
                             </div>
 
-                            <p className="text-2xl font-bold mb-4">
+                            <p className="text-2xl font-bold mb-4 flex items-baseline gap-2">
                                 <span className={service.color === 'yellow' ? 'text-yellow-900' : 'text-blue-900'}>
                                     {service.price}
                                 </span>
+                                <span className="text-[20px] line-through text-[#FF2C2C]">
+                                    {services[currentSlide].originalPrice}
+                                </span>
                             </p>
 
-                            <button className={`w-full py-3 rounded-full font-bold text-white transition-all duration-300 hover:shadow-lg ${service.color === 'yellow'
-                                ? 'bg-[#FFD472] hover:bg-orange-600'
-                                : 'bg-blue-600 hover:bg-blue-700'
+                            <button className={`w-full py-3 rounded-full font-bold text-white transition-all duration-300 cursor-pointer ${service.color === 'yellow'
+                                ? 'bg-[#F67524] hover:bg-orange-600'
+                                : 'bg-[#1554A4] hover:bg-blue-700'
                                 }`}>
                                 {service.description}
                             </button>
@@ -322,7 +327,7 @@ function Services() {
                             <div className="bg-red-500 text-white text-[20px] font-bold px-2 py-1 rounded-full inline-block mb-2">
                                 {services[currentSlide].discount}
                             </div>
-                            <span className="text-[16px] text-[#1554A4]">სრულად ნახვა→</span>
+                            <span className="text-[16px] text-[#1554A4] cursor-pointer">სრულად ნახვა→</span>
                         </div>
 
                         <div className="flex items-baseline gap-2 mb-4">
@@ -339,7 +344,7 @@ function Services() {
 
                         <button
                             onClick={() => handleServiceClick(services[currentSlide])}
-                            className={`w-full h-[68px] text-[24px] py-3 rounded-full font-bold text-white transition-all duration-300 hover:shadow-lg ${services[currentSlide].color === 'yellow'
+                            className={`w-full h-[68px] text-[24px] py-3 rounded-full font-bold text-white transition-all duration-300 hover:shadow-lg cursor-pointer ${services[currentSlide].color === 'yellow'
                                 ? 'bg-[#F67524] hover:bg-orange-600'
                                 : 'bg-blue-600 hover:bg-blue-700'
                                 }`}
@@ -351,7 +356,7 @@ function Services() {
                     <div className="flex items-center justify-between mt-6 gap-4">
                         <button
                             onClick={handlePrev}
-                            className="shrink-0 p-3 bg-white rounded-full shadow-lg hover:shadow-xl transition-shadow border-2 border-gray-200"
+                            className="shrink-0 p-3 bg-white rounded-full shadow-lg hover:shadow-xl transition-shadow border-2 border-gray-200 cursor-pointer"
                         >
                             <ChevronLeft size={24} className="text-gray-700" />
                         </button>
@@ -370,7 +375,7 @@ function Services() {
 
                         <button
                             onClick={handleNext}
-                            className="flex-shrink-0 p-3 bg-white rounded-full shadow-lg hover:shadow-xl transition-shadow border-2 border-gray-200"
+                            className="shrink-0 p-3 bg-white rounded-full shadow-lg hover:shadow-xl transition-shadow border-2 border-gray-200 cursor-pointer"
                         >
                             <ChevronRight size={24} className="text-gray-700" />
                         </button>
