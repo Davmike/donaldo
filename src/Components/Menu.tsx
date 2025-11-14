@@ -2,7 +2,7 @@
 
 function Menu() {
     return (
-        <div>
+        <div id="menu">
 
         </div>
     )

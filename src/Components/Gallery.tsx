@@ -1,7 +1,7 @@
 
 function Gallery() {
     return (
-        <div>
+        <div id="gallery">
 
         </div>
     )

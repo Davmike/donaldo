@@ -27,16 +27,16 @@ function HomeNext() {
                 <div className="absolute bottom-40 left-1/4 w-24 h-24 bg-blue-100 rounded-full opacity-40 blur-xl"></div>
 
                 <div className="relative z-10">
-                    <div className="mb-12 md:mb-16">
+                    <div className="mb-12 md:mb-16 cursor-pointer">
                         <div className="relative bg-linear-to-br max-w-[854px] mx-auto bg-[#1554A4] rounded-3xl p-6 md:p-8 shadow-xl overflow-hidden">
                             <div className="absolute -top-8 -right-8 w-20 h-20 bg-yellow-400 transform rotate-45 rounded-lg"></div>
 
-                            <div className="relative z-10">
+                            <div className="relative z-10 cursor-pointer">
                                 <div className="w-full h-40 md:h-48 bg-gray-100 rounded-2xl mb-6 flex items-center justify-center">
                                     <div className="w-full h-full bg-linear-to-br from-gray-200 to-gray-300 rounded-2xl opacity-40"></div>
                                 </div>
 
-                                <div className="bg-[#B4C4E5] rounded-full py-3 md:py-4 px-6 text-center">
+                                <div className="bg-[#B4C4E5] rounded-full py-3 md:py-4 px-6 text-center cursor pointer">
                                     <p className="text-[#1554A4] text-[20px] md:text-[24px] font-semibold text-sm md:text-base">
                                         დაბადების დღის პროგრამები
                                     </p>
@@ -50,7 +50,7 @@ function HomeNext() {
                             ჩვენი სერვისები
                         </h2> */}
 
-                        <div className="hidden md:grid grid-cols-4 gap-6  max-w-[1108px]">
+                        <div className="hidden md:grid grid-cols-4 gap-6  max-w-[1108px] cursor-pointer">
                             {cards.map((card) => (
                                 <div
                                     key={card.id}
@@ -64,7 +64,7 @@ function HomeNext() {
 
                                     <button
                                         style={{ backgroundColor: card.buttonColor }}
-                                        className={`w-full ${card.textColor.replace('text', 'bg')} text-white font-semibold py-3 text-[20px] rounded-full shadow-md hover:shadow-lg hover:opacity-90 active:scale-95 transition-all duration-200`}
+                                        className={`w-full ${card.textColor.replace('text', 'bg')} text-white font-semibold py-3 text-[20px] rounded-full shadow-md hover:shadow-lg hover:opacity-90 active:scale-95 transition-all duration-200 cursor-pointer`}
                                     >
                                         {card.title}
                                     </button>

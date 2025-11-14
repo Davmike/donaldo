@@ -3,7 +3,7 @@ import Services from "./Services";
 
 function Home() {
     return (
-        <div className="">
+        <div id="home">
             <section className="h-screen w-full overflow-hidden flex flex-col items-center justify-center">
                 <video
                     autoPlay

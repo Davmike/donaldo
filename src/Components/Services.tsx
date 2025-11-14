@@ -165,7 +165,7 @@ function Services() {
 
     if (selectedService) {
         return (
-            <section className="min-h-screen w-full px-4 py-8 md:py-16 text-guge">
+            <section className="min-h-screen w-full px-4 py-8 md:py-16 text-guge" id='services'>
                 <div className="max-w-4xl mx-auto">
                     <h1 className="text-ashesha text-[64px] font-bold text-[#F67524] mb-8 text-center">
                         servisebi
@@ -274,7 +274,7 @@ function Services() {
                 <div className="absolute top-40 right-20 w-32 h-32 bg-pink-200 rounded-full opacity-40 blur-2xl"></div>
                 <div className="absolute bottom-40 left-1/4 w-24 h-24 bg-blue-100 rounded-full opacity-40 blur-xl"></div>
 
-                <h1 className="text-ashesha text-[64px] font-bold text-orange-600 mb-12 md:mb-16 text-center">
+                <h1 className="text-ashesha text-[64px] font-bold text-[#F67524] mb-12 md:mb-16 text-center">
                     servisebi
                 </h1>
 
