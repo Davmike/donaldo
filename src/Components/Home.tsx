@@ -1,5 +1,6 @@
 import HomeNext from "./HomeNext";
 import Services from "./Services";
+import About from "./About";
 
 function Home() {
     return (
@@ -34,6 +35,7 @@ function Home() {
             </section>
             <HomeNext />
             <Services />
+            <About />
         </div>
     );
 }

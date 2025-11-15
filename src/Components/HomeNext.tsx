@@ -1,7 +1,10 @@
 import { useState } from 'react';
 import { ChevronLeft, ChevronRight, Star } from 'lucide-react';
+import { useNavigate } from "react-router-dom";
 
 function HomeNext() {
+    const navigate = useNavigate();
+
     const [currentSlide, setCurrentSlide] = useState(0);
 
     const cards = [
@@ -36,7 +39,7 @@ function HomeNext() {
                                     <div className="w-full h-full bg-linear-to-br from-gray-200 to-gray-300 rounded-2xl opacity-40"></div>
                                 </div>
 
-                                <div className="bg-[#B4C4E5] rounded-full py-3 md:py-4 px-6 text-center cursor pointer">
+                                <div onClick={() => navigate("/birthdayPrograms")} className="bg-[#B4C4E5] rounded-full py-3 md:py-4 px-6 text-center cursor pointer">
                                     <p className="text-[#1554A4] text-[20px] md:text-[24px] font-semibold text-sm md:text-base">
                                         დაბადების დღის პროგრამები
                                     </p>
