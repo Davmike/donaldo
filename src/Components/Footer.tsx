@@ -2,7 +2,7 @@ import { MapPin, Phone, Mail, Facebook, Instagram, Youtube, Music2 } from 'lucid
 
 function Footer() {
     return (
-        <footer className="bg-[#1554A4] text-guge">
+        <footer className="bg-[#1554A4] text-guge relative">
             <div className="container mx-auto px-4 py-12 md:py-16">
                 <div className="max-w-6xl mx-auto">
 

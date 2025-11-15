@@ -177,7 +177,7 @@ function BirthdayPrograms() {
                             <button
                                 key={service.id}
                                 onClick={() => setSelectedService(service.id)}
-                                className={`cursor-pointer group rounded-3xl overflow-hidden shadow-lg transition-all hover:shadow-xl hover:scale-105 border`}
+                                className={`cursor-pointer group rounded-3xl overflow-hidden shadow-lg transition-all hover:shadow-xl hover:scale-105`}
                             >
                                 <div className={`${getServiceColor(service.id)} p-6 text-white rounded-3xl h-full flex flex-col`}>
                                     <div className='flex flex-col items-center justify-center bg-[#1554A4] rounded-2xl mb-6 p-2'>
@@ -213,7 +213,7 @@ function BirthdayPrograms() {
                         ))}
                     </div>
 
-                    <div className="lg:hidden relative border">
+                    <div className="lg:hidden relative">
                         <div className="flex gap-4 overflow-x-auto snap-x snap-mandatory scroll-smooth pb-4">
                             {services.map((service) => (
                                 <div

@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { ShoppingCart, Menu, X, Globe } from 'lucide-react';
+import { useNavigate } from "react-router-dom";
 
 function Header() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -7,18 +8,20 @@ function Header() {
     const [language, setLanguage] = useState('KA'); // 👈 არჩეული ენა
     const [scrolled, setScrolled] = useState(false);
 
+    const navigate = useNavigate();
+
 
     const toggleMenu = () => {
         setIsMenuOpen(!isMenuOpen);
     };
 
     const menuItems = [
-        'მთავარი',
-        'დაბადების დღე',
-        'გმირები',
-        'მენიუ',
-        'სხვა პროგრამები',
-        'გალერეა',
+        { text: 'მთავარი', path: '/' },
+        { text: 'დაბადების დღე', path: '/birthdayPrograms' },
+        { text: 'გმირები', path: '/heros' },
+        { text: 'მენიუ', path: '/menu' },
+        { text: 'სხვა პროგრამები', path: '/otherProgram' },
+        { text: 'გალერეა', path: '/gallery' },
     ];
 
     // 👇 Scroll listener — როდესაც იუზერი ჩამოისქროლებს, იცვლება ფონი
@@ -56,16 +59,19 @@ function Header() {
 
                         {/* Desktop მენიუ */}
                         <nav className="hidden lg:flex items-center gap-6">
-                            {menuItems.map((text, index) => (
+                            {menuItems.map((item, index) => (
                                 <button
                                     key={index}
-                                    onClick={() => setActiveIndex(index)}
-                                    className={`transition-colors text-sm ${activeIndex === index
+                                    onClick={() => {
+                                        setActiveIndex(index);
+                                        navigate(menuItems[index].path);
+                                    }}
+                                    className={`transition-colors text-sm cursor-pointer ${activeIndex === index
                                         ? 'text-orange-500'
                                         : 'text-white hover:text-orange-400'
                                         }`}
                                 >
-                                    {text}
+                                    {item.text}
                                 </button>
                             ))}
                         </nav>
@@ -132,16 +138,42 @@ function Header() {
                                     </div>
                                 </div>
 
-                                {menuItems.map((text, index) => (
+                                {menuItems.map((item, index) => (
                                     <button
                                         key={index}
-                                        onClick={() => setActiveIndex(index)}
-                                        className={`py-3 text-lg transition-colors ${activeIndex === index
+                                        onClick={() => {
+                                            setActiveIndex(index);
+                                            setIsMenuOpen(false);
+                                            // აქ უნდა დააკონტროლო რომელ გვერდზე წასვლა
+                                            switch (index) {
+                                                case 0:
+                                                    navigate('/');
+                                                    break;
+                                                case 1:
+                                                    navigate('/birthdayPrograms');
+                                                    break;
+                                                case 2:
+                                                    navigate('/heros');
+                                                    break;
+                                                case 3:
+                                                    navigate('/menu');
+                                                    break;
+                                                case 4:
+                                                    navigate('/otherProgram');
+                                                    break;
+                                                case 5:
+                                                    navigate('/gallery');
+                                                    break;
+                                                default:
+                                                    navigate('/');
+                                            }
+                                        }}
+                                        className={`py-3 text-lg transition-colors cursor-pointer ${activeIndex === index
                                             ? 'text-orange-500'
                                             : 'text-gray-700 hover:text-orange-500'
                                             }`}
                                     >
-                                        {text}
+                                        {item.text}
                                     </button>
                                 ))}
                             </div>
