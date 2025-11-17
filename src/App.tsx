@@ -23,6 +23,8 @@ function App() {
           <Route path="/menu" element={<Menu />} />
           <Route path="/otherProgram" element={<OtherPrograms />} />
           <Route path="/gallery" element={<Gallery />} />
+
+
         </Routes>
         <Footer />
 
