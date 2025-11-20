@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Play, ChevronLeft, ChevronRight, ChevronDown, ChevronUp } from 'lucide-react';
+import { Play, ChevronLeft, ChevronRight } from 'lucide-react';
 
 const ITEMS_PER_PAGE = 6;
 
