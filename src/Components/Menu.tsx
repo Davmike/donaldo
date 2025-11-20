@@ -38,7 +38,7 @@ const menuItems: MenuItem[] = [
 function Menu() {
     const [activeTab, setActiveTab] = useState<'parents' | 'children'>('parents');
     const [selectedCategory, setSelectedCategory] = useState<Category | null>(null);
-    const [expandedCategories, setExpandedCategories] = useState<Set<string>>(new Set());
+    const [, setExpandedCategories] = useState<Set<string>>(new Set());
     const [filteredItems, setFilteredItems] = useState<MenuItem[]>([]);
 
     // ფილტრავს კატეგორიებს activeTab-ის მიხედვით
