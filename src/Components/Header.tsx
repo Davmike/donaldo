@@ -8,6 +8,7 @@ function Header() {
     const [language, setLanguage] = useState('KA'); // 👈 არჩეული ენა
     const [scrolled, setScrolled] = useState(false);
 
+
     const navigate = useNavigate();
 
 
@@ -45,7 +46,7 @@ function Header() {
                 }`}>
                 <div className="container mx-auto px-4">
                     {/* ცხელი ხაზი */}
-                    <div className="flex justify-between items-center lg:block text-white text-sm ">
+                    <div className="flex justify-between items-center lg:block text-[#919baf] text-sm ">
                         <span>ცხელი ხაზი: </span>
                         <span className="ml-2">+995 543 21 12 34</span>
                     </div>
@@ -69,7 +70,7 @@ function Header() {
                                     }}
                                     className={`transition-colors text-sm cursor-pointer ${activeIndex === index
                                         ? 'text-orange-500'
-                                        : 'text-white hover:text-orange-400'
+                                        : 'text-[#919baf] hover:text-orange-400'
                                         }`}
                                 >
                                     {item.text}
