@@ -22,6 +22,7 @@ function Header() {
         { text: 'მენიუ', path: '/menu' },
         { text: 'სხვა პროგრამები', path: '/otherProgram' },
         { text: 'გალერეა', path: '/gallery' },
+        { text: 'კონტაქტი', path: '/contact' },
     ];
 
     // 👇 Scroll listener — როდესაც იუზერი ჩამოისქროლებს, იცვლება ფონი

@@ -8,6 +8,7 @@ import Heros from './Components/Heros'
 import Menu from './Components/Menu'
 import OtherPrograms from './Components/OtherPrograms'
 import Gallery from './Components/Gallery'
+import Contact from './Components/Contact'
 
 function App() {
 
@@ -23,6 +24,7 @@ function App() {
           <Route path="/menu" element={<Menu />} />
           <Route path="/otherProgram" element={<OtherPrograms />} />
           <Route path="/gallery" element={<Gallery />} />
+          <Route path="/contact" element={<Contact />} />
 
 
         </Routes>
