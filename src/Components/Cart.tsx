@@ -1,150 +1,131 @@
-import { useState, useEffect } from 'react';
 import { Trash2 } from 'lucide-react';
-import SuccessMessage from './SuccesMessage';
+import type { CartItem } from '../../src/types/cart';
 
-import {
-    getCartItems,
-    removeCartItem,
-    type CartItem
-} from "../lib/cartLocal";
+interface CartProps {
+    items?: CartItem[];
+    onRemoveItem?: (id: string) => void;
+    setOpenCart: any;
+}
 
-function Cart() {
-    const [cartItems, setCartItems] = useState<CartItem[]>([]);
-    const [showSuccess, setShowSuccess] = useState(false);
-    const [loading, setLoading] = useState(true);
-
-    useEffect(() => {
-        const items = getCartItems();
-        setCartItems(items);
-        setLoading(false);
-    }, []);
-
-    const deleteItem = (id: string) => {
-        removeCartItem(id);
-        setCartItems(cartItems.filter(item => item.id !== id));
-    };
-
-    const handleOrder = () => {
-        setShowSuccess(true);
-
-        setTimeout(() => {
-            setShowSuccess(false);
-        }, 3000);
-    };
-
-    const groupedItems = cartItems.reduce((acc, item) => {
-        if (!acc[item.section]) acc[item.section] = [];
+function Cart({ items = [], onRemoveItem, setOpenCart }: CartProps) {
+    const groupedItems = items.reduce((acc, item) => {
+        if (!acc[item.section]) {
+            acc[item.section] = [];
+        }
         acc[item.section].push(item);
         return acc;
     }, {} as Record<string, CartItem[]>);
 
-    const subtotal = cartItems.reduce((sum, item) => sum + Number(item.final_price), 0);
-    const originalTotal = cartItems.reduce((sum, item) => sum + Number(item.price), 0);
-    const discount = originalTotal - subtotal;
-
-    if (showSuccess) return <SuccessMessage />;
-    if (loading) return null;
+    const subtotal = items.reduce((sum, item) => sum + item.price, 0);
+    const totalDiscount = items.reduce((sum, item) => {
+        if (item.originalPrice) {
+            return sum + (item.originalPrice - item.price);
+        }
+        return sum;
+    }, 0);
+    const total = subtotal;
 
     return (
-        <div className="min-h-screen bg-[#f5f3ed] flex items-center justify-center p-4">
-            <div className="w-full max-w-[420px] bg-white rounded-4xl border-2 border-[#2c2c2c] p-6 sm:p-8 shadow-lg">
-                <h1 className="text-2xl sm:text-3xl font-bold text-[#2c2c2c] mb-6 text-center">
-                    ნაკვეთის ბადახშა
-                </h1>
+        <div
+            className="fixed inset-0 backdrop-blur-sm bg-black/40 flex items-center justify-center p-4 z-50"
+            onClick={() => setOpenCart(false)}
+        >
+            <div
+                className="w-full max-w-md px-4 py-6"
+                onClick={(e) => e.stopPropagation()} // prevents closing on inner click
+            >
+                {/* Main container with flex + max height */}
+                <div className="bg-white rounded-3xl shadow-lg p-6 flex flex-col max-h-[80vh]">
 
-                {Object.keys(groupedItems).length === 0 ? (
-                    <p className="text-center text-gray-500 py-8">კალათა ცარიელია</p>
-                ) : (
-                    <div className="space-y-8">
-                        {Object.entries(groupedItems).map(([section, items]) => (
-                            <div key={section}>
-                                <h2 className="text-lg font-semibold text-[#4a7ab8] mb-4">
-                                    {section}
-                                </h2>
-                                <div className="space-y-4">
-                                    {items.map((item) => (
-                                        <div
-                                            key={item.id}
-                                            className="flex gap-3 pb-4 border-b border-gray-200 last:border-0"
-                                        >
-                                            <img
-                                                src={item.image_url}
-                                                alt={item.name}
-                                                className="w-24 h-24 sm:w-28 sm:h-28 rounded-xl object-cover shrink-0 cursor-pointer"
-                                            />
-                                            <div className="flex-1 flex flex-col justify-between min-w-0">
-                                                <div>
-                                                    <h3 className="font-semibold text-[#2c2c2c] text-base sm:text-lg">
-                                                        {item.name}
-                                                    </h3>
-                                                    <p className="text-sm text-gray-600">
-                                                        {item.description}
-                                                    </p>
-                                                </div>
-                                                <div className="flex items-end justify-between mt-2">
-                                                    <div className="flex items-center gap-2">
-                                                        {item.discount_percent && (
-                                                            <span className="text-red-500 text-sm font-medium">
-                                                                -{item.discount_percent}%
-                                                            </span>
-                                                        )}
-                                                        <span className="text-xl sm:text-2xl font-bold text-[#2c2c2c]">
-                                                            {item.final_price}₾
-                                                        </span>
-                                                        {item.discount_percent && (
-                                                            <span className="text-red-400 line-through text-sm">
+                    <h1 className="text-2xl font-bold text-blue-900 mb-4">
+                        ნაჯვნის ბადისებუვა
+                    </h1>
+
+                    {/* Scrollable item list */}
+                    <div className="flex-1 overflow-y-auto pr-1">
+                        {Object.keys(groupedItems).length === 0 ? (
+                            <div className="text-center text-gray-500 py-8">
+                                კალათა ცარიელია
+                            </div>
+                        ) : (
+                            <>
+                                {Object.entries(groupedItems).map(([section, sectionItems]) => (
+                                    <div key={section} className="mb-6">
+                                        <h2 className="text-blue-600 font-semibold mb-4">{section}</h2>
+
+                                        <div className="space-y-4">
+                                            {sectionItems.map((item) => (
+                                                <div
+                                                    key={item.id}
+                                                    className="flex items-center gap-3 pb-4 border-b border-gray-200 last:border-b-0"
+                                                >
+                                                    <img
+                                                        src={item.image}
+                                                        alt={item.name}
+                                                        className="w-24 h-24 rounded-xl object-cover flex-shrink-0"
+                                                    />
+
+                                                    <div className="flex-1 min-w-0">
+                                                        <h3 className="font-medium text-gray-900 mb-1">
+                                                            {item.name}
+                                                        </h3>
+
+                                                        <div className="flex items-center gap-2 mt-1">
+                                                            <span className="text-xl font-bold text-gray-900">
                                                                 {item.price}₾
                                                             </span>
-                                                        )}
+
+                                                            {item.originalPrice && (
+                                                                <span className="text-red-500 line-through text-sm">
+                                                                    {item.originalPrice}₾
+                                                                </span>
+                                                            )}
+                                                        </div>
                                                     </div>
+
                                                     <button
-                                                        onClick={() => deleteItem(item.id)}
-                                                        className="text-gray-400 hover:text-red-500 transition-colors p-1"
+                                                        onClick={() => onRemoveItem?.(item.id)}
+                                                        className="cursor-pointer p-2 hover:bg-gray-100 rounded-lg"
                                                     >
-                                                        <Trash2 size={20} />
+                                                        <Trash2 className="w-5 h-5 text-gray-600" />
                                                     </button>
                                                 </div>
-                                            </div>
+                                            ))}
                                         </div>
-                                    ))}
-                                </div>
-                            </div>
-                        ))}
+                                    </div>
+                                ))}
+                            </>
+                        )}
                     </div>
-                )}
 
-                {Object.keys(groupedItems).length > 0 && (
-                    <>
-                        <div className="mt-8 pt-6 border-t-2 border-gray-200 space-y-2">
-                            <div className="flex justify-between items-center text-gray-600">
-                                <span className="text-sm">ფასიანი თანხა:</span>
-                                <span className="text-red-500 font-medium">-{discount}₾</span>
+                    {/* Footer (always visible) */}
+                    <div className="mt-4 pt-4 border-t-2 border-gray-200">
+                        {totalDiscount > 0 && (
+                            <div className="flex justify-between text-sm text-gray-600 mb-2">
+                                <span>ღავალიძი თანხა:</span>
+                                <span className="text-red-500">-{totalDiscount}₾</span>
                             </div>
-                            <div className="flex justify-between items-center">
-                                <span className="text-xl sm:text-2xl font-bold text-[#2c2c2c]">
-                                    ჯამი:
-                                </span>
-                                <div className="flex items-center gap-2">
-                                    {discount > 0 && (
-                                        <span className="text-gray-400 line-through text-lg">
-                                            {originalTotal}₾
-                                        </span>
-                                    )}
-                                    <span className="text-3xl sm:text-4xl font-bold text-[#2c2c2c]">
-                                        {subtotal}₾
+                        )}
+
+                        <div className="flex justify-between items-center mb-6">
+                            <span className="text-2xl font-bold text-gray-900">ჯამი:</span>
+                            <div className="flex items-center gap-2">
+                                {totalDiscount > 0 && (
+                                    <span className="text-gray-400 line-through text-lg">
+                                        {subtotal + totalDiscount}₾
                                     </span>
-                                </div>
+                                )}
+                                <span className="text-3xl font-bold text-gray-900">
+                                    {total}₾
+                                </span>
                             </div>
                         </div>
 
-                        <button
-                            onClick={handleOrder}
-                            className="w-full mt-6 bg-[#4a7ab8] hover:bg-[#3d6399] text-white font-semibold text-lg py-4 rounded-2xl transition-colors"
-                        >
-                            გაგზავნა
+                        <button className="w-full bg-blue-700 hover:bg-blue-800 text-white font-semibold py-4 rounded-2xl cursor-pointer">
+                            გადახდენა
                         </button>
-                    </>
-                )}
+                    </div>
+                </div>
             </div>
         </div>
     );

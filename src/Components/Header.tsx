@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import { ShoppingCart, Menu, X, Globe } from 'lucide-react';
 import { useNavigate } from "react-router-dom";
 
-function Header() {
+function Header({ openCart, setOpenCart, totalItems }: any) {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const [activeIndex, setActiveIndex] = useState(0);
     const [language, setLanguage] = useState('KA'); // 👈 არჩეული ენა
@@ -94,11 +94,13 @@ function Header() {
                                 </select>
                             </div>
 
-                            <button className="relative p-2 hover:bg-white/10 transition-colors border-2 bg-gray-400 border-gray-400 rounded-full">
+                            <button className="relative p-2 hover:bg-white/10 transition-colors border-2 bg-gray-400 border-gray-400 rounded-full" onClick={() => setOpenCart(!openCart)}>
                                 <ShoppingCart className="text-white" size={24} />
-                                <span className="absolute -top-1 -right-1 w-5 h-5 bg-red-500 text-white text-xs rounded-full flex items-center justify-center">
-                                    0
-                                </span>
+                                {totalItems > 0 && (
+                                    <span className="absolute -top-1 -right-1 w-5 h-5 bg-red-500 text-white text-xs rounded-full flex items-center justify-center">
+                                        {totalItems}
+                                    </span>
+                                )}
                             </button>
 
                             <button

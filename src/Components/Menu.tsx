@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { ArrowLeft } from 'lucide-react';
+import { ArrowLeft, ShoppingCart } from 'lucide-react';
 
 interface Category {
     id: string;
@@ -17,7 +17,7 @@ interface MenuItem {
     originalPrice?: number;
     discountPercentage?: number;
     imageUrl: string;
-    type: 'children' | 'parents'; // დამატებული type
+    type: 'children' | 'parents';
 }
 
 const categories: Category[] = [
@@ -35,7 +35,7 @@ const menuItems: MenuItem[] = [
     { id: '3', categoryId: '2', name: 'ხაშლამა', description: 'ხორცი, კარტოფილი, სახვევი...', price: 45, imageUrl: 'https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=400', type: 'parents' },
 ];
 
-function Menu() {
+function Menu({ addToCart, cartItems }: any) {
     const [activeTab, setActiveTab] = useState<'parents' | 'children'>('parents');
     const [selectedCategory, setSelectedCategory] = useState<Category | null>(null);
     const [, setExpandedCategories] = useState<Set<string>>(new Set());
@@ -182,6 +182,25 @@ function Menu() {
                                                                     {item.originalPrice}₾
                                                                 </span>
                                                             )}
+                                                            <button
+                                                                onClick={() =>
+                                                                    addToCart({
+                                                                        id: item.id,
+                                                                        name: item.name,
+                                                                        price: item.price,
+                                                                        originalPrice: item.originalPrice,
+                                                                        discount: item.discountPercentage,
+                                                                        image: item.imageUrl,
+                                                                        section: selectedCategory?.name || '',
+                                                                    })
+                                                                }
+                                                                disabled={cartItems.some((i: { id: string; }) => i.id === item.id)} // აქ შემოწმება
+                                                                className={`mt-2 px-4 py-2 rounded-full cursor-pointer flex items-center justify-center
+    ${cartItems.some((i: { id: string; }) => i.id === item.id) ? 'bg-gray-400 cursor-not-allowed' : 'bg-blue-600 hover:bg-blue-700 text-white'}
+  `}
+                                                            >
+                                                                <ShoppingCart size={20} />
+                                                            </button>
                                                         </div>
                                                     </div>
                                                 </div>
