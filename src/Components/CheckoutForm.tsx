@@ -197,6 +197,7 @@ function CheckoutForm({ items = [], onClose, whatsappNumber }: CheckoutFormProps
                         )}
 
                         <div className="mt-8 pt-6 border-t border-gray-200">
+                            {totalDiscount > 0 && (<div className="flex justify-between text-sm text-gray-600 mb-2"> <span>დაზოგილი თანხა:</span> <span className="text-red-500">-{totalDiscount}₾</span> </div>)}
                             <div className="flex items-center justify-between mb-6">
                                 <span className="text-xl font-bold text-gray-900">ჯამი:</span>
                                 <span className="text-2xl font-bold text-gray-900">

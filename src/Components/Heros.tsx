@@ -36,7 +36,7 @@ const heroes: Hero[] = [
             'დისხლიწის ყენდიხაროდისინი", მისხხოლიპს მაბთაინო გალივის მათშელენს ხამეხიდელსო, ხოზფელო სკოც სისხხორსისტო თელის მონქგობლებს მედორებთო, რა კალია მხალეხი ჰოდიოქელი'
         ],
         price: 50,
-        originalPrice: 50,
+        originalPrice: 60,
         discount: '-20 %',
         image: 'https://via.placeholder.com/200x300/DC143C/FFFFFF?text=Spider-Man'
     },
@@ -156,7 +156,9 @@ function Heros({ addToCart, cartItems }: any) {
                                                         id: selectedHero.id,
                                                         name: selectedHero.name,
                                                         price: selectedHero.price,
+                                                        originalPrice: selectedHero.originalPrice,
                                                         image: selectedHero.image,
+                                                        description: selectedHero.description,
                                                         section: "Heroes"
                                                     })
                                                 }

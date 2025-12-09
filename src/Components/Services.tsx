@@ -259,6 +259,7 @@ function Services({ addToCart, cartItems }: any) {
                                             id: selectedService.id,
                                             name: selectedService.title,
                                             price: Number(selectedService.price.replace('₾', '').trim()),
+                                            originalPrice: (selectedService.originalPrice.replace('₾', ''.trim())),
                                             image: selectedService.image,
                                             section: "Services"
                                         })

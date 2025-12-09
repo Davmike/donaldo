@@ -8,7 +8,16 @@ interface CartProps {
 }
 
 function Cart({ items = [], onRemoveItem, setOpenCart }: CartProps) {
-    const contact = JSON.parse(localStorage.getItem('contactData') || 'null');
+
+    const contact = (() => {
+        const saved = localStorage.getItem('contactData');
+        if (!saved) return null;
+        try {
+            return JSON.parse(saved);
+        } catch {
+            return null;
+        }
+    })();
 
     const groupedItems = items.reduce((acc, item) => {
         if (!acc[item.section]) {
@@ -27,17 +36,8 @@ function Cart({ items = [], onRemoveItem, setOpenCart }: CartProps) {
     }, 0);
     const total = subtotal;
 
-    const isContactValid =
-        contact &&
-        contact.name?.trim() &&
-        contact.mobile?.trim() &&
-        contact.date &&
-        contact.time &&
-        contact.children &&
-        contact.message?.trim();
-
     const handleSendToWhatsapp = () => {
-        if (!isContactValid) {
+        if (!contact) {
             alert('გთხოვ ჯერ შეავსო საკონტაქტო ფორმა ❌');
             return;
         }
@@ -153,6 +153,7 @@ ${contact.message}
                     </div>
 
                     <div className="mt-4 pt-4 border-t-2 border-gray-200">
+                        {totalDiscount > 0 && (<div className="flex justify-between text-sm text-gray-600 mb-2"> <span>დაზოგილი თანხა:</span> <span className="text-red-500">-{totalDiscount}₾</span> </div>)}
                         <div className="flex justify-between items-center mb-6">
                             <span className="text-2xl font-bold">ჯამი:</span>
                             <span className="text-3xl font-bold">{total}₾</span>
@@ -160,8 +161,7 @@ ${contact.message}
 
                         <button
                             onClick={handleSendToWhatsapp}
-                            disabled={!isContactValid || items.length === 0}
-                            className="w-full text-[20px] bg-blue-700 hover:bg-blue-800 text-white font-semibold py-4 rounded-2xl cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed"
+                            className="w-full text-[20px] bg-blue-700 hover:bg-blue-800 text-white font-semibold py-4 rounded-2xl cursor-pointer"
                         >
                             გაგზავნა
                         </button>
