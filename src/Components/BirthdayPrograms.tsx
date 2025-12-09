@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { ChevronLeft, Check, ArrowRight } from 'lucide-react';
+import { ChevronLeft, Check, ArrowRight, ShoppingCart } from 'lucide-react';
 
 interface Service {
     id: number;
@@ -69,7 +69,7 @@ const getServiceColor = (id: number) => {
 };
 
 
-function BirthdayPrograms() {
+function BirthdayPrograms({ addToCart, cartItems }: any) {
     const [selectedService, setSelectedService] = useState<number | null>(null);
     // const [currentSlide, setCurrentSlide] = useState(0);
 
@@ -146,8 +146,28 @@ function BirthdayPrograms() {
                                             <button className="cursor-pointer flex-1 px-6 py-3 bg-[#1554A4] hover:bg-white/40 transition-colors rounded-full font-bold text-white">
                                                 {service.price}
                                             </button>
-                                            <button className="cursor-pointer flex-1 px-6 py-3 bg-[#1554A4] hover:bg-white/40 transition-colors rounded-full font-bold text-white">
-                                                დაჯავშნა
+                                            <button
+                                                onClick={() =>
+                                                    addToCart({
+                                                        id: service.id,
+                                                        name: service.title,
+                                                        price: Number(service.price.replace('₾', '').trim()),
+                                                        image: service.image,
+                                                        section: "Birthday Programs"
+                                                    })
+                                                }
+                                                disabled={cartItems.some((i: { id: number }) => i.id === service.id)}
+                                                className={`cursor-pointer flex-1 flex items-center justify-center gap-2 px-6 py-3 rounded-full font-bold text-white
+            ${cartItems.some((i: { id: number }) => i.id === service.id)
+                                                        ? "bg-gray-400 cursor-not-allowed"
+                                                        : "bg-[#1554A4] hover:bg-[#2D4373]"
+                                                    }
+        `}
+                                            >
+                                                <ShoppingCart size={18} />
+                                                {cartItems.some((i: { id: number }) => i.id === service.id)
+                                                    ? "დამატებულია"
+                                                    : "კალათაში"}
                                             </button>
                                         </div>
                                     </div>
@@ -176,7 +196,7 @@ function BirthdayPrograms() {
                         {services.map((service) => (
                             <button
                                 key={service.id}
-                                onClick={() => setSelectedService(service.id)}
+
                                 className={`cursor-pointer group rounded-3xl overflow-hidden shadow-lg transition-all hover:shadow-xl hover:scale-105`}
                             >
                                 <div className={`${getServiceColor(service.id)} p-6 text-white rounded-3xl h-full flex flex-col`}>
@@ -199,14 +219,32 @@ function BirthdayPrograms() {
                                         ))}
                                     </ul>
 
-                                    <p className="text-[14px] text-[#1554A4] opacity-75 mb-4 flex items-center justify-end gap-1 hover:opacity-100">
+                                    <p onClick={() => setSelectedService(service.id)} className="text-[14px] text-[#1554A4] opacity-75 mb-4 flex items-center justify-end gap-1 hover:opacity-100">
                                         სრული ნახვა <ArrowRight size={14} />
                                     </p>
                                     <button className="cursor-pointer w-full px-4 py-3 bg-[#1554A4] hover:bg-[#2D4373] transition-colors rounded-full font-bold text-white text-sm mb-2">
                                         {service.price}
                                     </button>
-                                    <button className="cursor-pointer w-full px-4 py-3 bg-[#1554A4] hover:bg-[#2D4373] transition-colors rounded-full font-bold text-white text-sm">
-                                        დაჯავშნა
+                                    <button
+                                        onClick={() =>
+                                            addToCart({
+                                                id: service.id,
+                                                name: service.title,
+                                                price: Number(service.price.replace('₾', '').trim()), // string → number
+                                                image: service.image,
+                                                section: "Birthday Programs"
+                                            })
+                                        }
+                                        disabled={cartItems.some((i: { id: number }) => i.id === service.id)}
+                                        className={`cursor-pointer flex items-center justify-center gap-2 w-full px-4 py-3 rounded-full font-bold text-white
+        ${cartItems.some((i: { id: number }) => i.id === service.id)
+                                                ? 'bg-gray-400 cursor-not-allowed'
+                                                : 'bg-[#1554A4] hover:bg-[#2D4373]'
+                                            }
+    `}
+                                    >
+                                        <ShoppingCart size={18} />
+                                        {cartItems.some((i: { id: number }) => i.id === service.id) ? 'დამატებულია' : 'კალათაში'}
                                     </button>
                                 </div>
                             </button>

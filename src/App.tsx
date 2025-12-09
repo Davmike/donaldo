@@ -56,11 +56,11 @@ function App() {
           onRemoveItem={removeFromCart} />}
 
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/birthdayPrograms" element={<BirthdayPrograms />} />
-          <Route path="/heros" element={<Heros />} />
+          <Route path="/" element={<Home addToCart={addToCart} cartItems={cartItems} />} />
+          <Route path="/birthdayPrograms" element={<BirthdayPrograms addToCart={addToCart} cartItems={cartItems} />} />
+          <Route path="/heros" element={<Heros addToCart={addToCart} cartItems={cartItems} />} />
           <Route path="/menu" element={<Menu addToCart={addToCart} cartItems={cartItems} />} />
-          <Route path="/otherProgram" element={<OtherPrograms />} />
+          <Route path="/otherProgram" element={<OtherPrograms addToCart={addToCart} cartItems={cartItems} />} />
           <Route path="/gallery" element={<Gallery />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>

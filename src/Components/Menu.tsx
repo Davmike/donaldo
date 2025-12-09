@@ -173,7 +173,7 @@ function Menu({ addToCart, cartItems }: any) {
                                                             </h3>
                                                             <p className="text-sm md:text-[16px] text-[#5C6983]">{item.description}</p>
                                                         </div>
-                                                        <div className="flex items-center gap-2">
+                                                        <div className="flex items-center justify-between gap-2">
                                                             <span className="text-lg md:text-[25px] font-bold text-[#1554A4]">
                                                                 {item.price}₾
                                                             </span>
@@ -187,6 +187,7 @@ function Menu({ addToCart, cartItems }: any) {
                                                                     addToCart({
                                                                         id: item.id,
                                                                         name: item.name,
+                                                                        description: item.description,
                                                                         price: item.price,
                                                                         originalPrice: item.originalPrice,
                                                                         discount: item.discountPercentage,
@@ -195,7 +196,7 @@ function Menu({ addToCart, cartItems }: any) {
                                                                     })
                                                                 }
                                                                 disabled={cartItems.some((i: { id: string; }) => i.id === item.id)} // აქ შემოწმება
-                                                                className={`mt-2 px-4 py-2 rounded-full cursor-pointer flex items-center justify-center
+                                                                className={`mt-2 px-4 py-2 rounded-full cursor-pointer flex items-center justify-end
     ${cartItems.some((i: { id: string; }) => i.id === item.id) ? 'bg-gray-400 cursor-not-allowed' : 'bg-blue-600 hover:bg-blue-700 text-white'}
   `}
                                                             >

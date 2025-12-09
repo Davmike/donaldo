@@ -72,7 +72,7 @@ const heroes: Hero[] = [
     }
 ];
 
-function Heros() {
+function Heros({ addToCart, cartItems }: any) {
     const [selectedHero, setSelectedHero] = useState<Hero | null>(null);
     const [currentIndex, setCurrentIndex] = useState(0);
 
@@ -150,9 +150,30 @@ function Heros() {
                                             <button onClick={handleBack} className="px-6 py-3 text-white rounded-full transition-colors border">
                                                 უკან დაბრუნება
                                             </button>
-                                            <button className="px-8 py-3 bg-[#F67524] border border-black text-white rounded-full hover:bg-[#E88239] transition-colors font-semibold">
-                                                დაჯავშნა
+                                            <button
+                                                onClick={() =>
+                                                    addToCart({
+                                                        id: selectedHero.id,
+                                                        name: selectedHero.name,
+                                                        price: selectedHero.price,
+                                                        image: selectedHero.image,
+                                                        section: "Heroes"
+                                                    })
+                                                }
+                                                disabled={cartItems.some((i: { id: number; }) => i.id === selectedHero.id)}
+                                                className={`
+        px-8 py-3 border border-black rounded-full font-semibold flex items-center gap-2
+        ${cartItems.some((i: { id: number; }) => i.id === selectedHero.id)
+                                                        ? "bg-gray-400 text-white cursor-not-allowed"
+                                                        : "bg-[#F67524] text-white hover:bg-[#E88239] cursor-pointer"
+                                                    }
+    `}
+                                            >
+                                                {cartItems.some((i: { id: number; }) => i.id === selectedHero.id)
+                                                    ? "დამატებულია"
+                                                    : "დაჯავშნა"}
                                             </button>
+
                                         </div>
                                     </div>
                                 </div>
@@ -241,7 +262,7 @@ function Heros() {
                                                         onClick={() => handleSelectHero(hero)}
                                                         className="w-full bg-[#F67524] text-white py-3 text-[20px] rounded-full font-semibold hover:bg-[#E88239] transition-colors"
                                                     >
-                                                        დაჯავშნა
+                                                        სრულად
                                                     </button>
                                                 </div>
                                             </div>

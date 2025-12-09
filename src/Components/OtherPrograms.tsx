@@ -106,7 +106,7 @@ const programs: Program[] = [
     }
 ];
 
-function OtherPrograms() {
+function OtherPrograms({ addToCart, cartItems }: any) {
     const [hoveredId, setHoveredId] = useState<number | null>(null);
 
     const getCardClasses = (program: Program) => {
@@ -176,9 +176,25 @@ function OtherPrograms() {
                                             </span>
                                         )}
                                     </div>
-                                    <button className={getButtonClasses(program)}>
-                                        {program.name}
+                                    <button
+                                        onClick={() =>
+                                            addToCart({
+                                                id: program.id,
+                                                name: program.name,
+                                                price: program.price,
+                                                image: program.image,
+                                                section: "Other Programs"
+                                            })
+                                        }
+                                        disabled={cartItems.some((i: { id: number; }) => i.id === program.id)}
+                                        className={`${getButtonClasses(program)} flex items-center justify-center gap-2 ${cartItems.some((i: { id: number; }) => i.id === program.id)
+                                            ? "opacity-60 cursor-not-allowed"
+                                            : "cursor-pointer"
+                                            }`}
+                                    >
+                                        {cartItems.some((i: { id: number; }) => i.id === program.id) ? "დამატებულია" : program.name}
                                     </button>
+
                                 </div>
                             </div>
                         ))}

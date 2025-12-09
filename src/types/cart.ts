@@ -3,6 +3,7 @@ export interface CartItem {
     name: string;
     image: string;
     price: number;
+    description: string;
     originalPrice?: number;
     discount?: number;
     section: string;
@@ -13,5 +14,6 @@ export interface CartSection {
     title: string;
     items: CartItem[];
 }
+
 
 

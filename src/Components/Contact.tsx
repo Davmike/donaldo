@@ -1,4 +1,4 @@
-import { useState, useRef } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import { Calendar, ChevronLeft, ChevronRight } from 'lucide-react';
 import DateTimePicker from './DateTimePicker';
 
@@ -6,6 +6,9 @@ function Contact() {
     const [showDatePicker, setShowDatePicker] = useState(false);
     const [selectedChildren, setSelectedChildren] = useState<number | null>(null);
     const scrollContainerRef = useRef<HTMLDivElement>(null);
+
+    const [status, setStatus] = useState<{ type: 'error' | 'success'; message: string } | null>(null);
+
     const [formData, setFormData] = useState({
         name: '',
         mobile: '',
@@ -15,166 +18,215 @@ function Contact() {
         message: ''
     });
 
+    const [errors, setErrors] = useState({
+        name: false,
+        mobile: false,
+        date: false,
+        time: false,
+        children: false,
+        message: false
+    });
+
     const childrenOptions = Array.from({ length: 20 }, (_, i) => (i + 1) * 5);
+
+    const isFormValid = () =>
+        formData.name.trim() &&
+        formData.mobile.trim() &&
+        formData.date &&
+        formData.time &&
+        formData.children &&
+        formData.message.trim();
 
     const handleChildrenSelect = (value: number) => {
         setSelectedChildren(value);
         setFormData({ ...formData, children: value });
+        setErrors({ ...errors, children: false });
     };
 
     const handleDateTimeSelect = (date: string, time: string) => {
         setFormData({ ...formData, date, time });
+        setErrors({ ...errors, date: false, time: false });
         setShowDatePicker(false);
     };
 
+    const validateForm = () => {
+        const newErrors = {
+            name: !formData.name.trim(),
+            mobile: !formData.mobile.trim(),
+            date: !formData.date,
+            time: !formData.time,
+            children: !formData.children,
+            message: !formData.message.trim()
+        };
+
+        setErrors(newErrors);
+
+        return !Object.values(newErrors).some(Boolean);
+    };
+
+    // 📌 LocalStorage მართვა
+    useEffect(() => {
+        if (isFormValid()) {
+            localStorage.setItem('contactData', JSON.stringify(formData));
+        } else {
+            localStorage.removeItem('contactData');
+        }
+    }, [formData]);
+
     const handleSubmit = () => {
-        console.log('Form submitted:', formData);
+        if (!validateForm()) {
+            setStatus({
+                type: 'error',
+                message: 'გთხოვ შეავსო ყველა სავალდებულო ველი'
+            });
+            return;
+        }
+
+        setStatus({
+            type: 'success',
+            message: 'გადაგზავნა მზად არის ✅'
+        });
+
+        const whatsappNumber = '995555925444';
+
+        const whatsappMessage = `
+📩 ახალი ჯავშანი
+
+👤 სახელი: ${formData.name}
+📞 ნომერი: ${formData.mobile}
+
+📅 თარიღი: ${formData.date}
+⏰ დრო: ${formData.time}
+👶 ბავშვების რაოდენობა: ${formData.children}
+
+📝 კომენტარი:
+${formData.message}
+        `;
+
+        const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`;
+        window.open(whatsappUrl, '_blank');
     };
 
     const scroll = (direction: 'left' | 'right') => {
-        if (scrollContainerRef.current) {
-            const scrollAmount = 200;
-            scrollContainerRef.current.scrollBy({
-                left: direction === 'left' ? -scrollAmount : scrollAmount,
-                behavior: 'smooth'
-            });
-        }
+        scrollContainerRef.current?.scrollBy({
+            left: direction === 'left' ? -200 : 200,
+            behavior: 'smooth'
+        });
     };
 
     return (
         <div className="min-h-screen flex items-center justify-center p-4 py-8 mt-[50px] text-guge">
             <div className="w-full max-w-[986px] bg-[#FDF7E9] rounded-4xl border p-8 md:p-12 shadow-sm">
+
                 <h1 className="text-[#1554A4] text-[28px] md:text-4xl font-bold text-center mb-10">
                     დაგვიკავშირდი!
                 </h1>
 
+                {status && (
+                    <div className={`mb-6 text-center font-semibold py-3 rounded-xl ${status.type === 'error'
+                        ? 'bg-red-100 text-red-700'
+                        : 'bg-green-100 text-green-700'
+                        }`}>
+                        {status.message}
+                    </div>
+                )}
+
                 <div className="space-y-6">
-                    <div>
-                        <label className="block text-[#5C6983] text-[18px] font-medium mb-2">
-                            სახელი
-                        </label>
+
+                    <input
+                        type="text"
+                        placeholder="სახელი"
+                        value={formData.name}
+                        onChange={(e) => {
+                            setFormData({ ...formData, name: e.target.value });
+                            setErrors({ ...errors, name: false });
+                        }}
+                        className={`w-full px-6 py-4 bg-[#faf9f6] border rounded-xl
+                            ${errors.name ? 'border-red-500' : 'border-[#FFD472]'}`}
+                    />
+
+                    <input
+                        type="tel"
+                        placeholder="მობილურის ნომერი"
+                        value={formData.mobile}
+                        onChange={(e) => {
+                            setFormData({ ...formData, mobile: e.target.value });
+                            setErrors({ ...errors, mobile: false });
+                        }}
+                        className={`w-full px-6 py-4 bg-[#faf9f6] border rounded-xl
+                            ${errors.mobile ? 'border-red-500' : 'border-[#FFD472]'}`}
+                    />
+
+                    <div className="relative">
                         <input
-                            type="text"
-                            placeholder="შეიყვანეთ სახელი"
-                            value={formData.name}
-                            onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                            className="w-full px-6 py-4 bg-[#faf9f6] border border-[#FFD472] rounded-xl text-[#2d2d2d] placeholder-[#b8b8b8] focus:outline-none focus:border-[#ff8c42] transition-colors cursor-pointer"
+                            readOnly
+                            onClick={() => setShowDatePicker(true)}
+                            value={formData.date && formData.time ? `${formData.date} | ${formData.time}` : ''}
+                            placeholder="თარიღი და დრო"
+                            className={`w-full px-6 py-4 bg-[#faf9f6] border rounded-xl cursor-pointer
+                                ${(errors.date || errors.time) ? 'border-red-500' : 'border-[#FFD472]'}`}
                         />
+                        <Calendar className="absolute right-5 top-1/2 -translate-y-1/2" />
                     </div>
 
-                    <div>
-                        <label className="block text-[#5C6983] text-[18px] font-medium mb-2">
-                            მობილურის ნომერი
-                        </label>
-                        <input
-                            type="tel"
-                            placeholder="შეიყვანეთ მობილურის ნომერი"
-                            value={formData.mobile}
-                            onChange={(e) => setFormData({ ...formData, mobile: e.target.value })}
-                            className="w-full px-6 py-4 bg-[#faf9f6] border border-[#FFD472] rounded-xl text-[#2d2d2d] placeholder-[#b8b8b8] focus:outline-none focus:border-[#ff8c42] transition-colors cursor-pointer"
-                        />
-                    </div>
+                    <div className="flex items-center gap-4">
+                        <button onClick={() => scroll('left')}>
+                            <ChevronLeft />
+                        </button>
 
-                    <div>
-                        <label className="block text-[#5C6983] text-[18px] font-medium mb-2">
-                            დრო & რიცხვი
-                        </label>
-                        <div className="relative">
-                            <input
-                                type="text"
-                                placeholder="10 აგვისტო, 2025  |  1:00 AM"
-                                value={formData.date && formData.time ? `${formData.date} | ${formData.time}` : ''}
-                                readOnly
-                                onClick={() => setShowDatePicker(true)}
-                                className="w-full px-6 py-4 bg-[#faf9f6] border border-[#FFD472] rounded-xl text-[#2d2d2d] placeholder-[#b8b8b8] focus:outline-none focus:border-[#ff8c42] transition-colors cursor-pointer pr-14"
-                            />
-                            <Calendar
-                                className="absolute right-5 top-1/2 -translate-y-1/2 text-[#6b6b6b] w-5 h-5 cursor-pointer"
-                                onClick={() => setShowDatePicker(true)}
-                            />
+                        <div
+                            ref={scrollContainerRef}
+                            className={"flex gap-3 overflow-x-auto p-1 rounded-xl"}
+                        >
+                            {childrenOptions.map(option => (
+                                <button
+                                    key={option}
+                                    onClick={() => handleChildrenSelect(option)}
+                                    className={`px-6 py-3 rounded-2xl transition
+                                       ${selectedChildren === option ? 'bg-[#ff8c42] text-white' : 'border'}
+  ${errors.children ? 'border border-red-500' : ''}`}
+                                >
+                                    {option}
+                                </button>
+                            ))}
                         </div>
+
+                        <button onClick={() => scroll('right')}>
+                            <ChevronRight />
+                        </button>
                     </div>
 
-                    <div>
-                        <label className="block text-[#5C6983] text-[18px] font-medium mb-4">
-                            ბავშვების რაოდენობა:
-                        </label>
-                        <div className="flex items-center gap-4">
-                            <button
-                                onClick={() => scroll('left')}
-                                className="shrink-0 p-2 hover:bg-gray-100 rounded-lg transition-colors cursor-pointer"
-                            >
-                                <ChevronLeft className="w-5 h-5 text-[#6b6b6b]" />
-                            </button>
-
-                            <div
-                                ref={scrollContainerRef}
-                                className="flex-1 overflow-x-auto scrollbar-hide"
-                            >
-                                <div className="flex gap-3 px-1">
-                                    {childrenOptions.map((option) => (
-                                        <button
-                                            key={option}
-                                            onClick={() => handleChildrenSelect(option)}
-                                            className={`shrink-0 px-6 py-3 rounded-2xl font-medium transition-all cursor-pointer ${selectedChildren === option
-                                                ? 'bg-[#ff8c42] text-white shadow-md'
-                                                : 'bg-[#faf9f6] text-[#2d2d2d] border border-[#e8e3d6] hover:border-[#ff8c42]'
-                                                }`}
-                                        >
-                                            {option}
-                                        </button>
-                                    ))}
-                                </div>
-                            </div>
-
-                            <button
-                                onClick={() => scroll('right')}
-                                className="shrink-0 p-2 hover:bg-gray-100 rounded-lg transition-colors cursor-pointer"
-                            >
-                                <ChevronRight className="w-5 h-5 text-[#6b6b6b]" />
-                            </button>
-                        </div>
-                    </div>
-
-                    <div>
-                        <label className="block text-[#5C6983] text-[18px] font-medium mb-2">
-                            შეიყვანეთ ტექსტი
-                        </label>
-                        <textarea
-                            placeholder="დაწერე დეტალები..."
-                            value={formData.message}
-                            onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                            rows={6}
-                            className="w-full px-6 py-4 bg-[#faf9f6] border border-[#FFD472] rounded-xl text-[#2d2d2d] placeholder-[#b8b8b8] focus:outline-none focus:border-[#ff8c42] transition-colors resize-none cursor-pointer"
-                        />
-                    </div>
+                    <textarea
+                        rows={6}
+                        placeholder="დეტალები..."
+                        value={formData.message}
+                        onChange={(e) => {
+                            setFormData({ ...formData, message: e.target.value });
+                            setErrors({ ...errors, message: false });
+                        }}
+                        className={`w-full px-6 py-4 bg-[#faf9f6] border rounded-xl
+                            ${errors.message ? 'border-red-500' : 'border-[#FFD472]'}`}
+                    />
 
                     <button
                         onClick={handleSubmit}
-                        className="w-full bg-[#1554A4] text-white font-semibold py-4 rounded-3xl hover:bg-[#2d4a9e] transition-colors cursor-pointer shadow-md text-lg"
+                        className="w-full bg-[#1554A4] text-white py-4 rounded-3xl text-lg hover:opacity-90 transition"
                     >
                         გაგზავნა
                     </button>
+
                 </div>
             </div>
 
-            {showDatePicker && (
-                <DateTimePicker
-                    onClose={() => setShowDatePicker(false)}
-                    onSelect={handleDateTimeSelect}
-                />
-            )}
-
-            <style>{`
-        .scrollbar-hide {
-          -ms-overflow-style: none;
-          scrollbar-width: none;
-        }
-        .scrollbar-hide::-webkit-scrollbar {
-          display: none;
-        }
-      `}</style>
-        </div>
+            {
+                showDatePicker && (
+                    <DateTimePicker
+                        onClose={() => setShowDatePicker(false)}
+                        onSelect={handleDateTimeSelect}
+                    />
+                )
+            }
+        </div >
     );
 }
 

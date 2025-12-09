@@ -2,7 +2,7 @@ import HomeNext from "./HomeNext";
 import Services from "./Services";
 import About from "./About";
 
-function Home() {
+function Home({ addToCart, cartItems }: any) {
     return (
         <div id="home">
             <section className="h-screen w-full overflow-hidden flex flex-col items-center justify-center">
@@ -34,7 +34,7 @@ function Home() {
                 </div>
             </section>
             <HomeNext />
-            <Services />
+            <Services addToCart={addToCart} cartItems={cartItems} />
             <About />
         </div>
     );

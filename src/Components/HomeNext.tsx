@@ -8,10 +8,10 @@ function HomeNext() {
     const [currentSlide, setCurrentSlide] = useState(0);
 
     const cards = [
-        { id: 1, title: 'სხვა პროგრამები', color: 'bg-[#FFD472]', textColor: 'text-orange-500', buttonColor: "#F67524" },
-        { id: 2, title: 'გმირები', color: 'bg-[#B4C4E5]', textColor: 'text-blue-700', buttonColor: "#1554A4" },
-        { id: 3, title: 'გალერეა', color: 'bg-[#FFD472]', textColor: 'text-orange-500', buttonColor: "#F67524" },
-        { id: 4, title: 'მენიუ', color: 'bg-[#B4C4E5]', textColor: 'text-blue-700', buttonColor: "#1554A4" },
+        { id: 1, title: 'სხვა პროგრამები', color: 'bg-[#FFD472]', textColor: 'text-orange-500', buttonColor: "#F67524", path: "/otherProgram" },
+        { id: 2, title: 'გმირები', color: 'bg-[#B4C4E5]', textColor: 'text-blue-700', buttonColor: "#1554A4", path: "/heros" },
+        { id: 3, title: 'გალერეა', color: 'bg-[#FFD472]', textColor: 'text-orange-500', buttonColor: "#F67524", path: "/gallery" },
+        { id: 4, title: 'მენიუ', color: 'bg-[#B4C4E5]', textColor: 'text-blue-700', buttonColor: "#1554A4", path: "/menu" },
     ];
 
     const handlePrev = () => {
@@ -66,6 +66,7 @@ function HomeNext() {
                                     <div className="w-full h-24 bg-white rounded-xl mb-4 opacity-60"></div>
 
                                     <button
+                                        onClick={() => navigate(card.path)}
                                         style={{ backgroundColor: card.buttonColor }}
                                         className={`w-full ${card.textColor.replace('text', 'bg')} text-white font-semibold py-3 text-[20px] rounded-full shadow-md hover:shadow-lg hover:opacity-90 active:scale-95 transition-all duration-200 cursor-pointer`}
                                     >

@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { ChevronLeft, ChevronRight, ArrowLeft, Check } from 'lucide-react';
+import { ChevronLeft, ChevronRight, ArrowLeft, Check, ShoppingCart } from 'lucide-react';
 
 interface Service {
     id: number;
@@ -140,7 +140,7 @@ const services: Service[] = [
     },
 ];
 
-function Services() {
+function Services({ addToCart, cartItems }: any) {
     const [currentSlide, setCurrentSlide] = useState(0);
     const [selectedService, setSelectedService] = useState<Service | null>(null);
     const [scrollPosition, setScrollPosition] = useState(0);
@@ -253,12 +253,33 @@ function Services() {
                                     : 'text-[#1554A4] border-[#1554A4]'}`}>
                                     უკან დაბრუნება
                                 </button>
-                                <button className={`flex-1 px-6 py-3 text-white font-bold rounded-3xl cursor-pointer hover:bg-orange-600 transition-colors border border-black ${selectedService.color === 'yellow'
-                                    ? 'bg-[#F67524]'
-                                    : 'bg-[#1554A4]'
-                                    }`}>
-                                    დაჯავშნა
+                                <button
+                                    onClick={() =>
+                                        addToCart({
+                                            id: selectedService.id,
+                                            name: selectedService.title,
+                                            price: Number(selectedService.price.replace('₾', '').trim()),
+                                            image: selectedService.image,
+                                            section: "Services"
+                                        })
+                                    }
+                                    disabled={cartItems.some((i: { id: number; }) => i.id === selectedService.id)}
+                                    className={`
+        flex-1 px-6 py-3 font-bold rounded-full cursor-pointer border border-black flex items-center justify-center gap-2
+        ${cartItems.some((i: { id: number; }) => i.id === selectedService.id)
+                                            ? "bg-gray-400 text-white cursor-not-allowed"
+                                            : selectedService.color === "yellow"
+                                                ? "bg-[#F67524] text-white hover:bg-orange-600"
+                                                : "bg-[#1554A4] text-white hover:bg-blue-700"
+                                        }
+    `}
+                                >
+                                    <ShoppingCart size={18} />
+                                    {cartItems.some((i: { id: number; }) => i.id === selectedService.id)
+                                        ? "დამატებულია"
+                                        : "დაჯავშნა"}
                                 </button>
+
                             </div>
                         </div>
                     </div>
