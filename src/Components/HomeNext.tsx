@@ -1,18 +1,55 @@
 import { useState } from 'react';
-import { ChevronLeft, ChevronRight, Star } from 'lucide-react';
+import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { useNavigate } from "react-router-dom";
+import thumb from "../../public/assets/thumbtack.png"
+import thumbBlue from "../../public/assets/thumbtackBlue.png"
+import vector from "../../public/assets/Vector 1.png"
 
 function HomeNext() {
     const navigate = useNavigate();
 
     const [currentSlide, setCurrentSlide] = useState(0);
 
+
     const cards = [
-        { id: 1, title: 'სხვა პროგრამები', color: 'bg-[#FFD472]', textColor: 'text-orange-500', buttonColor: "#F67524", path: "/otherProgram" },
-        { id: 2, title: 'გმირები', color: 'bg-[#B4C4E5]', textColor: 'text-blue-700', buttonColor: "#1554A4", path: "/heros" },
-        { id: 3, title: 'გალერეა', color: 'bg-[#FFD472]', textColor: 'text-orange-500', buttonColor: "#F67524", path: "/gallery" },
-        { id: 4, title: 'მენიუ', color: 'bg-[#B4C4E5]', textColor: 'text-blue-700', buttonColor: "#1554A4", path: "/menu" },
+        {
+            id: 1,
+            title: 'სხვა პროგრამები',
+            color: 'bg-[#FFD472]',
+            textColor: 'text-orange-500',
+            buttonColor: "#F67524",
+            path: "/otherProgram",
+            img: thumb
+        },
+        {
+            id: 2,
+            title: 'გმირები',
+            color: 'bg-[#B4C4E5]',
+            textColor: 'text-blue-700',
+            buttonColor: "#1554A4",
+            path: "/heros",
+            img: thumbBlue
+        },
+        {
+            id: 3,
+            title: 'გალერეა',
+            color: 'bg-[#FFD472]',
+            textColor: 'text-orange-500',
+            buttonColor: "#F67524",
+            path: "/gallery",
+            img: thumb
+        },
+        {
+            id: 4,
+            title: 'მენიუ',
+            color: 'bg-[#B4C4E5]',
+            textColor: 'text-blue-700',
+            buttonColor: "#1554A4",
+            path: "/menu",
+            img: thumbBlue
+        }
     ];
+
 
     const handlePrev = () => {
         setCurrentSlide((prev) => (prev === 0 ? cards.length - 1 : prev - 1));
@@ -29,12 +66,17 @@ function HomeNext() {
                 <div className="absolute top-40 right-20 w-32 h-32 bg-pink-200 rounded-full opacity-40 blur-2xl"></div>
                 <div className="absolute bottom-40 left-1/4 w-24 h-24 bg-blue-100 rounded-full opacity-40 blur-xl"></div>
 
-                <div className="relative z-10">
-                    <div className="mb-12 md:mb-16 cursor-pointer">
-                        <div className="relative bg-linear-to-br max-w-[854px] mx-auto bg-[#1554A4] rounded-3xl p-6 md:p-8 shadow-xl overflow-hidden">
-                            <div className="absolute -top-8 -right-8 w-20 h-20 bg-yellow-400 transform rotate-45 rounded-lg"></div>
+                <div className="relative z-10 overflow-visible">
+                    <div className="mb-12 md:mb-16 cursor-pointer relative max-w-[854px] mx-auto">
+                        <div className=" bg-linear-to-br max-w-[854px] mx-auto bg-[#1554A4] rounded-3xl p-6 md:p-8 shadow-xl overflow-hidden">
+                            {/* ვექტორი გვირგვინივით */}
+                            <img
+                                src={vector}
+                                alt="Vector"
+                                className="absolute -top-11 md:-top-13 -right-11 md:-right-13 w-20 h-20 md:w-24 md:h-24 transform rotate-15 z-20"
+                            />
 
-                            <div className="relative z-10 cursor-pointer">
+                            <div className=" z-10 cursor-pointer">
                                 <div className="w-full h-40 md:h-48 bg-gray-100 rounded-2xl mb-6 flex items-center justify-center">
                                     <div className="w-full h-full bg-linear-to-br from-gray-200 to-gray-300 rounded-2xl opacity-40"></div>
                                 </div>
@@ -53,14 +95,14 @@ function HomeNext() {
                             ჩვენი სერვისები
                         </h2> */}
 
-                        <div className="hidden md:grid grid-cols-4 gap-6  max-w-[1108px] cursor-pointer">
+                        <div className="hidden md:grid grid-cols-4 gap-6  max-w-[1108px] cursor-pointer relative">
                             {cards.map((card) => (
                                 <div
                                     key={card.id}
-                                    className={`${card.color} rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 border border-black`}
+                                    className={`${card.color} relative rounded-2xl p-6 shadow-lg  border border-black`}
                                 >
-                                    <div className="absolute -top-3 -right-3 bg-white rounded-full p-2 shadow-md">
-                                        <Star size={20} className={`${card.textColor}`} fill="currentColor" />
+                                    <div className="absolute -top-5 -right-5 w-10 h-10">
+                                        <img src={card.img} alt="" />
                                     </div>
 
                                     <div className="w-full h-24 bg-white rounded-xl mb-4 opacity-60"></div>
@@ -80,8 +122,9 @@ function HomeNext() {
                         <div className="md:hidden">
                             <div className="relative">
                                 <div className={`${cards[currentSlide].color} rounded-2xl p-6 shadow-lg border-2 border-yellow-400 transition-all duration-300`}>
-                                    <div className="absolute -top-3 -right-3 bg-white rounded-full p-2 shadow-md">
-                                        <Star size={20} className={`${cards[currentSlide].textColor}`} fill="currentColor" />
+                                    {/* ფოტოს relative parent უკვე ქარდზეა */}
+                                    <div className="absolute -top-5 -right-5 w-10 h-10">
+                                        <img src={cards[currentSlide].img} alt={cards[currentSlide].title} className="w-full h-full object-contain" />
                                     </div>
 
                                     <div className="w-full h-32 bg-white rounded-xl mb-4 opacity-60"></div>
@@ -123,7 +166,7 @@ function HomeNext() {
                     </div>
                 </div>
             </div>
-        </section>
+        </section >
     );
 }
 
