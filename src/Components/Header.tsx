@@ -1,16 +1,15 @@
 import { useEffect, useState } from 'react';
 import { ShoppingCart, Menu, X, Globe } from 'lucide-react';
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 
 function Header({ openCart, setOpenCart, totalItems }: any) {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const [activeIndex, setActiveIndex] = useState(0);
-    const [language, setLanguage] = useState('KA'); // 👈 არჩეული ენა
+    const [language, setLanguage] = useState('KA'); // არჩეული ენა
     const [scrolled, setScrolled] = useState(false);
 
-
     const navigate = useNavigate();
-
+    const location = useLocation(); // 👈 current path
 
     const toggleMenu = () => {
         setIsMenuOpen(!isMenuOpen);
@@ -26,24 +25,24 @@ function Header({ openCart, setOpenCart, totalItems }: any) {
         { text: 'კონტაქტი', path: '/contact' },
     ];
 
-    // 👇 Scroll listener — როდესაც იუზერი ჩამოისქროლებს, იცვლება ფონი
+    // 👇 Scroll listener — background
     useEffect(() => {
         const handleScroll = () => {
-            if (window.scrollY > 50) {
-                setScrolled(true);
-            } else {
-                setScrolled(false);
-            }
+            setScrolled(window.scrollY > 50);
         };
-
         window.addEventListener('scroll', handleScroll);
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
 
+    // 👇 Update active menu on location change (refresh or navigation)
+    useEffect(() => {
+        const currentIndex = menuItems.findIndex(item => item.path === location.pathname);
+        if (currentIndex !== -1) setActiveIndex(currentIndex);
+    }, [location.pathname]);
+
     return (
         <>
-            <header className={`fixed top-0 left-0 right-0 z-50 p-2.5 text-guge transition-all duration-300 ${scrolled ? 'bg-black/80 backdrop-blur-md shadow-lg' : 'bg-transparent'
-                }`}>
+            <header className={`fixed top-0 left-0 right-0 z-50 p-2.5 text-guge transition-all duration-300 ${scrolled ? 'bg-black/80 backdrop-blur-md shadow-lg' : 'bg-transparent'}`}>
                 <div className="container mx-auto px-4">
                     {/* ცხელი ხაზი */}
                     <div className="flex justify-between items-center lg:block text-[#919baf] text-sm ">
@@ -66,12 +65,9 @@ function Header({ openCart, setOpenCart, totalItems }: any) {
                                     key={index}
                                     onClick={() => {
                                         setActiveIndex(index);
-                                        navigate(menuItems[index].path);
+                                        navigate(item.path);
                                     }}
-                                    className={`transition-colors text-sm cursor-pointer ${activeIndex === index
-                                        ? 'text-orange-500'
-                                        : 'text-[#919baf] hover:text-orange-400'
-                                        }`}
+                                    className={`transition-colors text-sm cursor-pointer ${activeIndex === index ? 'text-orange-500' : 'text-[#919baf] hover:text-orange-400'}`}
                                 >
                                     {item.text}
                                 </button>
@@ -119,10 +115,7 @@ function Header({ openCart, setOpenCart, totalItems }: any) {
                 </div>
 
                 {/* --- მობილური მენიუ --- */}
-                <div
-                    className={`lg:hidden overflow-hidden transition-all duration-300 ease-in-out ${isMenuOpen ? 'max-h-screen opacity-100' : 'max-h-0 opacity-0'
-                        }`}
-                >
+                <div className={`lg:hidden overflow-hidden transition-all duration-300 ease-in-out ${isMenuOpen ? 'max-h-screen opacity-100' : 'max-h-0 opacity-0'}`}>
                     <nav className="bg-white border-t rounded-2xl border-gray-200 py-4 relative z-50">
                         <div className="container mx-auto px-4">
                             <div className="flex flex-col gap-1 items-start">
@@ -148,34 +141,9 @@ function Header({ openCart, setOpenCart, totalItems }: any) {
                                         onClick={() => {
                                             setActiveIndex(index);
                                             setIsMenuOpen(false);
-                                            // აქ უნდა დააკონტროლო რომელ გვერდზე წასვლა
-                                            switch (index) {
-                                                case 0:
-                                                    navigate('/');
-                                                    break;
-                                                case 1:
-                                                    navigate('/birthdayPrograms');
-                                                    break;
-                                                case 2:
-                                                    navigate('/heros');
-                                                    break;
-                                                case 3:
-                                                    navigate('/menu');
-                                                    break;
-                                                case 4:
-                                                    navigate('/otherProgram');
-                                                    break;
-                                                case 5:
-                                                    navigate('/gallery');
-                                                    break;
-                                                default:
-                                                    navigate('/');
-                                            }
+                                            navigate(item.path);
                                         }}
-                                        className={`py-3 text-lg transition-colors cursor-pointer ${activeIndex === index
-                                            ? 'text-orange-500'
-                                            : 'text-gray-700 hover:text-orange-500'
-                                            }`}
+                                        className={`py-3 text-lg transition-colors cursor-pointer ${activeIndex === index ? 'text-orange-500' : 'text-gray-700 hover:text-orange-500'}`}
                                     >
                                         {item.text}
                                     </button>

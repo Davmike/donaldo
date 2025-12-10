@@ -12,6 +12,7 @@ import Contact from './Components/Contact'
 import { useState } from 'react'
 import Cart from './Components/Cart'
 import type { CartItem } from './types/cart'
+import ScrollToTop from './Components/ScrollToTop'
 
 function App() {
   const [openCart, setOpenCart] = useState<boolean>(false);
@@ -47,6 +48,9 @@ function App() {
   return (
     <div>
       <BrowserRouter>
+
+        {/* ✅ გვერდის შეცვლისას scroll ზემოთ */}
+        <ScrollToTop />
 
         {/* აქ უკვე სწორად მიდის setOpenCart */}
         <Header setOpenCart={setOpenCart} openCart={openCart} totalItems={totalItems} />

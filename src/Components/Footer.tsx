@@ -49,7 +49,7 @@ function Footer() {
                         <div className="flex flex-col md:w-1/3">
                             <h3 className="text-white font-bold text-xl mb-3">გამოგვყევით:</h3>
                             <div className="flex gap-4">
-                                <a href="#" className="bg-white/20 hover:bg-white/30 rounded-full p-3 transition">
+                                <a href="https://www.facebook.com/profile.php?id=100093144237657" target='_blank' className="bg-white/20 hover:bg-white/30 rounded-full p-3 transition">
                                     <Facebook size={24} className="text-white" />
                                 </a>
                                 <a href="#" className="bg-white/20 hover:bg-white/30 rounded-full p-3 transition">
