@@ -186,14 +186,23 @@ function OtherPrograms({ addToCart, cartItems }: any) {
                                                 section: "Other Programs"
                                             })
                                         }
-                                        disabled={cartItems.some((i: { id: number; }) => i.id === program.id)}
-                                        className={`${getButtonClasses(program)} flex items-center justify-center gap-2 ${cartItems.some((i: { id: number; }) => i.id === program.id)
+                                        disabled={cartItems.some(
+                                            (i: { id: number; section: string; }) => i.id === program.id && i.section === "Other Programs"
+                                        )}
+                                        className={`${getButtonClasses(program)} flex items-center justify-center gap-2 ${cartItems.some(
+                                            (i: { id: number; section: string; }) => i.id === program.id && i.section === "Other Programs"
+                                        )
                                             ? "opacity-60 cursor-not-allowed"
                                             : "cursor-pointer"
                                             }`}
                                     >
-                                        {cartItems.some((i: { id: number; }) => i.id === program.id) ? "დამატებულია" : program.name}
+                                        {cartItems.some(
+                                            (i: { id: number; section: string; }) => i.id === program.id && i.section === "Other Programs"
+                                        )
+                                            ? "დამატებულია"
+                                            : program.name}
                                     </button>
+
 
                                 </div>
                             </div>

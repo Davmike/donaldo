@@ -20,20 +20,26 @@ function App() {
 
   const addToCart = (item: Omit<CartItem, "quantity">) => {
     setCartItems(prev => {
-      // თუ უკვე არსებობს, არ დაამატო
-      const exists = prev.find(i => i.id === item.id);
+      const exists = prev.find(
+        i => i.id === item.id && i.section === item.section
+      );
+
       if (exists) return prev;
 
-      // ახალი პროდუქტი, quantity = 1
       return [...prev, { ...item, quantity: 1 }];
     });
   };
 
 
+
   // პროდუქტის წაშლა
-  const removeFromCart = (id: string) => {
-    setCartItems(prev => prev.filter(i => i.id !== id));
+  const removeFromCart = (id: string, section: string) => {
+    setCartItems(prev =>
+      prev.filter(item => !(item.id === id && item.section === section))
+    );
   };
+
+
 
 
   // კალათაში ჯამური რაოდენობა

@@ -162,19 +162,26 @@ function Heros({ addToCart, cartItems }: any) {
                                                         section: "Heroes"
                                                     })
                                                 }
-                                                disabled={cartItems.some((i: { id: number; }) => i.id === selectedHero.id)}
+                                                disabled={cartItems.some(
+                                                    (item: { id: number; section: string; }) => item.id === selectedHero.id && item.section === "Heroes"
+                                                )}
                                                 className={`
         px-8 py-3 border border-black rounded-full font-semibold flex items-center gap-2
-        ${cartItems.some((i: { id: number; }) => i.id === selectedHero.id)
+        ${cartItems.some(
+                                                    (item: { id: number; section: string; }) => item.id === selectedHero.id && item.section === "Heroes"
+                                                )
                                                         ? "bg-gray-400 text-white cursor-not-allowed"
                                                         : "bg-[#F67524] text-white hover:bg-[#E88239] cursor-pointer"
                                                     }
     `}
                                             >
-                                                {cartItems.some((i: { id: number; }) => i.id === selectedHero.id)
+                                                {cartItems.some(
+                                                    (item: { id: number; section: string; }) => item.id === selectedHero.id && item.section === "Heroes"
+                                                )
                                                     ? "დამატებულია"
                                                     : "დაჯავშნა"}
                                             </button>
+
 
                                         </div>
                                     </div>

@@ -259,15 +259,21 @@ function Services({ addToCart, cartItems }: any) {
                                             id: selectedService.id,
                                             name: selectedService.title,
                                             price: Number(selectedService.price.replace('₾', '').trim()),
-                                            originalPrice: (selectedService.originalPrice.replace('₾', ''.trim())),
+                                            originalPrice: selectedService.originalPrice
+                                                ? Number(selectedService.originalPrice.replace('₾', '').trim())
+                                                : undefined,
                                             image: selectedService.image,
-                                            section: "Services"
+                                            section: "Service"
                                         })
                                     }
-                                    disabled={cartItems.some((i: { id: number; }) => i.id === selectedService.id)}
+                                    disabled={cartItems.some(
+                                        (i: { id: number; section: string; }) => i.id === selectedService.id && i.section === "Service"
+                                    )}
                                     className={`
         flex-1 px-6 py-3 font-bold rounded-full cursor-pointer border border-black flex items-center justify-center gap-2
-        ${cartItems.some((i: { id: number; }) => i.id === selectedService.id)
+        ${cartItems.some(
+                                        (i: { id: number; section: string; }) => i.id === selectedService.id && i.section === "Service"
+                                    )
                                             ? "bg-gray-400 text-white cursor-not-allowed"
                                             : selectedService.color === "yellow"
                                                 ? "bg-[#F67524] text-white hover:bg-orange-600"
@@ -276,10 +282,13 @@ function Services({ addToCart, cartItems }: any) {
     `}
                                 >
                                     <ShoppingCart size={18} />
-                                    {cartItems.some((i: { id: number; }) => i.id === selectedService.id)
+                                    {cartItems.some(
+                                        (i: { id: number; section: string; }) => i.id === selectedService.id && i.section === "Service"
+                                    )
                                         ? "დამატებულია"
                                         : "დაჯავშნა"}
                                 </button>
+
 
                             </div>
                         </div>

@@ -230,22 +230,29 @@ function BirthdayPrograms({ addToCart, cartItems }: any) {
                                             addToCart({
                                                 id: service.id,
                                                 name: service.title,
-                                                price: Number(service.price.replace('₾', '').trim()), // string → number
+                                                price: Number(service.price.replace('₾', '').trim()),
                                                 image: service.image,
                                                 section: "Birthday Programs"
                                             })
                                         }
-                                        disabled={cartItems.some((i: { id: number }) => i.id === service.id)}
+                                        disabled={cartItems.some(
+                                            (item: { id: number; section: string; }) => item.id === service.id && item.section === "Birthday Programs"
+                                        )}
                                         className={`cursor-pointer flex items-center justify-center gap-2 w-full px-4 py-3 rounded-full font-bold text-white
-        ${cartItems.some((i: { id: number }) => i.id === service.id)
+        ${cartItems.some(
+                                            (item: { id: number; section: string; }) => item.id === service.id && item.section === "Birthday Programs"
+                                        )
                                                 ? 'bg-gray-400 cursor-not-allowed'
                                                 : 'bg-[#1554A4] hover:bg-[#2D4373]'
                                             }
     `}
                                     >
                                         <ShoppingCart size={18} />
-                                        {cartItems.some((i: { id: number }) => i.id === service.id) ? 'დამატებულია' : 'კალათაში'}
+                                        {cartItems.some(
+                                            (item: { id: number; section: string; }) => item.id === service.id && item.section === "Birthday Programs"
+                                        ) ? 'დამატებულია' : 'კალათაში'}
                                     </button>
+
                                 </div>
                             </button>
                         ))}

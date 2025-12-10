@@ -3,8 +3,8 @@ import type { CartItem } from '../../src/types/cart';
 
 interface CartProps {
     items?: CartItem[];
-    onRemoveItem?: (id: string) => void;
-    setOpenCart: any;
+    onRemoveItem?: (id: string, section: string) => void;
+    setOpenCart: (open: boolean) => void;
 }
 
 function Cart({ items = [], onRemoveItem, setOpenCart }: CartProps) {
@@ -19,6 +19,7 @@ function Cart({ items = [], onRemoveItem, setOpenCart }: CartProps) {
         }
     })();
 
+    // 🔹 დაჯგუფება section-ის მიხედვით
     const groupedItems = items.reduce((acc, item) => {
         if (!acc[item.section]) {
             acc[item.section] = [];
@@ -28,12 +29,14 @@ function Cart({ items = [], onRemoveItem, setOpenCart }: CartProps) {
     }, {} as Record<string, CartItem[]>);
 
     const subtotal = items.reduce((sum, item) => sum + item.price, 0);
+
     const totalDiscount = items.reduce((sum, item) => {
         if (item.originalPrice) {
             return sum + (item.originalPrice - item.price);
         }
         return sum;
     }, 0);
+
     const total = subtotal;
 
     const handleSendToWhatsapp = () => {
@@ -103,12 +106,14 @@ ${contact.message}
                         ) : (
                             Object.entries(groupedItems).map(([section, sectionItems]) => (
                                 <div key={section} className="mb-6">
-                                    <h2 className="text-[#1554A4] font-semibold mb-4">{section}</h2>
+                                    <h2 className="text-[#1554A4] font-semibold mb-4">
+                                        {section}
+                                    </h2>
 
                                     <div className="space-y-4">
                                         {sectionItems.map((item) => (
                                             <div
-                                                key={item.id}
+                                                key={`${item.section}-${item.id}`}
                                                 className="flex items-center gap-3 pb-4 border-b border-gray-200 last:border-b-0"
                                             >
                                                 <img
@@ -121,9 +126,12 @@ ${contact.message}
                                                     <h3 className="font-semibold md:text-[20px] text-[#4a6fa5] mb-1">
                                                         {item.name}
                                                     </h3>
-                                                    <p className="text-sm md:text-[16px] text-[#5C6983]">
-                                                        {item.description}
-                                                    </p>
+
+                                                    {item.description && (
+                                                        <p className="text-sm md:text-[16px] text-[#5C6983]">
+                                                            {item.description}
+                                                        </p>
+                                                    )}
 
                                                     <div className="flex items-center gap-2 mt-1">
                                                         <span className="text-lg md:text-[25px] font-bold text-[#1554A4]">
@@ -139,7 +147,9 @@ ${contact.message}
                                                 </div>
 
                                                 <button
-                                                    onClick={() => onRemoveItem?.(item.id)}
+                                                    onClick={() =>
+                                                        onRemoveItem?.(item.id, item.section)
+                                                    }
                                                     className="cursor-pointer p-2 hover:bg-gray-100 rounded-lg"
                                                 >
                                                     <Trash2 className="w-5 h-5 text-gray-600" />
@@ -153,7 +163,15 @@ ${contact.message}
                     </div>
 
                     <div className="mt-4 pt-4 border-t-2 border-gray-200">
-                        {totalDiscount > 0 && (<div className="flex justify-between text-sm text-gray-600 mb-2"> <span>დაზოგილი თანხა:</span> <span className="text-red-500">-{totalDiscount}₾</span> </div>)}
+                        {totalDiscount > 0 && (
+                            <div className="flex justify-between text-sm text-gray-600 mb-2">
+                                <span>დაზოგილი თანხა:</span>
+                                <span className="text-red-500">
+                                    -{totalDiscount}₾
+                                </span>
+                            </div>
+                        )}
+
                         <div className="flex justify-between items-center mb-6">
                             <span className="text-2xl font-bold">ჯამი:</span>
                             <span className="text-3xl font-bold">{total}₾</span>
