@@ -1,5 +1,7 @@
 import { useState } from 'react';
 import { ChevronLeft, Check, ArrowRight, ShoppingCart } from 'lucide-react';
+import { useLanguage } from '../contexts/LanguageContext';
+
 
 interface Service {
     id: number;
@@ -13,52 +15,9 @@ interface Service {
     color: 'blue' | 'orange' | 'light-blue';
 }
 
-const services: Service[] = [
-    {
-        id: 1,
-        title: 'სამეფეხი 1',
-        guests: '2 საათი',
-        duration: '10 დამსაქმე',
-        price: '250 ₾',
-        features: ['1 წამყვანი', 'DJ', 'Laser Show', 'X-BOX', 'კარაოკე'],
-        description: 'დაზღვეულის ფლირტირება კმ ზღვა აღმიოსებელი. 10-ს. ხარწილდელიკილა - 2 საათი; დამსაქმელი ახალი მოთხოვილებელი პროგრამა (მხარდელების გამოცემა, რომლებმა შეხვდნენ 1 ნამსხვევი, DJ - ის მენეჯერი ფელიციიდა, Laser Show-ს ექსპლორერი კარაოკე, X-BOX მედავითი, კარაოკე სემელთიდან',
-        image: 'https://images.pexels.com/photos/3807517/pexels-photo-3807517.jpeg?auto=compress&cs=tinysrgb&w=600',
-        color: 'blue'
-    },
-    {
-        id: 2,
-        title: 'სამეფეხი 2',
-        guests: '2 საათი',
-        duration: '10 დამსაქმე',
-        price: '250 ₾',
-        features: ['2 ნამსხვევი', 'DJ', 'Laser Show', 'X-BOX', 'კარაოკე'],
-        description: 'დაზღვეულის ფლირტირება კმ ზღვა აღმიოსებელი. 10-ს. ხარწილდელიკილა - 2 საათი; დამსაქმელი ახალი მოთხოვილებელი პროგრამა (მხარდელების გამოცემა, რომლებმა შეხვდნენ 2 ნამსხვევი, DJ - ის მენეჯერი ფელიციიდა, Laser Show-ს ექსპლორერი კარაოკე, X-BOX მედავითი, კარაოკე სემელთიდან',
-        image: 'https://images.pexels.com/photos/1444716/pexels-photo-1444716.jpeg?auto=compress&cs=tinysrgb&w=600',
-        color: 'blue'
-    },
-    {
-        id: 3,
-        title: 'სახელმწიფო',
-        guests: '2 საათი',
-        duration: '1-5 დამსაქმე',
-        price: '250 ₾',
-        features: ['1 ნამსხვევი', 'DJ', 'Laser Show', 'X-BOX', 'კარაოკე'],
-        description: 'დაზღვეულის ფლირტირება კმ ზღვა აღმიოსებელი. 10-ს. ხარწილდელიკილა - 2 საათი; დამსაქმელი ახალი მოთხოვილებელი პროგრამა',
-        image: 'https://images.pexels.com/photos/3452361/pexels-photo-3452361.jpeg?auto=compress&cs=tinysrgb&w=600',
-        color: 'blue'
-    },
-    {
-        id: 4,
-        title: 'ფესტივალი',
-        guests: '2 საათი',
-        duration: '1-5 დამსაქმე',
-        price: '250 ₾',
-        features: ['2 "დეტალეთი" ნამსხვევი', 'DJ', 'Laser Show', 'X-BOX', 'კარაოკე'],
-        description: 'დაზღვეულის ფლირტირება კმ ზღვა აღმიოსებელი. 10-ს. ხარწილდელიკილა - 2 საათი; დამსაქმელი ახალი მოთხოვილებელი პროგრამა',
-        image: 'https://images.pexels.com/photos/3375971/pexels-photo-3375971.jpeg?auto=compress&cs=tinysrgb&w=600',
-        color: 'blue'
-    },
-];
+
+
+
 
 const getServiceColor = (id: number) => {
     if (id === 1) return 'bg-[#B4C4E5]';
@@ -71,6 +30,55 @@ const getServiceColor = (id: number) => {
 
 function BirthdayPrograms({ addToCart, cartItems }: any) {
     const [selectedService, setSelectedService] = useState<number | null>(null);
+
+    const { t } = useLanguage();
+
+    const services: Service[] = [
+        {
+            id: 1,
+            title: t.birthprogram1.title,
+            guests: t.birthprogram1.guests,
+            duration: t.birthprogram1.duration,
+            price: '250 ₾',
+            features: t.birthprogram1.features,
+            description: t.birthprogram1.description,
+            image: 'https://images.pexels.com/photos/3807517/pexels-photo-3807517.jpeg?auto=compress&cs=tinysrgb&w=600',
+            color: 'blue'
+        },
+        {
+            id: 2,
+            title: t.birthprogram2.title,
+            guests: t.birthprogram2.guests,
+            duration: t.birthprogram2.duration,
+            price: '250 ₾',
+            features: t.birthprogram2.features,
+            description: t.birthprogram2.description,
+            image: 'https://images.pexels.com/photos/1444716/pexels-photo-1444716.jpeg?auto=compress&cs=tinysrgb&w=600',
+            color: 'blue'
+        },
+        {
+            id: 3,
+            title: t.birthprogram3.title,
+            guests: t.birthprogram3.guests,
+            duration: t.birthprogram3.duration,
+            price: '250 ₾',
+            features: t.birthprogram3.features,
+            description: t.birthprogram3.description,
+            image: 'https://images.pexels.com/photos/3452361/pexels-photo-3452361.jpeg?auto=compress&cs=tinysrgb&w=600',
+            color: 'blue'
+        },
+        {
+            id: 4,
+            title: t.birthprogram4.title,
+            guests: t.birthprogram4.guests,
+            duration: t.birthprogram4.guests,
+            price: '250 ₾',
+            features: t.birthprogram4.features,
+            description: t.birthprogram4.description,
+            image: 'https://images.pexels.com/photos/3375971/pexels-photo-3375971.jpeg?auto=compress&cs=tinysrgb&w=600',
+            color: 'blue'
+        },
+    ];
     // const [currentSlide, setCurrentSlide] = useState(0);
 
     // const handlePrevSlide = () => {
@@ -100,7 +108,7 @@ function BirthdayPrograms({ addToCart, cartItems }: any) {
                             className="text-guge cursor-pointer flex items-center gap-2 text-[#4A6FA5] font-semibold mb-8 hover:opacity-70 transition-opacity"
                         >
                             <ChevronLeft size={20} />
-                            უკან დაბრუნება
+                            {t.birthprogram1.back}
                         </button>
                         <div className="grid grid-cols-1 lg:grid-cols-4 gap-4 mb-8 text-guge">
                             <div className="lg:col-span-1 space-y-3">
@@ -166,8 +174,8 @@ function BirthdayPrograms({ addToCart, cartItems }: any) {
                                             >
                                                 <ShoppingCart size={18} />
                                                 {cartItems.some((i: { id: number }) => i.id === service.id)
-                                                    ? "დამატებულია"
-                                                    : "კალათაში"}
+                                                    ? t.birthprogram1.added
+                                                    : t.birthprogram1.bookNow}
                                             </button>
                                         </div>
                                     </div>
@@ -220,7 +228,7 @@ function BirthdayPrograms({ addToCart, cartItems }: any) {
                                     </ul>
 
                                     <p onClick={() => setSelectedService(service.id)} className="text-[14px] text-[#1554A4] opacity-75 mb-4 flex items-center justify-end gap-1 hover:opacity-100">
-                                        სრული ნახვა <ArrowRight size={14} />
+                                        {t.birthprogram1.viewAll} <ArrowRight size={14} />
                                     </p>
                                     <button className="cursor-pointer w-full px-4 py-3 bg-[#1554A4] hover:bg-[#2D4373] transition-colors rounded-full font-bold text-white text-sm mb-2">
                                         {service.price}
@@ -286,14 +294,14 @@ function BirthdayPrograms({ addToCart, cartItems }: any) {
                                         </ul>
 
                                         <p className="text-[16px] opacity-75 mb-6 flex items-center justify-end gap-1 text-[#1554A4]">
-                                            სრული ნახვა <ArrowRight size={16} />
+                                            {t.birthprogram1.viewAll} <ArrowRight size={16} />
                                         </p>
 
                                         <button className="w-full px-6 py-3 bg-[#1554A4] hover:bg-white/30 transition-colors rounded-full font-bold text-white text-lg mb-3 cursor-pointer">
                                             {service.price}
                                         </button>
                                         <button className="cursor-pointer w-full px-6 py-3 bg-[#1554A4] hover:bg-[#2D4373] transition-colors rounded-full font-bold text-white text-lg">
-                                            დაჯავშნა
+                                            {t.birthprogram1.bookNow}
                                         </button>
                                     </div>
                                 </div>

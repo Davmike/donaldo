@@ -137,6 +137,48 @@ export const translations = {
             point3: "უნიკალური სათამაშო ზონები, რომლებიც ქმნის სწავლა-თამაშზე დაფუძნებულ საინტერესო გარემოს.",
             button: "გაიგე მეტი"
         },
+
+        // birthprogram
+        birthprogram1: {
+            back: "უკან დაბრუნება",
+            viewAll: "სრულად ნახვა",
+            added: "დამატებულია",
+            bookNow: "დაჯავშნა",
+
+            title: "სამეფეხი 1",
+            guests: '2 საათი',
+            duration: '10 დამსაქმე',
+            price: '250 ₾',
+            features: ['1 წამყვანი', 'DJ', 'Laser Show', 'X-BOX', 'კარაოკე'],
+            description: 'დაზღვეულის ფლირტირება კმ ზღვა აღმიოსებელი. 10-ს. ხარწილდელიკილა - 2 საათი; დამსაქმელი ახალი მოთხოვილებელი პროგრამა (მხარდელების გამოცემა, რომლებმა შეხვდნენ 1 ნამსხვევი, DJ - ის მენეჯერი ფელიციიდა, Laser Show-ს ექსპლორერი კარაოკე, X-BOX მედავითი, კარაოკე სემელთიდან',
+        },
+
+        birthprogram2: {
+            title: "სამეფეხი 2",
+            guests: '2 საათი',
+            duration: '10 დამსაქმე',
+            price: '250 ₾',
+            features: ['1 წამყვანი', 'DJ', 'Laser Show', 'X-BOX', 'კარაოკე'],
+            description: 'დაზღვეულის ფლირტირება კმ ზღვა აღმიოსებელი. 10-ს. ხარწილდელიკილა - 2 საათი; დამსაქმელი ახალი მოთხოვილებელი პროგრამა (მხარდელების გამოცემა, რომლებმა შეხვდნენ 1 ნამსხვევი, DJ - ის მენეჯერი ფელიციიდა, Laser Show-ს ექსპლორერი კარაოკე, X-BOX მედავითი, კარაოკე სემელთიდან',
+        },
+
+        birthprogram3: {
+            title: "სამეფეხი 3",
+            guests: '2 საათი',
+            duration: '10 დამსაქმე',
+            price: '250 ₾',
+            features: ['1 წამყვანი', 'DJ', 'Laser Show', 'X-BOX', 'კარაოკე'],
+            description: 'დაზღვეულის ფლირტირება კმ ზღვა აღმიოსებელი. 10-ს. ხარწილდელიკილა - 2 საათი; დამსაქმელი ახალი მოთხოვილებელი პროგრამა (მხარდელების გამოცემა, რომლებმა შეხვდნენ 1 ნამსხვევი, DJ - ის მენეჯერი ფელიციიდა, Laser Show-ს ექსპლორერი კარაოკე, X-BOX მედავითი, კარაოკე სემელთიდან',
+        },
+
+        birthprogram4: {
+            title: "სამეფეხი 4",
+            guests: '2 საათი',
+            duration: '10 დამსაქმე',
+            price: '250 ₾',
+            features: ['1 წამყვანი', 'DJ', 'Laser Show', 'X-BOX', 'კარაოკე'],
+            description: 'დაზღვეულის ფლირტირება კმ ზღვა აღმიოსებელი. 10-ს. ხარწილდელიკილა - 2 საათი; დამსაქმელი ახალი მოთხოვილებელი პროგრამა (მხარდელების გამოცემა, რომლებმა შეხვდნენ 1 ნამსხვევი, DJ - ის მენეჯერი ფელიციიდა, Laser Show-ს ექსპლორერი კარაოკე, X-BOX მედავითი, კარაოკე სემელთიდან',
+        },
     },
 
 
@@ -277,6 +319,49 @@ export const translations = {
             point3: "Unique play zones that create a fun, learning-oriented atmosphere.",
             button: "Learn More"
         },
+
+        // birthprogram
+
+        birthprogram1: {
+            back: "Back",
+            viewAll: "View More",
+            added: "Added",
+            bookNow: "Book Now",
+
+            title: "Program 1",
+            guests: "2 hours",
+            duration: "10 participants",
+            price: "250 ₾",
+            features: ["1 host", "DJ", "Laser Show", "X-BOX", "Karaoke"],
+            description: "A fun and engaging birthday program. Duration: 2 hours; suitable for 10 participants. Includes a host, DJ, Laser Show, X-BOX, and Karaoke.",
+        },
+
+        birthprogram2: {
+            title: "Program 2",
+            guests: "2 hours",
+            duration: "10 participants",
+            price: "250 ₾",
+            features: ["1 host", "DJ", "Laser Show", "X-BOX", "Karaoke"],
+            description: "A fun and engaging birthday program. Duration: 2 hours; suitable for 10 participants. Includes a host, DJ, Laser Show, X-BOX, and Karaoke.",
+        },
+
+        birthprogram3: {
+            title: "Program 3",
+            guests: "2 hours",
+            duration: "10 participants",
+            price: "250 ₾",
+            features: ["1 host", "DJ", "Laser Show", "X-BOX", "Karaoke"],
+            description: "A fun and engaging birthday program. Duration: 2 hours; suitable for 10 participants. Includes a host, DJ, Laser Show, X-BOX, and Karaoke.",
+        },
+
+        birthprogram4: {
+            title: "Program 4",
+            guests: "2 hours",
+            duration: "10 participants",
+            price: "250 ₾",
+            features: ["1 host", "DJ", "Laser Show", "X-BOX", "Karaoke"],
+            description: "A fun and engaging birthday program. Duration: 2 hours; suitable for 10 participants. Includes a host, DJ, Laser Show, X-BOX, and Karaoke.",
+        },
     },
 
 
@@ -416,6 +501,49 @@ export const translations = {
             point2: "Разнообразные активности, способствующие развитию и социализации.",
             point3: "Уникальные игровые зоны, создающие интересную обучающую атмосферу.",
             button: "Узнать больше"
+        },
+
+        // birthprogram
+
+        birthprogram1: {
+            back: "Назад",
+            viewAll: "Смотреть полностью",
+            added: "Добавлено",
+            bookNow: "Забронировать",
+
+            title: "Программа 1",
+            guests: "2 часа",
+            duration: "10 участников",
+            price: "250 ₾",
+            features: ["1 ведущий", "DJ", "Лазерное шоу", "X-BOX", "Караоке"],
+            description: "Весёлая и увлекательная программа для дня рождения. Продолжительность: 2 часа; для 10 участников. Включает ведущего, DJ, Лазерное шоу, X-BOX и Караоке.",
+        },
+
+        birthprogram2: {
+            title: "Программа 2",
+            guests: "2 часа",
+            duration: "10 участников",
+            price: "250 ₾",
+            features: ["1 ведущий", "DJ", "Лазерное шоу", "X-BOX", "Караоке"],
+            description: "Весёлая и увлекательная программа для дня рождения. Продолжительность: 2 часа; для 10 участников. Включает ведущего, DJ, Лазерное шоу, X-BOX и Караоке.",
+        },
+
+        birthprogram3: {
+            title: "Программа 3",
+            guests: "2 часа",
+            duration: "10 участников",
+            price: "250 ₾",
+            features: ["1 ведущий", "DJ", "Лазерное шоу", "X-BOX", "Караоке"],
+            description: "Весёлая и увлекательная программа для дня рождения. Продолжительность: 2 часа; для 10 участников. Включает ведущего, DJ, Лазерное шоу, X-BOX и Караоке.",
+        },
+
+        birthprogram4: {
+            title: "Программа 4",
+            guests: "2 часа",
+            duration: "10 участников",
+            price: "250 ₾",
+            features: ["1 ведущий", "DJ", "Лазерное шоу", "X-BOX", "Караоке"],
+            description: "Весёлая и увлекательная программа для дня рождения. Продолжительность: 2 часа; для 10 участников. Включает ведущего, DJ, Лазерное шоу, X-BOX и Караоке.",
         },
 
     },
