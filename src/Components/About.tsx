@@ -1,5 +1,8 @@
+import { useLanguage } from "../contexts/LanguageContext";
 
 function About() {
+    const { t } = useLanguage();
+
     return (
         <div id="about" className="relative overflow-hidden">
             <div className="absolute top-20 right-10 w-32 h-32 bg-[#D4A5A5]/30 rounded-full blur-3xl"></div>
@@ -8,7 +11,7 @@ function About() {
 
             <div className="container mx-auto px-4 py-16 md:py-24">
                 <h1 className="text-ashesha text-[64px] font-bold text-[#F67524] mb-8 text-center">
-                    Cven Sesaxeb
+                    {t.about.title}
                 </h1>
 
                 <div className="max-w-6xl mx-auto">
@@ -25,12 +28,12 @@ function About() {
 
                         <div className="w-full md:w-1/2 relative z-10">
                             <h3 className="text-[24px] md:text-3xl font-bold text-[#1554A4] mb-6 leading-tight text-guge">
-                                კეთილი იყოს თქვენი მობრძანება დონალდოლენდში!
+                                {t.about.welcome}
                             </h3>
 
                             <div className="rounded-2xl mb-6">
                                 <p className="text-[#5C6983] text-[20px] leading-relaxed text-guge">
-                                    ჩვენ, დონალდოლენდში, გვჯერა, რომ ვქმნით ჯადოსნურ მომენტებს, რომლებიც დაუვიწყარ მოგონებებად რჩება. ჩვენი თანამედროვე გასართობი ცენტრი შექმნილია იმისთვის, რომ გააღვივოს ბავშვების წარმოსახვა, ხელი შეუწყოს სწავლის პროცესს და, რაც მთავარია, დატოვოს მხიარული შთაბეჭდილებები!
+                                    {t.about.description}
                                 </p>
                             </div>
 
@@ -38,29 +41,26 @@ function About() {
                                 <li className="flex items-start gap-3">
                                     <span className="text-[#D66B4A] text-xl mt-1">•</span>
                                     <span className="text-gray-700 text-base">
-                                        უსაზღვროთ და დადელთ საათობაში სივრცეში ნებისმიერი ასაკის
-                                        ბავშვებისთვის.
+                                        {t.about.point1}
                                     </span>
                                 </li>
                                 <li className="flex items-start gap-3">
                                     <span className="text-[#D66B4A] text-xl mt-1">•</span>
                                     <span className="text-gray-700 text-base">
-                                        შემცვდელთ არცოდების, რომლებენ სხვადას სახელოსს
-                                        ხშოს.
+                                        {t.about.point2}
                                     </span>
                                 </li>
                                 <li className="flex items-start gap-3">
                                     <span className="text-[#D66B4A] text-xl mt-1">•</span>
                                     <span className="text-gray-700 text-base">
-                                        საათავფსანკილო ზონდი, რომლებენ ხელს უნდობს დორაკევი
-                                        აქტივობსა და წარომსახენს განფოთობებს.
+                                        {t.about.point3}
                                     </span>
                                 </li>
                             </ul>
 
                             <div className="w-full flex md:justify-end">
                                 <button className="w-full md:w-auto px-12 py-4 bg-[#1554A4] hover:bg-[#3D5A8A] transition-colors text-white font-bold rounded-full text-[24px] shadow-lg text-guge">
-                                    გაიგე მეტი
+                                    {t.about.button}
                                 </button>
                             </div>
                         </div>

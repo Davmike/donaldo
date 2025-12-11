@@ -125,7 +125,18 @@ export const translations = {
                 "დეტალური რეპორტი",
                 "სპეციალური მენეჯერი"
             ]
-        }
+        },
+
+        // about
+        about: {
+            title: "ჩვენს შესახებ",
+            welcome: "კეთილი იყოს თქვენი მობრძანება დონალდოლენდში!",
+            description: "დონალდოლენდში გვჯერა, რომ ბავშვებისთვის უნდა შევქმნათ ემოციებით სავსე, ჯადოსნური გამოცდილება, რომელიც დაუვიწყარ მოგონებებად იქცევა. ჩვენი თანამედროვე გასართობი სივრცე შექმნილია იმისთვის, რომ გააღვივოს ბავშვების წარმოსახვა, დაეხმაროს სწავლაში და, რაც მთავარია, გაუჩინოს ბედნიერი განწყობა!",
+            point1: "სასიამოვნო და უსაფრთხო გარემო ყველა ასაკის ბავშვისთვის.",
+            point2: "მრავალფეროვანი აქტივობები, რომლებიც ხელს უწყობს განვითარებას და სოციალური უნარების გაძლიერებას.",
+            point3: "უნიკალური სათამაშო ზონები, რომლებიც ქმნის სწავლა-თამაშზე დაფუძნებულ საინტერესო გარემოს.",
+            button: "გაიგე მეტი"
+        },
     },
 
 
@@ -254,7 +265,18 @@ export const translations = {
                 "Detailed report",
                 "Dedicated manager"
             ]
-        }
+        },
+
+        // about
+        about: {
+            title: "About Us",
+            welcome: "Welcome to DonaldoLand!",
+            description: "At DonaldoLand, we believe in creating magical, emotion-filled experiences that turn into unforgettable memories. Our modern entertainment center is designed to spark imagination, support learning, and most importantly, bring joy to children!",
+            point1: "A pleasant and safe environment for children of all ages.",
+            point2: "A variety of activities that support development and social skills.",
+            point3: "Unique play zones that create a fun, learning-oriented atmosphere.",
+            button: "Learn More"
+        },
     },
 
 
@@ -383,6 +405,17 @@ export const translations = {
                 "Детальный отчёт",
                 "Выделенный менеджер"
             ]
+        },
+
+        // about
+        about: {
+            title: "О нас",
+            welcome: "Добро пожаловать в Доналдоленд!",
+            description: "В Доналдоленде мы верим в создание волшебных и эмоциональных моментов, которые превращаются в незабываемые воспоминания. Наш современный развлекательный центр создан для того, чтобы вдохновлять детей, помогать им в обучении и, самое главное, дарить радость!",
+            point1: "Комфортная и безопасная среда для детей всех возрастов.",
+            point2: "Разнообразные активности, способствующие развитию и социализации.",
+            point3: "Уникальные игровые зоны, создающие интересную обучающую атмосферу.",
+            button: "Узнать больше"
         },
 
     },
