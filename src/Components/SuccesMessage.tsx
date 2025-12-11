@@ -3,7 +3,7 @@ import { Check } from 'lucide-react';
 function SuccessMessage() {
     return (
         <div className="min-h-screen bg-[#f5f3ed] flex items-center justify-center p-4">
-            <div className="w-full max-w-[420px] bg-white rounded-[32px] border-2 border-[#2c2c2c] p-8 sm:p-12 shadow-lg text-center">
+            <div className="w-full max-w-[420px] bg-white rounded-4xl border-2 border-[#2c2c2c] p-8 sm:p-12 shadow-lg text-center">
                 <div className="mb-8 flex justify-center">
                     <div className="w-32 h-32 sm:w-40 sm:h-40 rounded-full bg-[#d4e8e8] flex items-center justify-center">
                         <Check size={64} className="text-[#6ba5a5]" strokeWidth={3} />

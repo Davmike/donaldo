@@ -194,7 +194,7 @@ function BirthdayPrograms({ addToCart, cartItems }: any) {
                 <div className="max-w-7xl mx-auto">
                     <div className="hidden lg:grid grid-cols-4 gap-6">
                         {services.map((service) => (
-                            <button
+                            <div
                                 key={service.id}
 
                                 className={`cursor-pointer group rounded-3xl overflow-hidden shadow-lg transition-all hover:shadow-xl hover:scale-105`}
@@ -254,7 +254,7 @@ function BirthdayPrograms({ addToCart, cartItems }: any) {
                                     </button>
 
                                 </div>
-                            </button>
+                            </div>
                         ))}
                     </div>
 

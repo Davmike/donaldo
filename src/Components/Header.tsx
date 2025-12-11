@@ -1,11 +1,13 @@
 import { useEffect, useState } from 'react';
 import { ShoppingCart, Menu, X, Globe } from 'lucide-react';
 import { useNavigate, useLocation } from "react-router-dom";
+import { useLanguage } from "../contexts/LanguageContext";
+
 
 function Header({ openCart, setOpenCart, totalItems }: any) {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const [activeIndex, setActiveIndex] = useState(0);
-    const [language, setLanguage] = useState('KA'); // არჩეული ენა
+    const { language, setLanguage, t } = useLanguage();
     const [scrolled, setScrolled] = useState(false);
 
     const navigate = useNavigate();
@@ -16,14 +18,15 @@ function Header({ openCart, setOpenCart, totalItems }: any) {
     };
 
     const menuItems = [
-        { text: 'მთავარი', path: '/' },
-        { text: 'დაბადების დღე', path: '/birthdayPrograms' },
-        { text: 'გმირები', path: '/heros' },
-        { text: 'მენიუ', path: '/menu' },
-        { text: 'სხვა პროგრამები', path: '/otherProgram' },
-        { text: 'გალერეა', path: '/gallery' },
-        { text: 'კონტაქტი', path: '/contact' },
+        { text: t.home, path: "/" },
+        { text: t.birthday, path: "/birthdayPrograms" },
+        { text: t.heroes, path: "/heros" },
+        { text: t.menu, path: "/menu" },
+        { text: t.other, path: "/otherProgram" },
+        { text: t.gallery, path: "/gallery" },
+        { text: t.contact, path: "/contact" },
     ];
+
 
     // 👇 Scroll listener — background
     useEffect(() => {
@@ -46,7 +49,7 @@ function Header({ openCart, setOpenCart, totalItems }: any) {
                 <div className="container mx-auto px-4">
                     {/* ცხელი ხაზი */}
                     <div className="flex justify-between items-center lg:block text-[#919baf] text-sm ">
-                        <span>ცხელი ხაზი: </span>
+                        <span>{t.hotLine}: </span>
                         <span className="ml-2">+995 543 21 12 34</span>
                     </div>
 
@@ -81,13 +84,16 @@ function Header({ openCart, setOpenCart, totalItems }: any) {
                                 <Globe size={18} />
                                 <select
                                     value={language}
-                                    onChange={(e) => setLanguage(e.target.value)}
-                                    className="bg-transparent focus:outline-none text-white text-sm cursor-pointer"
+                                    onChange={(e) =>
+                                        setLanguage(e.target.value as "KA" | "EN" | "RU")
+                                    }
+                                    className="bg-transparent text-white outline-none"
                                 >
                                     <option value="KA">KA</option>
                                     <option value="EN">EN</option>
-                                    <option value="RUS">RUS</option>
+                                    <option value="RU">RU</option>
                                 </select>
+
                             </div>
 
                             <button className="relative p-2 hover:bg-white/10 transition-colors border-2 bg-gray-400 border-gray-400 rounded-full" onClick={() => setOpenCart(!openCart)}>
@@ -125,12 +131,14 @@ function Header({ openCart, setOpenCart, totalItems }: any) {
                                         <Globe size={18} />
                                         <select
                                             value={language}
-                                            onChange={(e) => setLanguage(e.target.value)}
+                                            onChange={(e) =>
+                                                setLanguage(e.target.value as "KA" | "EN" | "RU")
+                                            }
                                             className="bg-transparent focus:outline-none text-orange-500 text-sm cursor-pointer"
                                         >
                                             <option value="KA">KA</option>
                                             <option value="EN">EN</option>
-                                            <option value="RUS">RUS</option>
+                                            <option value="RU">RU</option>
                                         </select>
                                     </div>
                                 </div>

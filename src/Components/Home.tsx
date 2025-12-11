@@ -1,8 +1,11 @@
 import HomeNext from "./HomeNext";
 import Services from "./Services";
 import About from "./About";
+import { useLanguage } from "../contexts/LanguageContext";
 
 function Home({ addToCart, cartItems }: any) {
+    const { t } = useLanguage(); // 👈 აქ იღებ აქტიურ თარგმანს
+
     return (
         <div id="home">
             <section className="h-screen w-full overflow-hidden flex flex-col items-center justify-center">
@@ -21,15 +24,15 @@ function Home({ addToCart, cartItems }: any) {
 
                     <div className="flex flex-col items-start text-left gap-4 md:gap-6 max-w-2xl">
                         <h1 className="text-ashesha text-3xl md:text-5xl lg:text-6xl font-bold text-yellow-400 leading-tight">
-                            sauketeso momentebi iqmneba aq!
+                            {t.homeTitle}  {/* 👈 აქ გამოიყენე თარგმანი */}
                         </h1>
                         <p className="text-guge text-base text-left md:text-lg text-gray-300 leading-relaxed">
-                            დაბადების დღეები, გასართობი ზონები და დაუვიწყარი გართობა ყველა ბავშვისთვის.
+                            {t.homeDescription}  {/* 👈 აქაც */}
                         </p>
                     </div>
 
                     <button className="text-guge z-20 px-8 md:px-12 py-3 md:py-4 bg-blue-600 hover:bg-blue-700 transition-colors text-white font-semibold rounded-2xl text-base md:text-lg shadow-lg hover:shadow-xl md:max-w-[300px]">
-                        დაგეგმე წვეულება
+                        {t.homeButton}  {/* 👈 აქაც */}
                     </button>
                 </div>
             </section>
