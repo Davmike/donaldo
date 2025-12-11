@@ -4,8 +4,11 @@ import { useNavigate } from "react-router-dom";
 import thumb from "../../public/assets/thumbtack.png"
 import thumbBlue from "../../public/assets/thumbtackBlue.png"
 import vector from "../../public/assets/Vector 1.png"
+import { useLanguage } from "../contexts/LanguageContext";
 
 function HomeNext() {
+    const { t } = useLanguage();
+
     const navigate = useNavigate();
 
     const [currentSlide, setCurrentSlide] = useState(0);
@@ -14,7 +17,7 @@ function HomeNext() {
     const cards = [
         {
             id: 1,
-            title: 'სხვა პროგრამები',
+            title: t.homenext.otherPrograms,
             color: 'bg-[#FFD472]',
             textColor: 'text-orange-500',
             buttonColor: "#F67524",
@@ -23,7 +26,7 @@ function HomeNext() {
         },
         {
             id: 2,
-            title: 'გმირები',
+            title: t.homenext.heroes,
             color: 'bg-[#B4C4E5]',
             textColor: 'text-blue-700',
             buttonColor: "#1554A4",
@@ -32,7 +35,7 @@ function HomeNext() {
         },
         {
             id: 3,
-            title: 'გალერეა',
+            title: t.homenext.gallery,
             color: 'bg-[#FFD472]',
             textColor: 'text-orange-500',
             buttonColor: "#F67524",
@@ -41,7 +44,7 @@ function HomeNext() {
         },
         {
             id: 4,
-            title: 'მენიუ',
+            title: t.homenext.menu,
             color: 'bg-[#B4C4E5]',
             textColor: 'text-blue-700',
             buttonColor: "#1554A4",
@@ -83,7 +86,7 @@ function HomeNext() {
 
                                 <div onClick={() => navigate("/birthdayPrograms")} className="bg-[#B4C4E5] rounded-full py-3 md:py-4 px-6 text-center cursor pointer">
                                     <p className="text-[#1554A4] text-[20px] md:text-[24px] font-semibold text-sm md:text-base">
-                                        დაბადების დღის პროგრამები
+                                        {t.homenext.birthdayPrograms}
                                     </p>
                                 </div>
                             </div>

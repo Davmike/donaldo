@@ -25,6 +25,16 @@ export const translations = {
             followUs: "გამოგვყევით:",
             copyright: "© 2025 DonaldoLand. ყველა უფლება დაცულია.",
         },
+
+        // homenext
+        homenext: {
+            birthdayPrograms: "დაბადების დღის პროგრამები",
+            otherPrograms: "სხვა პროგრამები",
+            heroes: "გმირები",
+            gallery: "გალერეა",
+            menu: "მენიუ",
+            viewButton: "ნახვა",
+        },
     },
     EN: {
         // Header / Navigation
@@ -51,6 +61,16 @@ export const translations = {
             followUs: "Follow us:",
             copyright: "© 2025 DonaldoLand. All rights reserved.",
         },
+
+        // homenext
+        homenext: {
+            birthdayPrograms: "Birthday Programs",
+            otherPrograms: "Other Programs",
+            heroes: "Heroes",
+            gallery: "Gallery",
+            menu: "Menu",
+            viewButton: "View",
+        },
     },
     RU: {
         // Header / Navigation
@@ -76,6 +96,16 @@ export const translations = {
             email: "info@donaldoland.ge",
             followUs: "Следите за нами:",
             copyright: "© 2025 DonaldoLand. Все права защищены.",
+        },
+
+        // homenext
+        homenext: {
+            birthdayPrograms: "Программы дня рождения",
+            otherPrograms: "Другие программы",
+            heroes: "Герои",
+            gallery: "Галерея",
+            menu: "Меню",
+            viewButton: "Посмотреть",
         },
     },
 };
