@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { ArrowLeft, ShoppingCart } from 'lucide-react';
+import { useLanguage } from "../contexts/LanguageContext";
 
 interface Category {
     id: string;
@@ -20,26 +21,31 @@ interface MenuItem {
     type: 'children' | 'parents';
 }
 
-const categories: Category[] = [
-    { id: '1', name: 'დესერტები', imageUrl: 'https://images.pexels.com/photos/1055272/pexels-photo-1055272.jpeg?auto=compress&cs=tinysrgb&w=800', type: 'children' },
-    { id: '2', name: 'ცხელი კერძები', imageUrl: 'https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=800', type: 'parents' },
-    { id: '3', name: 'სასმელები', imageUrl: 'https://images.pexels.com/photos/1553969/pexels-photo-1553969.jpeg?auto=compress&cs=tinysrgb&w=800', type: 'children' },
-    { id: '4', name: 'ცივი კერძები', imageUrl: 'https://images.pexels.com/photos/1059905/pexels-photo-1059905.jpeg?auto=compress&cs=tinysrgb&w=800', type: 'parents' },
-    { id: '5', name: 'ცომეული', imageUrl: 'https://images.pexels.com/photos/1639562/pexels-photo-1639562.jpeg?auto=compress&cs=tinysrgb&w=800', type: 'children' },
-    { id: '6', name: 'გარნირი', imageUrl: 'https://images.pexels.com/photos/1893556/pexels-photo-1893556.jpeg?auto=compress&cs=tinysrgb&w=800', type: 'parents' },
-];
-
-const menuItems: MenuItem[] = [
-    { id: '1', categoryId: '1', name: 'ხილის პონჩიკი', description: 'ვანილი, ცვების, სახვევი...', price: 30, originalPrice: 36, discountPercentage: 20, imageUrl: 'https://images.pexels.com/photos/1055272/pexels-photo-1055272.jpeg?auto=compress&cs=tinysrgb&w=400', type: 'children' },
-    { id: '2', categoryId: '1', name: 'შოკოლადის დონატი', description: 'ვანილი, ცვების, სახვევი...', price: 30, imageUrl: 'https://images.pexels.com/photos/1055272/pexels-photo-1055272.jpeg?auto=compress&cs=tinysrgb&w=400', type: 'children' },
-    { id: '3', categoryId: '2', name: 'ხაშლამა', description: 'ხორცი, კარტოფილი, სახვევი...', price: 45, imageUrl: 'https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=400', type: 'parents' },
-];
 
 function Menu({ addToCart, cartItems }: any) {
     const [activeTab, setActiveTab] = useState<'parents' | 'children'>('parents');
     const [selectedCategory, setSelectedCategory] = useState<Category | null>(null);
     const [, setExpandedCategories] = useState<Set<string>>(new Set());
     const [filteredItems, setFilteredItems] = useState<MenuItem[]>([]);
+    const { t } = useLanguage();
+
+    const categories: Category[] = [
+        { id: '1', name: t.menu1.categories.desserts, imageUrl: 'https://images.pexels.com/photos/1055272/pexels-photo-1055272.jpeg?auto=compress&cs=tinysrgb&w=800', type: 'children' },
+        { id: '2', name: t.menu1.categories.hotDishes, imageUrl: 'https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=800', type: 'parents' },
+        { id: '3', name: t.menu1.categories.drinks, imageUrl: 'https://images.pexels.com/photos/1553969/pexels-photo-1553969.jpeg?auto=compress&cs=tinysrgb&w=800', type: 'children' },
+        { id: '4', name: t.menu1.categories.coldDishes, imageUrl: 'https://images.pexels.com/photos/1059905/pexels-photo-1059905.jpeg?auto=compress&cs=tinysrgb&w=800', type: 'parents' },
+        { id: '5', name: t.menu1.categories.bakery, imageUrl: 'https://images.pexels.com/photos/1639562/pexels-photo-1639562.jpeg?auto=compress&cs=tinysrgb&w=800', type: 'children' },
+        { id: '6', name: t.menu1.categories.garnish, imageUrl: 'https://images.pexels.com/photos/1893556/pexels-photo-1893556.jpeg?auto=compress&cs=tinysrgb&w=800', type: 'parents' },
+    ];
+
+    const menuItems: MenuItem[] = [
+        { id: '1', categoryId: '1', name: t.menu1.categories.foodName, description: t.menu1.categories.foodDescription, price: 30, originalPrice: 36, discountPercentage: 20, imageUrl: 'https://images.pexels.com/photos/1055272/pexels-photo-1055272.jpeg?auto=compress&cs=tinysrgb&w=400', type: 'children' },
+        {
+            id: '2', categoryId: '1', name: t.menu1.categories.foodName1, description: t.menu1.categories.foodDescription1, price: 30, imageUrl: 'https://images.pexels.com/photos/1055272/pexels-photo-1055272.jpeg?auto=compress&cs=tinysrgb&w=400', type: 'children'
+        },
+        { id: '3', categoryId: '2', name: t.menu1.categories.foodName2, description: t.menu1.categories.foodDescription2, price: 45, imageUrl: 'https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=400', type: 'parents' },
+    ];
+
 
     // ფილტრავს კატეგორიებს activeTab-ის მიხედვით
     const filteredCategories = categories.filter(cat => cat.type === activeTab);
@@ -98,7 +104,7 @@ function Menu({ addToCart, cartItems }: any) {
                                     : 'bg-white/60 text-[#4a6fa5] hover:bg-white/80'
                                     }`}
                             >
-                                ბავშვებისთვის
+                                {t.menu1.categories.children}
                             </button>
                             <button
                                 onClick={() => handleTabClick('parents')}
@@ -107,7 +113,7 @@ function Menu({ addToCart, cartItems }: any) {
                                     : 'bg-white/60 text-[#4a6fa5] hover:bg-white/80'
                                     }`}
                             >
-                                მშობლებისთვის
+                                {t.menu1.categories.parents}
                             </button>
                         </div>
 
@@ -140,7 +146,7 @@ function Menu({ addToCart, cartItems }: any) {
                             className="flex items-center gap-2 text-[#4a6fa5] font-medium mb-6 md:mb-8 hover:gap-3 transition-all px-4 py-2 rounded-full text-[16px] md:text-24px cursor-pointer text-guge"
                         >
                             <ArrowLeft size={20} />
-                            უკან დაბრუნება
+                            {t.menu1.actions.returnBack}
                         </button>
 
                         <div className="space-y-12 text-guge">

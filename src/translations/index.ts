@@ -233,9 +233,32 @@ export const translations = {
             fullDescription: [
                 'დიველელების სარელესისანი, ჰექიხოთილა გალიარებელი ხნელებ მეგიმბორელს მის დიოთურელის და ამეხისა'
             ],
-        }
-    },
+        },
 
+        // menu
+        menu1: {
+            categories: {
+                children: "ბავშვებისთვის",
+                parents: "მშობლებისთვის",
+                desserts: "დესერტები",
+                hotDishes: "ცხელი კერძები",
+                drinks: "სასმელები",
+                coldDishes: "ცივი კერძები",
+                bakery: "ცომეული",
+                garnish: "გარნირი",
+                foodName: 'ხილის პონჩიკი',
+                foodName1: 'შოკოლადის დონატი',
+                foodName2: 'ხაშლამა',
+                foodDescription: 'ვანილი, ცვების, სახვევი...',
+                foodDescription1: 'ვანილი, ფქვილი, შაქარი...',
+                foodDescription2: 'ხორცი, კარტოფილი, სახვევი...',
+            },
+            actions: {
+                returnBack: "უკან დაბრუნება",
+            },
+        },
+
+    },
 
     EN: {
         // Header / Navigation
@@ -472,8 +495,31 @@ export const translations = {
                 'Specialist in creative performances, capable of managing large-scale events and productions.',
             ],
         },
-    },
 
+        menu1: {
+            categories: {
+                children: "For children",
+                parents: "For parents",
+                desserts: "Desserts",
+                hotDishes: "Hot dishes",
+                drinks: "Drinks",
+                coldDishes: "Cold dishes",
+                bakery: "Bakery",
+                garnish: "Garnish",
+
+                foodName: 'Fruit Donut',
+                foodName1: 'Chocolate Donut',
+                foodName2: 'Khashlama',
+                foodDescription: 'Vanilla, eggs, frosting...',
+                foodDescription1: 'Vanilla, flour, sugar...',
+                foodDescription2: 'Meat, potatoes, dough...',
+            },
+            actions: {
+                returnBack: "Go back",
+            },
+        },
+
+    },
 
     RU: {
         // Header / Navigation
@@ -711,6 +757,33 @@ export const translations = {
             ],
         },
 
-    },
-}
+        menu1: {
+            categories: {
+                children: "Для детей",
+                parents: "Для родителей",
+                desserts: "Десерты",
+                hotDishes: "Горячие блюда",
+                drinks: "Напитки",
+                coldDishes: "Холодные блюда",
+                bakery: "Выпечка",
+                garnish: "Гарнир",
 
+                foodName: 'Фруктовый пончик',
+                foodName1: 'Шоколадный пончик',
+                foodName2: 'Хашлама',
+                foodDescription: 'Ваниль, яйца, глазурь...',
+                foodDescription1: 'Ваниль, мука, сахар...',
+                foodDescription2: 'Мясо, картофель, тесто...',
+            },
+            actions: {
+                returnBack: "Назад",
+            },
+        }
+
+
+    },
+
+
+
+
+}
