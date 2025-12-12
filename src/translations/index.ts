@@ -312,6 +312,26 @@ export const translations = {
             ],
 
             weekDays: ["ორშ", "სამ", "ოთხ", "ხუთ", "პარ", "შაბ", "კვი"],
+        },
+
+        // cart
+        cart: {
+            reviewBooking: "ჯავშნის გადახედვა",
+            empty: "კალათა ცარიელია",
+            savedAmount: "დაზოგილი თანხა",
+            total: "ჯამი",
+            send: "გაგზავნა",
+            fillFormAlert: "გთხოვ ჯერ შეავსო საკონტაქტო ფორმა ❌",
+            emptyCartAlert: "კალათა ცარიელია ❌",
+
+            orderTitle: "🟢 ახალი შეკვეთა",
+            name: "სახელი",
+            mobile: "ნომერი",
+            date: "თარიღი",
+            time: "დრო",
+            children: "ბავშვების რაოდენობა",
+            order: "შეკვეთა",
+            comment: "კომენტარი",
         }
 
 
@@ -630,7 +650,28 @@ export const translations = {
             ],
 
             weekDays: ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"],
+        },
+
+        // cart
+        cart: {
+            reviewBooking: "Review Booking",
+            empty: "Cart is empty",
+            savedAmount: "Saved Amount",
+            total: "Total",
+            send: "Send",
+            fillFormAlert: "Please fill out the contact form first ❌",
+            emptyCartAlert: "Cart is empty ❌",
+
+            orderTitle: "🟢 New Order",
+            name: "Name",
+            mobile: "Phone",
+            date: "Date",
+            time: "Time",
+            children: "Number of children",
+            order: "Order",
+            comment: "Comment",
         }
+
 
 
 
@@ -950,7 +991,28 @@ export const translations = {
             ],
 
             weekDays: ["Пн", "Вт", "Ср", "Чт", "Пт", "Сб", "Вс"],
-        }
+        },
+
+        // cart
+        cart: {
+            reviewBooking: "Просмотр бронирования",
+            empty: "Корзина пуста",
+            savedAmount: "Сэкономленная сумма",
+            total: "Итого",
+            send: "Отправить",
+            fillFormAlert: "Пожалуйста, сначала заполните контактную форму ❌",
+            emptyCartAlert: "Корзина пуста ❌",
+
+            orderTitle: "🟢 Новый заказ",
+            name: "Имя",
+            mobile: "Номер телефона",
+            date: "Дата",
+            time: "Время",
+            children: "Количество детей",
+            order: "Заказ",
+            comment: "Комментарий",
+        },
+
 
 
 

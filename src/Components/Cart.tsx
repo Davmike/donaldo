@@ -1,5 +1,6 @@
 import { Trash2 } from 'lucide-react';
 import type { CartItem } from '../../src/types/cart';
+import { useLanguage } from "../contexts/LanguageContext";
 
 interface CartProps {
     items?: CartItem[];
@@ -8,6 +9,8 @@ interface CartProps {
 }
 
 function Cart({ items = [], onRemoveItem, setOpenCart }: CartProps) {
+
+    const { t } = useLanguage();
 
     const contact = (() => {
         const saved = localStorage.getItem('contactData');
@@ -41,12 +44,12 @@ function Cart({ items = [], onRemoveItem, setOpenCart }: CartProps) {
 
     const handleSendToWhatsapp = () => {
         if (!contact) {
-            alert('გთხოვ ჯერ შეავსო საკონტაქტო ფორმა ❌');
+            alert(t.cart.fillFormAlert);
             return;
         }
 
         if (items.length === 0) {
-            alert('კალათა ცარიელია ❌');
+            alert(t.cart.emptyCartAlert);
             return;
         }
 
@@ -95,13 +98,13 @@ ${contact.message}
                 <div className="bg-white rounded-3xl shadow-lg p-6 flex flex-col max-h-[80vh]">
 
                     <h1 className="text-[28px] text-center font-bold text-[#1554A4] mb-4">
-                        ჯავშნის გადახედვა
+                        {t.cart.reviewBooking}
                     </h1>
 
                     <div className="flex-1 overflow-y-auto pr-1">
                         {Object.keys(groupedItems).length === 0 ? (
                             <div className="text-center text-gray-500 py-8">
-                                კალათა ცარიელია
+                                {t.cart.empty}
                             </div>
                         ) : (
                             Object.entries(groupedItems).map(([section, sectionItems]) => (
@@ -165,7 +168,7 @@ ${contact.message}
                     <div className="mt-4 pt-4 border-t-2 border-gray-200">
                         {totalDiscount > 0 && (
                             <div className="flex justify-between text-sm text-gray-600 mb-2">
-                                <span>დაზოგილი თანხა:</span>
+                                <span>{t.cart.savedAmount}:</span>
                                 <span className="text-red-500">
                                     -{totalDiscount}₾
                                 </span>
@@ -173,7 +176,7 @@ ${contact.message}
                         )}
 
                         <div className="flex justify-between items-center mb-6">
-                            <span className="text-2xl font-bold">ჯამი:</span>
+                            <span className="text-2xl font-bold">{t.cart.total}:</span>
                             <span className="text-3xl font-bold">{total}₾</span>
                         </div>
 
@@ -181,7 +184,7 @@ ${contact.message}
                             onClick={handleSendToWhatsapp}
                             className="w-full text-[20px] bg-blue-700 hover:bg-blue-800 text-white font-semibold py-4 rounded-2xl cursor-pointer"
                         >
-                            გაგზავნა
+                            {t.cart.send}
                         </button>
                     </div>
 
