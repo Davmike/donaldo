@@ -3,7 +3,7 @@ export const translations = {
         // Header / Navigation
         hotLine: "ცხელი ხაზი",
         home: "მთავარი",
-        homeTitle: "sauketeso momentebi iqmneba aq!",
+        // homeTitle: "sauketeso momentebi iqmneba aq!",
         homeDescription: "დაბადების დღეები, გასართობი ზონები და დაუვიწყარი გართობა ყველა ბავშვისთვის.",
         homeButton: "დაგეგმე წვეულება",
         birthday: "დაბადების დღე",
@@ -129,7 +129,7 @@ export const translations = {
 
         // about
         about: {
-            title: "ჩვენს შესახებ",
+            // title: "ჩვენს შესახებ",
             welcome: "კეთილი იყოს თქვენი მობრძანება დონალდოლენდში!",
             description: "დონალდოლენდში გვჯერა, რომ ბავშვებისთვის უნდა შევქმნათ ემოციებით სავსე, ჯადოსნური გამოცდილება, რომელიც დაუვიწყარ მოგონებებად იქცევა. ჩვენი თანამედროვე გასართობი სივრცე შექმნილია იმისთვის, რომ გააღვივოს ბავშვების წარმოსახვა, დაეხმაროს სწავლაში და, რაც მთავარია, გაუჩინოს ბედნიერი განწყობა!",
             point1: "სასიამოვნო და უსაფრთხო გარემო ყველა ასაკის ბავშვისთვის.",
@@ -341,7 +341,7 @@ export const translations = {
         // Header / Navigation
         hotLine: "Hot line",
         home: "Home",
-        homeTitle: "The happiest moments happen here!",
+        // homeTitle: "The happiest moments happen here!",
         homeDescription: "Birthdays, entertainment zones, and unforgettable fun for every child.",
         homeButton: "Plan a party",
         birthday: "Birthday",
@@ -682,7 +682,7 @@ export const translations = {
         // Header / Navigation
         hotLine: "Горячая линия",
         home: "Главная",
-        homeTitle: "Счастливые моменты происходят здесь!",
+        // homeTitle: "Счастливые моменты происходят здесь!",
         homeDescription: "Дни рождения, развлекательные зоны и незабываемые развлечения для каждого ребёнка.",
         homeButton: "Запланировать праздник",
         birthday: "День рождения",

@@ -24,7 +24,7 @@ function Home({ addToCart, cartItems }: any) {
 
                     <div className="flex flex-col items-start text-left gap-4 md:gap-6 max-w-2xl">
                         <h1 className="text-ashesha text-3xl md:text-5xl lg:text-6xl font-bold text-yellow-400 leading-tight">
-                            {t.homeTitle}  {/* 👈 აქ გამოიყენე თარგმანი */}
+                            sauketeso momentebi iqmneba aq!  {/* 👈 აქ გამოიყენე თარგმანი */}
                         </h1>
                         <p className="text-guge text-base text-left md:text-lg text-gray-300 leading-relaxed">
                             {t.homeDescription}  {/* 👈 აქაც */}

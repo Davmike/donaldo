@@ -258,7 +258,7 @@ function BirthdayPrograms({ addToCart, cartItems }: any) {
                                         <ShoppingCart size={18} />
                                         {cartItems.some(
                                             (item: { id: number; section: string; }) => item.id === service.id && item.section === "Birthday Programs"
-                                        ) ? 'დამატებულია' : 'კალათაში'}
+                                        ) ? t.birthprogram1.added : t.birthprogram1.bookNow}
                                     </button>
 
                                 </div>

@@ -11,7 +11,7 @@ function About() {
 
             <div className="container mx-auto px-4 py-16 md:py-24">
                 <h1 className="text-ashesha text-[64px] font-bold text-[#F67524] mb-8 text-center">
-                    {t.about.title}
+                    Cvens Sesaxeb
                 </h1>
 
                 <div className="max-w-6xl mx-auto">
