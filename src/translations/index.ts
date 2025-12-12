@@ -273,6 +273,13 @@ export const translations = {
             name10: 'დათას პროგრამის თამ (დამატებული 1 საათი)',
         },
 
+        // gallery
+        gallery1: {
+            photo: "ფოტო",
+            video: "ვიდეო",
+            photo_studio: "ფოტო-სტუდია"
+        }
+
     },
 
     EN: {
@@ -549,6 +556,13 @@ export const translations = {
             name10: 'Program duration (added 1 hour)',
         },
 
+        // gallery
+        gallery1: {
+            photo: "Photo",
+            video: "Video",
+            photo_studio: "Photo Studio"
+        },
+
     },
 
     RU: {
@@ -823,6 +837,13 @@ export const translations = {
             name8: 'Автор, детские аттракционы',
             name9: 'Название',
             name10: 'Длительность программы (добавлен 1 час)',
+        },
+
+        // gallery
+        gallery1: {
+            photo: "Фото",
+            video: "Видео",
+            photo_studio: "Фотостудия"
         }
 
 

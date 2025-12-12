@@ -1,122 +1,127 @@
 import { useState } from 'react';
 import { Play, ChevronLeft, ChevronRight } from 'lucide-react';
+import { useLanguage } from "../contexts/LanguageContext";
 
-const ITEMS_PER_PAGE = 6;
-
-const CATEGORIES = [
-    { id: 'photo', title: 'ფოტოები' },
-    { id: 'video', title: 'ვიდეოები' },
-    { id: 'photo_studio', title: 'ფოტო სტუდია' },
-];
-
-const GALLERY_DATA = {
-    photo: [
-        {
-            id: 1,
-            image: 'https://images.pexels.com/photos/1674752/pexels-photo-1674752.jpeg?auto=compress&cs=tinysrgb&w=800',
-            isVideo: false,
-        },
-        {
-            id: 2,
-            image: 'https://images.pexels.com/photos/1648374/pexels-photo-1648374.jpeg?auto=compress&cs=tinysrgb&w=800',
-            isVideo: false,
-        },
-        {
-            id: 3,
-            image: 'https://images.pexels.com/photos/1857157/pexels-photo-1857157.jpeg?auto=compress&cs=tinysrgb&w=800',
-            isVideo: false,
-        },
-        {
-            id: 4,
-            image: 'https://images.pexels.com/photos/1416736/pexels-photo-1416736.jpeg?auto=compress&cs=tinysrgb&w=800',
-            isVideo: false,
-        },
-        {
-            id: 5,
-            image: 'https://images.pexels.com/photos/1720186/pexels-photo-1720186.jpeg?auto=compress&cs=tinysrgb&w=800',
-            isVideo: false,
-        },
-        {
-            id: 6,
-            image: 'https://images.pexels.com/photos/1729797/pexels-photo-1729797.jpeg?auto=compress&cs=tinysrgb&w=800',
-            isVideo: false,
-        },
-        {
-            id: 7,
-            image: 'https://images.pexels.com/photos/1536619/pexels-photo-1536619.jpeg?auto=compress&cs=tinysrgb&w=800',
-            isVideo: false,
-        },
-        {
-            id: 8,
-            image: 'https://images.pexels.com/photos/1739970/pexels-photo-1739970.jpeg?auto=compress&cs=tinysrgb&w=800',
-            isVideo: false,
-        },
-    ],
-    video: [
-        {
-            id: 1,
-            image: 'https://images.pexels.com/photos/1674752/pexels-photo-1674752.jpeg?auto=compress&cs=tinysrgb&w=800',
-            isVideo: true,
-        },
-        {
-            id: 2,
-            image: 'https://images.pexels.com/photos/1648374/pexels-photo-1648374.jpeg?auto=compress&cs=tinysrgb&w=800',
-            isVideo: true,
-        },
-        {
-            id: 3,
-            image: 'https://images.pexels.com/photos/1857157/pexels-photo-1857157.jpeg?auto=compress&cs=tinysrgb&w=800',
-            isVideo: true,
-        },
-        {
-            id: 4,
-            image: 'https://images.pexels.com/photos/1416736/pexels-photo-1416736.jpeg?auto=compress&cs=tinysrgb&w=800',
-            isVideo: true,
-        },
-        {
-            id: 5,
-            image: 'https://images.pexels.com/photos/1720186/pexels-photo-1720186.jpeg?auto=compress&cs=tinysrgb&w=800',
-            isVideo: true,
-        },
-    ],
-    photo_studio: [
-        {
-            id: 1,
-            image: 'https://images.pexels.com/photos/1720186/pexels-photo-1720186.jpeg?auto=compress&cs=tinysrgb&w=800',
-            isVideo: false,
-        },
-        {
-            id: 2,
-            image: 'https://images.pexels.com/photos/1648374/pexels-photo-1648374.jpeg?auto=compress&cs=tinysrgb&w=800',
-            isVideo: false,
-        },
-        {
-            id: 3,
-            image: 'https://images.pexels.com/photos/1857157/pexels-photo-1857157.jpeg?auto=compress&cs=tinysrgb&w=800',
-            isVideo: false,
-        },
-        {
-            id: 4,
-            image: 'https://images.pexels.com/photos/1729797/pexels-photo-1729797.jpeg?auto=compress&cs=tinysrgb&w=800',
-            isVideo: false,
-        },
-        {
-            id: 5,
-            image: 'https://images.pexels.com/photos/1536619/pexels-photo-1536619.jpeg?auto=compress&cs=tinysrgb&w=800',
-            isVideo: false,
-        },
-        {
-            id: 6,
-            image: 'https://images.pexels.com/photos/1739970/pexels-photo-1739970.jpeg?auto=compress&cs=tinysrgb&w=800',
-            isVideo: false,
-        },
-    ],
-};
 
 function Gallery() {
     const [selectedCategory, setSelectedCategory] = useState('photo');
     const [currentPage, setCurrentPage] = useState(1);
     const [, setActiveSidebar] = useState<string | null>(null);
+
+    const { t } = useLanguage();
+
+    const CATEGORIES = [
+        { id: 'photo', title: t.gallery1.photo },
+        { id: 'video', title: t.gallery1.video },
+        { id: 'photo_studio', title: t.gallery1.photo_studio },
+    ];
+
+    const ITEMS_PER_PAGE = 6;
+
+
+    const GALLERY_DATA = {
+        photo: [
+            {
+                id: 1,
+                image: 'https://images.pexels.com/photos/1674752/pexels-photo-1674752.jpeg?auto=compress&cs=tinysrgb&w=800',
+                isVideo: false,
+            },
+            {
+                id: 2,
+                image: 'https://images.pexels.com/photos/1648374/pexels-photo-1648374.jpeg?auto=compress&cs=tinysrgb&w=800',
+                isVideo: false,
+            },
+            {
+                id: 3,
+                image: 'https://images.pexels.com/photos/1857157/pexels-photo-1857157.jpeg?auto=compress&cs=tinysrgb&w=800',
+                isVideo: false,
+            },
+            {
+                id: 4,
+                image: 'https://images.pexels.com/photos/1416736/pexels-photo-1416736.jpeg?auto=compress&cs=tinysrgb&w=800',
+                isVideo: false,
+            },
+            {
+                id: 5,
+                image: 'https://images.pexels.com/photos/1720186/pexels-photo-1720186.jpeg?auto=compress&cs=tinysrgb&w=800',
+                isVideo: false,
+            },
+            {
+                id: 6,
+                image: 'https://images.pexels.com/photos/1729797/pexels-photo-1729797.jpeg?auto=compress&cs=tinysrgb&w=800',
+                isVideo: false,
+            },
+            {
+                id: 7,
+                image: 'https://images.pexels.com/photos/1536619/pexels-photo-1536619.jpeg?auto=compress&cs=tinysrgb&w=800',
+                isVideo: false,
+            },
+            {
+                id: 8,
+                image: 'https://images.pexels.com/photos/1739970/pexels-photo-1739970.jpeg?auto=compress&cs=tinysrgb&w=800',
+                isVideo: false,
+            },
+        ],
+        video: [
+            {
+                id: 1,
+                image: 'https://images.pexels.com/photos/1674752/pexels-photo-1674752.jpeg?auto=compress&cs=tinysrgb&w=800',
+                isVideo: true,
+            },
+            {
+                id: 2,
+                image: 'https://images.pexels.com/photos/1648374/pexels-photo-1648374.jpeg?auto=compress&cs=tinysrgb&w=800',
+                isVideo: true,
+            },
+            {
+                id: 3,
+                image: 'https://images.pexels.com/photos/1857157/pexels-photo-1857157.jpeg?auto=compress&cs=tinysrgb&w=800',
+                isVideo: true,
+            },
+            {
+                id: 4,
+                image: 'https://images.pexels.com/photos/1416736/pexels-photo-1416736.jpeg?auto=compress&cs=tinysrgb&w=800',
+                isVideo: true,
+            },
+            {
+                id: 5,
+                image: 'https://images.pexels.com/photos/1720186/pexels-photo-1720186.jpeg?auto=compress&cs=tinysrgb&w=800',
+                isVideo: true,
+            },
+        ],
+        photo_studio: [
+            {
+                id: 1,
+                image: 'https://images.pexels.com/photos/1720186/pexels-photo-1720186.jpeg?auto=compress&cs=tinysrgb&w=800',
+                isVideo: false,
+            },
+            {
+                id: 2,
+                image: 'https://images.pexels.com/photos/1648374/pexels-photo-1648374.jpeg?auto=compress&cs=tinysrgb&w=800',
+                isVideo: false,
+            },
+            {
+                id: 3,
+                image: 'https://images.pexels.com/photos/1857157/pexels-photo-1857157.jpeg?auto=compress&cs=tinysrgb&w=800',
+                isVideo: false,
+            },
+            {
+                id: 4,
+                image: 'https://images.pexels.com/photos/1729797/pexels-photo-1729797.jpeg?auto=compress&cs=tinysrgb&w=800',
+                isVideo: false,
+            },
+            {
+                id: 5,
+                image: 'https://images.pexels.com/photos/1536619/pexels-photo-1536619.jpeg?auto=compress&cs=tinysrgb&w=800',
+                isVideo: false,
+            },
+            {
+                id: 6,
+                image: 'https://images.pexels.com/photos/1739970/pexels-photo-1739970.jpeg?auto=compress&cs=tinysrgb&w=800',
+                isVideo: false,
+            },
+        ],
+    };
 
     const items = selectedCategory ? GALLERY_DATA[selectedCategory as keyof typeof GALLERY_DATA] : [];
     const totalPages = Math.ceil(items.length / ITEMS_PER_PAGE);
