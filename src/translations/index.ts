@@ -278,7 +278,29 @@ export const translations = {
             photo: "ფოტო",
             video: "ვიდეო",
             photo_studio: "ფოტო-სტუდია"
+        },
+
+        // contact
+        contactForm: {
+            title: 'დამიკავშირდი!',
+            requiredWarning: 'გთხოვ შეავსო ყველა სავალდებულო ველი',
+            readyToSend: 'გადაგზავნა მზად არის ✅',
+
+            name: 'სახელი',
+            phone: 'მობილურის ნომერი',
+            dateAndTime: 'თარიღი და დრო',
+            date: 'თარიღი',
+            time: 'დრო',
+            childrenCount: 'ბავშვების რაოდენობა',
+            comment: 'კომენტარი',
+            details: 'დეტალები...',
+
+            send: 'გაგზავნა',
+            back: 'უკან დაბრუნება',
+
+            newReservation: 'ახალი ჯავშანი',
         }
+
 
     },
 
@@ -563,6 +585,28 @@ export const translations = {
             photo_studio: "Photo Studio"
         },
 
+        // contact
+        contactForm: {
+            title: 'Contact us!',
+            requiredWarning: 'Please fill in all required fields',
+            readyToSend: 'Ready to send',
+
+            name: 'Name',
+            phone: 'Mobile number',
+            dateAndTime: 'Date and time',
+            date: 'Date',
+            time: 'Time',
+            childrenCount: 'Number of children',
+            comment: 'Comment',
+            details: 'Details...',
+
+            send: 'Send',
+            back: 'Go back',
+
+            newReservation: 'New reservation',
+        }
+
+
     },
 
     RU: {
@@ -844,7 +888,29 @@ export const translations = {
             photo: "Фото",
             video: "Видео",
             photo_studio: "Фотостудия"
+        },
+
+        // contact
+        contactForm: {
+            title: 'Свяжитесь с нами!',
+            requiredWarning: 'Пожалуйста, заполните все обязательные поля',
+            readyToSend: 'Готово к отправке',
+
+            name: 'Имя',
+            phone: 'Номер мобильного',
+            dateAndTime: 'Дата и время',
+            date: 'Дата',
+            time: 'Время',
+            childrenCount: 'Количество детей',
+            comment: 'Комментарий',
+            details: 'Детали...',
+
+            send: 'Отправить',
+            back: 'Назад',
+
+            newReservation: 'Новая бронь',
         }
+
 
 
     },

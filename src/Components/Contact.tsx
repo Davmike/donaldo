@@ -1,6 +1,8 @@
 import { useState, useRef, useEffect } from 'react';
 import { Calendar, ChevronLeft, ChevronRight } from 'lucide-react';
 import DateTimePicker from './DateTimePicker';
+import { useLanguage } from "../contexts/LanguageContext";
+
 
 function Contact() {
     const [showDatePicker, setShowDatePicker] = useState(false);
@@ -8,6 +10,8 @@ function Contact() {
     const scrollContainerRef = useRef<HTMLDivElement>(null);
 
     const [status, setStatus] = useState<{ type: 'error' | 'success'; message: string } | null>(null);
+
+    const { t } = useLanguage();
 
     const [formData, setFormData] = useState({
         name: '',
@@ -77,14 +81,14 @@ function Contact() {
         if (!validateForm()) {
             setStatus({
                 type: 'error',
-                message: 'გთხოვ შეავსო ყველა სავალდებულო ველი'
+                message: t.contactForm.requiredWarning
             });
             return;
         }
 
         setStatus({
             type: 'success',
-            message: 'გადაგზავნა მზად არის ✅'
+            message: t.contactForm.readyToSend
         });
 
         const whatsappNumber = '995555925444';
@@ -119,7 +123,7 @@ ${formData.message}
             <div className="w-full max-w-[986px] bg-[#FDF7E9] rounded-4xl border p-8 md:p-12 shadow-sm">
 
                 <h1 className="text-[#1554A4] text-[28px] md:text-4xl font-bold text-center mb-10">
-                    დაგვიკავშირდი!
+                    {t.contactForm.title}
                 </h1>
 
                 {status && (
@@ -135,7 +139,7 @@ ${formData.message}
 
                     <input
                         type="text"
-                        placeholder="სახელი"
+                        placeholder={t.contactForm.name}
                         value={formData.name}
                         onChange={(e) => {
                             setFormData({ ...formData, name: e.target.value });
@@ -147,7 +151,7 @@ ${formData.message}
 
                     <input
                         type="tel"
-                        placeholder="მობილურის ნომერი"
+                        placeholder={t.contactForm.phone}
                         value={formData.mobile}
                         onChange={(e) => {
                             setFormData({ ...formData, mobile: e.target.value });
@@ -162,7 +166,7 @@ ${formData.message}
                             readOnly
                             onClick={() => setShowDatePicker(true)}
                             value={formData.date && formData.time ? `${formData.date} | ${formData.time}` : ''}
-                            placeholder="თარიღი და დრო"
+                            placeholder={t.contactForm.dateAndTime}
                             className={`w-full px-6 py-4 bg-[#faf9f6] border rounded-xl cursor-pointer
                                 ${(errors.date || errors.time) ? 'border-red-500' : 'border-[#FFD472]'}`}
                         />
@@ -198,7 +202,7 @@ ${formData.message}
 
                     <textarea
                         rows={6}
-                        placeholder="დეტალები..."
+                        placeholder={t.contactForm.details}
                         value={formData.message}
                         onChange={(e) => {
                             setFormData({ ...formData, message: e.target.value });
@@ -212,7 +216,7 @@ ${formData.message}
                         onClick={handleSubmit}
                         className="w-full bg-[#1554A4] text-white py-4 rounded-3xl text-lg hover:opacity-90 transition"
                     >
-                        გაგზავნა
+                        {t.contactForm.send}
                     </button>
 
                 </div>
