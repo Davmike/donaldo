@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { ChevronLeft, ChevronRight, ArrowLeft } from 'lucide-react';
+import { useLanguage } from "../contexts/LanguageContext";
 
 interface Hero {
     id: number;
@@ -12,69 +13,58 @@ interface Hero {
     image: string;
 }
 
-const heroes: Hero[] = [
-    {
-        id: 1,
-        name: 'პინოქიო',
-        description: 'მრავალჟანრიანი გამოსახულება თავ...',
-        fullDescription: [
-            'ეროვნების სპეციალისტი, ჰაქერები ხუკერელ ხელოვო მეტწინების მის თევანდენი და ამისას',
-            'სისხლების დემდელიხერიო", სისხლიერებ თიხსალეს აბლევის ნატევნელელი ისხელებელს, რომელიკ ართის სისხლროელის თელის მინძებიელებს ფინასის, რა იქრეს ერგევერის ქორკოცი',
-            'შორენსი ერთიცების მადევიალუხრი კორპრიელი არმეკვა დიებსის" თქბროს, საბოლა მადწევრეს მორლაპწს ეკროთს ეთიიხების ერთისხოდეს შედებელობის.',
-            'ყკიბილექრე მელოეხისი", მხსიარკოდიი შესოსკელელრნე დიელესოტედის ვორლიებელის შადებოხოლობისი',
-            'ოლსსეხეხრე მელოსისფელო; კოლოლოძოოროხოტოლი დეოთოსოდასა პოროთოსია, პკკოჰებს და სხვა ვროთილების ელეროელდკოროსი.'
-        ],
-        price: 50,
-        image: 'https://via.placeholder.com/200x300/4169E1/FFFFFF?text=Pinocchio'
-    },
-    {
-        id: 2,
-        name: 'ბიენადინი',
-        description: 'მრავალჟანრიანი გამოსახულება თავ...',
-        fullDescription: [
-            'დიველელების სარელესისანი, ჰექიხოთილა გალიარებელი ხნელებ მეგიმბორელს მის დიოთურელის და ამეხისა',
-            'დისხლიწის ყენდიხაროდისინი", მისხხოლიპს მაბთაინო გალივის მათშელენს ხამეხიდელსო, ხოზფელო სკოც სისხხორსისტო თელის მონქგობლებს მედორებთო, რა კალია მხალეხი ჰოდიოქელი'
-        ],
-        price: 50,
-        originalPrice: 60,
-        discount: '-20 %',
-        image: 'https://via.placeholder.com/200x300/DC143C/FFFFFF?text=Spider-Man'
-    },
-    {
-        id: 3,
-        name: 'პინოქიო',
-        description: 'მრავალჟანრიანი გამოსახულება თავ...',
-        fullDescription: [
-            'დიველელების სარელესისანი, ჰექიხოთილა გალიარებელი ხნელებ მეგიმბორელს მის დიოთურელის და ამეხისა'
-        ],
-        price: 50,
-        image: 'https://via.placeholder.com/200x300/FFD700/000000?text=Iron+Man'
-    },
-    {
-        id: 4,
-        name: 'პინოქიო',
-        description: 'მრავალჟანრიანი გამოსახულება თავ...',
-        fullDescription: [
-            'დიველელების სარელესისანი, ჰექიხოთილა გალიარებელი ხნელებ მეგიმბორელს მის დიოთურელის და ამეხისა'
-        ],
-        price: 50,
-        image: 'https://via.placeholder.com/200x300/000000/FFFFFF?text=Batman'
-    },
-    {
-        id: 5,
-        name: 'პინოქიო',
-        description: 'მრავალჟანრიანი გამოსახულება თავ...',
-        fullDescription: [
-            'დიველელების სარელესისანი, ჰექიხოთილა გალიარებელი ხნელებ მეგიმბორელს მის დიოთურელის და ამეხისა'
-        ],
-        price: 50,
-        image: 'https://via.placeholder.com/200x300/0066CC/FFFFFF?text=Sonic'
-    }
-];
 
 function Heros({ addToCart, cartItems }: any) {
     const [selectedHero, setSelectedHero] = useState<Hero | null>(null);
     const [currentIndex, setCurrentIndex] = useState(0);
+
+    const { t } = useLanguage();
+
+    const heroes: Hero[] = [
+        {
+            id: 1,
+            name: t.hero1.name,
+            description: t.hero1.description,
+            fullDescription: t.hero1.fullDescription,
+            price: 50,
+            image: 'https://via.placeholder.com/200x300/4169E1/FFFFFF?text=Pinocchio'
+        },
+        {
+            id: 2,
+            name: t.hero2.name,
+            description: t.hero2.description,
+            fullDescription: t.hero2.fullDescription,
+            price: 50,
+            originalPrice: 60,
+            discount: '-20 %',
+            image: 'https://via.placeholder.com/200x300/DC143C/FFFFFF?text=Spider-Man'
+        },
+        {
+            id: 3,
+            name: t.hero3.name,
+            description: t.hero3.description,
+            fullDescription: t.hero3.fullDescription,
+            price: 50,
+            image: 'https://via.placeholder.com/200x300/FFD700/000000?text=Iron+Man'
+        },
+        {
+            id: 4,
+            name: t.hero4.name,
+            description: t.hero4.description,
+            fullDescription: t.hero4.fullDescription,
+            price: 50,
+            image: 'https://via.placeholder.com/200x300/000000/FFFFFF?text=Batman'
+        },
+        {
+            id: 5,
+            name: t.hero5.name,
+            description: t.hero5.description,
+            fullDescription: t.hero5.fullDescription,
+            price: 50,
+            image: 'https://via.placeholder.com/200x300/0066CC/FFFFFF?text=Sonic'
+        }
+    ];
+
 
     const handlePrevious = () => {
         setCurrentIndex((prev) => (prev > 0 ? prev - 1 : heroes.length - 1));
@@ -104,7 +94,7 @@ function Heros({ addToCart, cartItems }: any) {
                         className="flex items-center gap-2 text-[#4169E1] mb-8 hover:opacity-80 transition-opacity"
                     >
                         <ArrowLeft className="w-5 h-5" />
-                        <span className="text-lg text-guge" onClick={handlePrevious}>უკან დაბრუნება</span>
+                        <span className="text-lg text-guge" onClick={handlePrevious}>{t.hero1.back}</span>
                     </button>
 
                     <div className="rounded-3xl border text-guge">
@@ -128,7 +118,7 @@ function Heros({ addToCart, cartItems }: any) {
                                             {selectedHero.fullDescription[0]}
                                         </p>
                                         <div className="space-y-3">
-                                            <p className="font-semibold text-[16px] text-[#B4C4E5]">აღწერება მოიცავს:</p>
+                                            <p className="font-semibold text-[16px] text-[#B4C4E5]">{t.hero1.agwera}:</p>
                                             <ul className="space-y-2 list-none">
                                                 {selectedHero.fullDescription.slice(1).map((desc, index) => (
                                                     <li key={index} className="flex items-start gap-2">
@@ -144,11 +134,11 @@ function Heros({ addToCart, cartItems }: any) {
 
                                     <div className="flex flex-col sm:flex-row items-center justify-between gap-4 mt-8">
                                         <div className="text-2xl lg:text-3xl font-bold text-[#FFD472]">
-                                            ფასი: {selectedHero.price}₾
+                                            {t.hero1.price}: {selectedHero.price}₾
                                         </div>
                                         <div className="flex gap-3">
                                             <button onClick={handleBack} className="px-6 py-3 text-white rounded-full transition-colors border">
-                                                უკან დაბრუნება
+                                                {t.hero1.back}
                                             </button>
                                             <button
                                                 onClick={() =>
@@ -178,8 +168,8 @@ function Heros({ addToCart, cartItems }: any) {
                                                 {cartItems.some(
                                                     (item: { id: number; section: string; }) => item.id === selectedHero.id && item.section === "Heroes"
                                                 )
-                                                    ? "დამატებულია"
-                                                    : "დაჯავშნა"}
+                                                    ? t.hero1.added
+                                                    : t.hero1.bookNow}
                                             </button>
 
 
@@ -203,9 +193,9 @@ function Heros({ addToCart, cartItems }: any) {
 
                 <div className="flex justify-center items-center gap-4 mb-12">
                     <div className="flex items-center gap-3 bg-white rounded-full px-3 py-2 border text-guge text-[20px] md:text-[24px]">
-                        <span className="text-[#1554A4] font-medium">გასვლითი ლოკაცია</span>
+                        <span className="text-[#1554A4] font-medium">{t.hero1.gasvla}</span>
                         <button className="bg-[#F67524] text-white px-3 py-4 rounded-full font-medium hover:bg-[#E88239] transition-colors">
-                            ადგილზე
+                            {t.hero1.adgilze}
                         </button>
                     </div>
                 </div>
@@ -255,7 +245,7 @@ function Heros({ addToCart, cartItems }: any) {
                                                 <div className="p-6">
                                                     <h3 className="text-xl font-bold mb-2 text-[#FFD472]">{hero.name}</h3>
                                                     <p className="text-sm mb-4 line-clamp-2 text-[#B4C4E5]">
-                                                        {hero.description}
+                                                        {t.hero1.description}
                                                     </p>
                                                     <div className="flex items-center justify-between mb-4">
                                                         <div className="flex items-center gap-2">
@@ -271,7 +261,7 @@ function Heros({ addToCart, cartItems }: any) {
                                                         onClick={() => handleSelectHero(hero)}
                                                         className="w-full bg-[#F67524] text-white py-3 text-[20px] rounded-full font-semibold hover:bg-[#E88239] transition-colors"
                                                     >
-                                                        სრულად
+                                                        {t.hero1.viewAll}
                                                     </button>
                                                 </div>
                                             </div>

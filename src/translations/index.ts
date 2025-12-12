@@ -179,6 +179,61 @@ export const translations = {
             features: ['1 წამყვანი', 'DJ', 'Laser Show', 'X-BOX', 'კარაოკე'],
             description: 'დაზღვეულის ფლირტირება კმ ზღვა აღმიოსებელი. 10-ს. ხარწილდელიკილა - 2 საათი; დამსაქმელი ახალი მოთხოვილებელი პროგრამა (მხარდელების გამოცემა, რომლებმა შეხვდნენ 1 ნამსხვევი, DJ - ის მენეჯერი ფელიციიდა, Laser Show-ს ექსპლორერი კარაოკე, X-BOX მედავითი, კარაოკე სემელთიდან',
         },
+
+        // heros
+        hero1: {
+            agwera: "აღწერება მოიცავს",
+            back: "უკან დაბრუნება",
+            added: "დამატებულია",
+            bookNow: "დაჯავშნა",
+            viewAll: "სრულად ნახვა",
+            price: "ფასი",
+            gasvla: "გასვლითი ლოკაცია",
+            adgilze: "ადგილზე",
+
+            name: 'პინოქიო',
+            description: 'მრავალჟანრიანი გამოსახულება თავ...',
+            fullDescription: [
+                'ეროვნების სპეციალისტი, ჰაქერები ხუკერელ ხელოვო მეტწინების მის თევანდენი და ამისას',
+                'სისხლების დემდელიხერიო", სისხლიერებ თიხსალეს აბლევის ნატევნელელი ისხელებელს, რომელიკ ართის სისხლროელის თელის მინძებიელებს ფინასის, რა იქრეს ერგევერის ქორკოცი',
+                'შორენსი ერთიცების მადევიალუხრი კორპრიელი არმეკვა დიებსის" თქბროს, საბოლა მადწევრეს მორლაპწს ეკროთს ეთიიხების ერთისხოდეს შედებელობის.',
+                'ყკიბილექრე მელოეხისი", მხსიარკოდიი შესოსკელელრნე დიელესოტედის ვორლიებელის შადებოხოლობისი',
+                'ოლსსეხეხრე მელოსისფელო; კოლოლოძოოროხოტოლი დეოთოსოდასა პოროთოსია, პკკოჰებს და სხვა ვროთილების ელეროელდკოროსი.'
+            ],
+        },
+
+        hero2: {
+            name: 'ბიენადინი',
+            description: 'მრავალჟანრიანი გამოსახულება თავ...',
+            fullDescription: [
+                'დიველელების სარელესისანი, ჰექიხოთილა გალიარებელი ხნელებ მეგიმბორელს მის დიოთურელის და ამეხისა',
+                'დისხლიწის ყენდიხაროდისინი", მისხხოლიპს მაბთაინო გალივის მათშელენს ხამეხიდელსო, ხოზფელო სკოც სისხხორსისტო თელის მონქგობლებს მედორებთო, რა კალია მხალეხი ჰოდიოქელი'
+            ],
+        },
+
+        hero3: {
+            name: 'პინოქიო',
+            description: 'მრავალჟანრიანი გამოსახულება თავ...',
+            fullDescription: [
+                'დიველელების სარელესისანი, ჰექიხოთილა გალიარებელი ხნელებ მეგიმბორელს მის დიოთურელის და ამეხისა'
+            ],
+        },
+
+        hero4: {
+            name: 'პინოქიო',
+            description: 'მრავალჟანრიანი გამოსახულება თავ...',
+            fullDescription: [
+                'დიველელების სარელესისანი, ჰექიხოთილა გალიარებელი ხნელებ მეგიმბორელს მის დიოთურელის და ამეხისა'
+            ],
+        },
+
+        hero5: {
+            name: 'პინოქიო',
+            description: 'მრავალჟანრიანი გამოსახულება თავ...',
+            fullDescription: [
+                'დიველელების სარელესისანი, ჰექიხოთილა გალიარებელი ხნელებ მეგიმბორელს მის დიოთურელის და ამეხისა'
+            ],
+        }
     },
 
 
@@ -362,6 +417,61 @@ export const translations = {
             features: ["1 host", "DJ", "Laser Show", "X-BOX", "Karaoke"],
             description: "A fun and engaging birthday program. Duration: 2 hours; suitable for 10 participants. Includes a host, DJ, Laser Show, X-BOX, and Karaoke.",
         },
+
+        // heros
+        hero1: {
+            agwera: "Description includes",
+            back: "Go back",
+            added: "Added",
+            bookNow: "Book now",
+            viewAll: "View all",
+            price: "Price",
+            gasvla: "On-site location",
+            adgilze: "At the venue",
+
+            name: 'Pinocchio',
+            description: 'Multigenre character representation...',
+            fullDescription: [
+                'National specialist, hackers and other creative experts in their fields.',
+                'Expert in blood-based rituals and related performances, skilled in artistic interpretations.',
+                'Performer with exceptional coordination and presence, capable of engaging diverse audiences.',
+                'Specialist in visual storytelling, creating immersive and memorable experiences.',
+                'Master of unique crafts; works with tools, materials, and various interactive elements.',
+            ],
+        },
+
+        hero2: {
+            name: 'Bienadini',
+            description: 'Multigenre character representation...',
+            fullDescription: [
+                'Specialist in creative performances, capable of managing large-scale events and productions.',
+                'Expert in dynamic choreography and engaging audience interaction, skilled in complex setups.',
+            ],
+        },
+
+        hero3: {
+            name: 'Pinocchio',
+            description: 'Multigenre character representation...',
+            fullDescription: [
+                'Specialist in creative performances, capable of managing large-scale events and productions.',
+            ],
+        },
+
+        hero4: {
+            name: 'Pinocchio',
+            description: 'Multigenre character representation...',
+            fullDescription: [
+                'Specialist in creative performances, capable of managing large-scale events and productions.',
+            ],
+        },
+
+        hero5: {
+            name: 'Pinocchio',
+            description: 'Multigenre character representation...',
+            fullDescription: [
+                'Specialist in creative performances, capable of managing large-scale events and productions.',
+            ],
+        },
     },
 
 
@@ -544,6 +654,61 @@ export const translations = {
             price: "250 ₾",
             features: ["1 ведущий", "DJ", "Лазерное шоу", "X-BOX", "Караоке"],
             description: "Весёлая и увлекательная программа для дня рождения. Продолжительность: 2 часа; для 10 участников. Включает ведущего, DJ, Лазерное шоу, X-BOX и Караоке.",
+        },
+
+        // heros
+        hero1: {
+            agwera: "Описание включает",
+            back: "Назад",
+            added: "Добавлено",
+            bookNow: "Забронировать",
+            viewAll: "Посмотреть все",
+            price: "Цена",
+            gasvla: "Выездная локация",
+            adgilze: "На месте",
+
+            name: 'Пиноккио',
+            description: 'Многожанровое изображение персонажа...',
+            fullDescription: [
+                'Национальный специалист, хакеры и другие творческие эксперты в своих областях.',
+                'Эксперт в кровавых ритуалах и связанных представлениях, мастер художественной интерпретации.',
+                'Исполнитель с исключительной координацией и присутствием, способный увлекать разнообразную аудиторию.',
+                'Специалист по визуальному повествованию, создающий захватывающий и запоминающийся опыт.',
+                'Мастер уникальных ремёсел; работает с инструментами, материалами и различными интерактивными элементами.',
+            ],
+        },
+
+        hero2: {
+            name: 'Биенадини',
+            description: 'Многожанровое изображение персонажа...',
+            fullDescription: [
+                'Специалист по креативным выступлениям, способный управлять масштабными событиями и постановками.',
+                'Эксперт в динамичной хореографии и взаимодействии с аудиторией, мастер сложных постановок.',
+            ],
+        },
+
+        hero3: {
+            name: 'Пиноккио',
+            description: 'Многожанровое изображение персонажа...',
+            fullDescription: [
+                'Специалист по креативным выступлениям, способный управлять масштабными событиями и постановками.',
+            ],
+        },
+
+        hero4: {
+            name: 'Пиноккио',
+            description: 'Многожанровое изображение персонажа...',
+            fullDescription: [
+                'Специалист по креативным выступлениям, способный управлять масштабными событиями и постановками.',
+            ],
+        },
+
+        hero5: {
+            name: 'Пиноккио',
+            description: 'Многожанровое изображение персонажа...',
+            fullDescription: [
+                'Специалист по креативным выступлениям, способный управлять масштабными событиями и постановками.',
+            ],
         },
 
     },
