@@ -1,5 +1,6 @@
 import { useState, useMemo } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
+import { useLanguage } from "../contexts/LanguageContext";
 
 interface DateTimePickerProps {
     onClose: () => void;
@@ -13,12 +14,11 @@ function DateTimePicker({ onClose, onSelect }: DateTimePickerProps) {
 
     const timeOptions = ['12:00', '14:00', '16:00', '18:00', '20:00', '22:00',];
 
-    const monthNames = [
-        'იანვარი', 'თებერვალი', 'მარტი', 'აპრილი', 'მაისი', 'ივნისი',
-        'ივლისი', 'აგვისტო', 'სექტემბერი', 'ოქტომბერი', 'ნოემბერი', 'დეკემბერი'
-    ];
+    const { t } = useLanguage();
 
-    const weekDays = ['ორშ', 'სამ', 'ოთხ', 'ხუთ', 'პარ', 'შაბ', 'კვი'];
+    const monthNames = t.dateTimePicker.months
+
+    const weekDays = t.dateTimePicker.weekDays
 
     const daysInMonth = new Date(currentDate.getFullYear(), currentDate.getMonth() + 1, 0).getDate();
     const firstDayOfMonth = new Date(currentDate.getFullYear(), currentDate.getMonth(), 1).getDay();
@@ -151,7 +151,7 @@ function DateTimePicker({ onClose, onSelect }: DateTimePickerProps) {
                 </div>
 
                 <div>
-                    <p className="text-[#6b6b6b] text-sm font-medium mb-4">ბიჭებო დრო:</p>
+                    <p className="text-[#6b6b6b] text-sm font-medium mb-4">{t.dateTimePicker.selectTime}:</p>
 
                     <div className="grid grid-cols-4 gap-3 mb-6">
                         {timeOptions.map((time) => (
@@ -173,7 +173,7 @@ function DateTimePicker({ onClose, onSelect }: DateTimePickerProps) {
                         disabled={!selectedDay}
                         className="w-full bg-[#3d5cb8] text-white font-semibold py-4 rounded-2xl hover:bg-[#2d4a9e] transition-colors cursor-pointer shadow-md disabled:bg-gray-300 disabled:cursor-not-allowed"
                     >
-                        დადასტურება
+                        {t.dateTimePicker.confirm}
                     </button>
                 </div>
             </div>

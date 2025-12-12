@@ -299,6 +299,19 @@ export const translations = {
             back: 'უკან დაბრუნება',
 
             newReservation: 'ახალი ჯავშანი',
+        },
+
+        // datepicker
+        dateTimePicker: {
+            selectTime: "აირჩიეთ დრო",
+            confirm: "დადასტურება",
+
+            months: [
+                "იანვარი", "თებერვალი", "მარტი", "აპრილი", "მაისი", "ივნისი",
+                "ივლისი", "აგვისტო", "სექტემბერი", "ოქტომბერი", "ნოემბერი", "დეკემბერი"
+            ],
+
+            weekDays: ["ორშ", "სამ", "ოთხ", "ხუთ", "პარ", "შაბ", "კვი"],
         }
 
 
@@ -604,7 +617,22 @@ export const translations = {
             back: 'Go back',
 
             newReservation: 'New reservation',
+        },
+
+        // datepicker
+        dateTimePicker: {
+            selectTime: "Select time",
+            confirm: "Confirm",
+
+            months: [
+                "January", "February", "March", "April", "May", "June",
+                "July", "August", "September", "October", "November", "December"
+            ],
+
+            weekDays: ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"],
         }
+
+
 
 
     },
@@ -909,7 +937,21 @@ export const translations = {
             back: 'Назад',
 
             newReservation: 'Новая бронь',
+        },
+
+        // datepicker
+        dateTimePicker: {
+            selectTime: "Выберите время",
+            confirm: "Подтвердить",
+
+            months: [
+                "Январь", "Февраль", "Март", "Апрель", "Май", "Июнь",
+                "Июль", "Август", "Сентябрь", "Октябрь", "Ноябрь", "Декабрь"
+            ],
+
+            weekDays: ["Пн", "Вт", "Ср", "Чт", "Пт", "Сб", "Вс"],
         }
+
 
 
 
