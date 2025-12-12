@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { useLanguage } from "../contexts/LanguageContext";
 
 interface Program {
     id: number;
@@ -11,103 +12,105 @@ interface Program {
     buttonColor: 'orange' | 'blue';
 }
 
-const programs: Program[] = [
-    {
-        id: 1,
-        name: 'ბავშლის დაშინებ მთა',
-        price: 200,
-        originalPrice: 200,
-        discount: '-20 %',
-        image: 'https://via.placeholder.com/300x200/E8E8E8/CCCCCC?text=Program+1',
-        borderColor: 'orange',
-        buttonColor: 'orange'
-    },
-    {
-        id: 2,
-        name: 'სახელი ატრაქციის თამ',
-        price: 200,
-        originalPrice: 200,
-        discount: '-20 %',
-        image: 'https://via.placeholder.com/300x200/E8E8E8/CCCCCC?text=Program+2',
-        borderColor: 'blue',
-        buttonColor: 'blue'
-    },
-    {
-        id: 3,
-        name: 'დათამაშები, ატრაქციებ',
-        price: 100,
-        image: 'https://via.placeholder.com/300x200/E8E8E8/CCCCCC?text=Program+3',
-        borderColor: 'blue',
-        buttonColor: 'blue'
-    },
-    {
-        id: 4,
-        name: 'ავტორთზე ძმა',
-        price: 110,
-        image: 'https://via.placeholder.com/300x200/E8E8E8/CCCCCC?text=Program+4',
-        borderColor: 'orange',
-        buttonColor: 'orange'
-    },
-    {
-        id: 5,
-        name: 'ავტორ ატრაქცია (3რმ...',
-        price: 250,
-        image: 'https://via.placeholder.com/300x200/E8E8E8/CCCCCC?text=Program+5',
-        borderColor: 'orange',
-        buttonColor: 'orange'
-    },
-    {
-        id: 6,
-        name: 'დათამაშებელ მოზენ...',
-        price: 30,
-        image: 'https://via.placeholder.com/300x200/E8E8E8/CCCCCC?text=Program+6',
-        borderColor: 'blue',
-        buttonColor: 'blue'
-    },
-    {
-        id: 7,
-        name: 'დათამაშებელ მოზენ, ატრაქციები რთელ (ლეზე დასახელებ)',
-        price: 50,
-        image: 'https://via.placeholder.com/300x200/E8E8E8/CCCCCC?text=Program+7',
-        borderColor: 'blue',
-        buttonColor: 'blue'
-    },
-    {
-        id: 8,
-        name: 'სახელი, ატრაქცია მოზენტებ რთელ ყვავ დასახელებელ',
-        price: 50,
-        image: 'https://via.placeholder.com/300x200/E8E8E8/CCCCCC?text=Program+8',
-        borderColor: 'blue',
-        buttonColor: 'blue'
-    },
-    {
-        id: 9,
-        name: 'ავტორთი, ბავშ მოტრელებ',
-        price: 80,
-        image: 'https://via.placeholder.com/300x200/E8E8E8/CCCCCC?text=Program+9',
-        borderColor: 'orange',
-        buttonColor: 'orange'
-    },
-    {
-        id: 10,
-        name: 'სახელი',
-        price: 450,
-        image: 'https://via.placeholder.com/300x200/E8E8E8/CCCCCC?text=Program+10',
-        borderColor: 'orange',
-        buttonColor: 'orange'
-    },
-    {
-        id: 11,
-        name: 'დათას პროგრამის თამ (დამატებული 1 საათი)',
-        price: 200,
-        image: 'https://via.placeholder.com/300x200/E8E8E8/CCCCCC?text=Program+11',
-        borderColor: 'orange',
-        buttonColor: 'orange'
-    }
-];
 
 function OtherPrograms({ addToCart, cartItems }: any) {
     const [hoveredId, setHoveredId] = useState<number | null>(null);
+    const { t } = useLanguage();
+
+    const programs: Program[] = [
+        {
+            id: 1,
+            name: t.otherProgram.name,
+            price: 200,
+            originalPrice: 200,
+            discount: '-20 %',
+            image: 'https://via.placeholder.com/300x200/E8E8E8/CCCCCC?text=Program+1',
+            borderColor: 'orange',
+            buttonColor: 'orange'
+        },
+        {
+            id: 2,
+            name: t.otherProgram.name1,
+            price: 200,
+            originalPrice: 200,
+            discount: '-20 %',
+            image: 'https://via.placeholder.com/300x200/E8E8E8/CCCCCC?text=Program+2',
+            borderColor: 'blue',
+            buttonColor: 'blue'
+        },
+        {
+            id: 3,
+            name: t.otherProgram.name2,
+            price: 100,
+            image: 'https://via.placeholder.com/300x200/E8E8E8/CCCCCC?text=Program+3',
+            borderColor: 'blue',
+            buttonColor: 'blue'
+        },
+        {
+            id: 4,
+            name: t.otherProgram.name3,
+            price: 110,
+            image: 'https://via.placeholder.com/300x200/E8E8E8/CCCCCC?text=Program+4',
+            borderColor: 'orange',
+            buttonColor: 'orange'
+        },
+        {
+            id: 5,
+            name: t.otherProgram.name4,
+            price: 250,
+            image: 'https://via.placeholder.com/300x200/E8E8E8/CCCCCC?text=Program+5',
+            borderColor: 'orange',
+            buttonColor: 'orange'
+        },
+        {
+            id: 6,
+            name: t.otherProgram.name5,
+            price: 30,
+            image: 'https://via.placeholder.com/300x200/E8E8E8/CCCCCC?text=Program+6',
+            borderColor: 'blue',
+            buttonColor: 'blue'
+        },
+        {
+            id: 7,
+            name: t.otherProgram.name6,
+            price: 50,
+            image: 'https://via.placeholder.com/300x200/E8E8E8/CCCCCC?text=Program+7',
+            borderColor: 'blue',
+            buttonColor: 'blue'
+        },
+        {
+            id: 8,
+            name: t.otherProgram.name7,
+            price: 50,
+            image: 'https://via.placeholder.com/300x200/E8E8E8/CCCCCC?text=Program+8',
+            borderColor: 'blue',
+            buttonColor: 'blue'
+        },
+        {
+            id: 9,
+            name: t.otherProgram.name8,
+            price: 80,
+            image: 'https://via.placeholder.com/300x200/E8E8E8/CCCCCC?text=Program+9',
+            borderColor: 'orange',
+            buttonColor: 'orange'
+        },
+        {
+            id: 10,
+            name: t.otherProgram.name9,
+            price: 450,
+            image: 'https://via.placeholder.com/300x200/E8E8E8/CCCCCC?text=Program+10',
+            borderColor: 'orange',
+            buttonColor: 'orange'
+        },
+        {
+            id: 11,
+            name: t.otherProgram.name10,
+            price: 200,
+            image: 'https://via.placeholder.com/300x200/E8E8E8/CCCCCC?text=Program+11',
+            borderColor: 'orange',
+            buttonColor: 'orange'
+        }
+    ];
 
     const getCardClasses = (program: Program) => {
         const borderClass = program.borderColor === 'orange'

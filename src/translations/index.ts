@@ -258,6 +258,21 @@ export const translations = {
             },
         },
 
+        // otherprogram
+        otherProgram: {
+            name: 'ბავშლის დაშინებ მთა',
+            name1: 'სახელი ატრაქციის თამ',
+            name2: 'დათამაშები, ატრაქციებ',
+            name3: 'ავტორთზე ძმა',
+            name4: 'ავტორ ატრაქცია (3რმ...',
+            name5: 'დათამაშებელ მოზენ...',
+            name6: 'დათამაშებელ მოზენ, ატრაქციები რთელ (ლეზე დასახელებ)',
+            name7: 'სახელი, ატრაქცია მოზენტებ რთელ ყვავ დასახელებელ',
+            name8: 'ავტორთი, ბავშ მოტრელებ',
+            name9: 'სახელი',
+            name10: 'დათას პროგრამის თამ (დამატებული 1 საათი)',
+        },
+
     },
 
     EN: {
@@ -519,6 +534,21 @@ export const translations = {
             },
         },
 
+        // other program
+        otherProgram: {
+            name: 'Child Scare Mountain',
+            name1: 'Attraction Name',
+            name2: 'Playgrounds, attractions',
+            name3: 'Author’s game',
+            name4: 'Author attraction (3h...)',
+            name5: 'Playground for kids...',
+            name6: 'Playground for kids, complex attractions (with listed names)',
+            name7: 'Name, complex attractions for children with listed names',
+            name8: 'Author, children’s attractions',
+            name9: 'Name',
+            name10: 'Program duration (added 1 hour)',
+        },
+
     },
 
     RU: {
@@ -778,6 +808,21 @@ export const translations = {
             actions: {
                 returnBack: "Назад",
             },
+        },
+
+        // otherprogram
+        otherProgram: {
+            name: 'Гора детских страхов',
+            name1: 'Название аттракциона',
+            name2: 'Игровые площадки, аттракционы',
+            name3: 'Авторская игра',
+            name4: 'Авторский аттракцион (3ч...)',
+            name5: 'Детская игровая площадка...',
+            name6: 'Детская площадка, комплексные аттракционы (с указанными названиями)',
+            name7: 'Название, комплексные аттракционы для детей с указанными названиями',
+            name8: 'Автор, детские аттракционы',
+            name9: 'Название',
+            name10: 'Длительность программы (добавлен 1 час)',
         }
 
 
