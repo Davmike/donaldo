@@ -30,21 +30,310 @@ function Menu({ addToCart, cartItems }: any) {
     const { t } = useLanguage();
 
     const categories: Category[] = [
-        { id: '1', name: t.menu1.categories.desserts, imageUrl: 'https://images.pexels.com/photos/1055272/pexels-photo-1055272.jpeg?auto=compress&cs=tinysrgb&w=800', type: 'children' },
-        { id: '2', name: t.menu1.categories.hotDishes, imageUrl: 'https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=800', type: 'parents' },
-        { id: '3', name: t.menu1.categories.drinks, imageUrl: 'https://images.pexels.com/photos/1553969/pexels-photo-1553969.jpeg?auto=compress&cs=tinysrgb&w=800', type: 'children' },
-        { id: '4', name: t.menu1.categories.coldDishes, imageUrl: 'https://images.pexels.com/photos/1059905/pexels-photo-1059905.jpeg?auto=compress&cs=tinysrgb&w=800', type: 'parents' },
-        { id: '5', name: t.menu1.categories.bakery, imageUrl: 'https://images.pexels.com/photos/1639562/pexels-photo-1639562.jpeg?auto=compress&cs=tinysrgb&w=800', type: 'children' },
-        { id: '6', name: t.menu1.categories.garnish, imageUrl: 'https://images.pexels.com/photos/1893556/pexels-photo-1893556.jpeg?auto=compress&cs=tinysrgb&w=800', type: 'parents' },
+        {
+            id: 'cold',
+            name: t.menu1.categories.coldDishes,
+            imageUrl: 'https://images.pexels.com/photos/1059905/pexels-photo-1059905.jpeg',
+            type: 'parents',
+        },
+        {
+            id: 'hot',
+            name: t.menu1.categories.hotDishes,
+            imageUrl: 'https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg',
+            type: 'parents',
+        },
+        {
+            id: 'bakery',
+            name: t.menu1.categories.bakery,
+            imageUrl: 'https://images.pexels.com/photos/1639562/pexels-photo-1639562.jpeg',
+            type: 'children',
+        },
+        {
+            id: 'garnish',
+            name: t.menu1.categories.garnish,
+            imageUrl: 'https://images.pexels.com/photos/1893556/pexels-photo-1893556.jpeg',
+            type: 'parents',
+        },
+        {
+            id: 'desserts',
+            name: t.menu1.categories.desserts,
+            imageUrl: 'https://images.pexels.com/photos/1055272/pexels-photo-1055272.jpeg',
+            type: 'children',
+        },
+        {
+            id: 'drinks',
+            name: t.menu1.categories.drinks,
+            imageUrl: 'https://images.pexels.com/photos/1553969/pexels-photo-1553969.jpeg',
+            type: 'children',
+        },
     ];
 
     const menuItems: MenuItem[] = [
-        { id: '1', categoryId: '1', name: t.menu1.categories.foodName, description: t.menu1.categories.foodDescription, price: 30, originalPrice: 36, discountPercentage: 20, imageUrl: 'https://images.pexels.com/photos/1055272/pexels-photo-1055272.jpeg?auto=compress&cs=tinysrgb&w=400', type: 'children' },
+        // 🥗 Cold dishes (parents)
         {
-            id: '2', categoryId: '1', name: t.menu1.categories.foodName1, description: t.menu1.categories.foodDescription1, price: 30, imageUrl: 'https://images.pexels.com/photos/1055272/pexels-photo-1055272.jpeg?auto=compress&cs=tinysrgb&w=400', type: 'children'
+            id: 'cd1',
+            categoryId: 'cold',
+            name: t.menu1.categories.caesar,
+            price: 17,
+            imageUrl: 'https://images.pexels.com/photos/1640772/pexels-photo-1640772.jpeg',
+            type: 'parents',
+            description: ''
         },
-        { id: '3', categoryId: '2', name: t.menu1.categories.foodName2, description: t.menu1.categories.foodDescription2, price: 45, imageUrl: 'https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=400', type: 'parents' },
+        {
+            id: 'cd2',
+            categoryId: 'cold',
+            name: t.menu1.categories.assortedCheese,
+            price: 15,
+            imageUrl: 'https://images.pexels.com/photos/821365/pexels-photo-821365.jpeg',
+            type: 'parents',
+            description: ''
+        },
+        {
+            id: 'cd3',
+            categoryId: 'cold',
+            name: t.menu1.categories.pkhali,
+            price: 20,
+            imageUrl: 'https://images.pexels.com/photos/4194623/pexels-photo-4194623.jpeg',
+            type: 'parents',
+            description: ''
+        },
+        {
+            id: 'cd4',
+            categoryId: 'cold',
+            name: t.menu1.categories.cucumberTomato,
+            price: 8,
+            imageUrl: 'https://images.pexels.com/photos/1435907/pexels-photo-1435907.jpeg',
+            type: 'parents',
+            description: ''
+        },
+        {
+            id: 'cd5',
+            categoryId: 'cold',
+            name: t.menu1.categories.chickenSalad,
+            price: 15,
+            imageUrl: 'https://images.pexels.com/photos/1640774/pexels-photo-1640774.jpeg',
+            type: 'parents',
+            description: ''
+        },
+
+        // 🍖 Hot dishes (parents)
+        {
+            id: 'hd1',
+            categoryId: 'hot',
+            name: t.menu1.categories.porkBarbecue,
+            price: 18,
+            imageUrl: 'https://images.pexels.com/photos/410648/pexels-photo-410648.jpeg',
+            type: 'parents',
+            description: ''
+        },
+        {
+            id: 'hd2',
+            categoryId: 'hot',
+            name: t.menu1.categories.chickenBarbecue,
+            price: 15,
+            imageUrl: 'https://images.pexels.com/photos/461198/pexels-photo-461198.jpeg',
+            type: 'parents',
+            description: ''
+        },
+        {
+            id: 'hd3',
+            categoryId: 'hot',
+            name: t.menu1.categories.hamMushroom,
+            price: 15,
+            imageUrl: 'https://images.pexels.com/photos/723198/pexels-photo-723198.jpeg',
+            type: 'parents',
+            description: ''
+        },
+        {
+            id: 'hd4',
+            categoryId: 'hot',
+            name: t.menu1.categories.ojakhuri,
+            price: 17,
+            imageUrl: 'https://images.pexels.com/photos/323682/pexels-photo-323682.jpeg',
+            type: 'parents',
+            description: ''
+        },
+
+        // 🧀 Bakery (children)
+        {
+            id: 'b1',
+            categoryId: 'bakery',
+            name: t.menu1.categories.imeruliKhachapuri,
+            price: 15,
+            imageUrl: 'https://images.pexels.com/photos/8951199/pexels-photo-8951199.jpeg',
+            type: 'children',
+            description: ''
+        },
+        {
+            id: 'b2',
+            categoryId: 'bakery',
+            name: t.menu1.categories.megruliKhachapuri,
+            price: 17,
+            imageUrl: 'https://images.pexels.com/photos/11115865/pexels-photo-11115865.jpeg',
+            type: 'children',
+            description: ''
+        },
+        {
+            id: 'b3',
+            categoryId: 'bakery',
+            name: t.menu1.categories.pepperoniPizza,
+            price: 18,
+            imageUrl: 'https://images.pexels.com/photos/4109128/pexels-photo-4109128.jpeg',
+            type: 'children',
+            description: ''
+        },
+        {
+            id: 'b4',
+            categoryId: 'bakery',
+            name: t.menu1.categories.margaritaPizza,
+            price: 17,
+            imageUrl: 'https://images.pexels.com/photos/825661/pexels-photo-825661.jpeg',
+            type: 'children',
+            description: ''
+        },
+        {
+            id: 'b5',
+            categoryId: 'bakery',
+            name: t.menu1.categories.lentPizza,
+            price: 17,
+            imageUrl: 'https://images.pexels.com/photos/590349/pexels-photo-590349.jpeg',
+            type: 'children',
+            description: ''
+        },
+        {
+            id: 'b6',
+            categoryId: 'bakery',
+            name: t.menu1.categories.beans,
+            price: 17,
+            imageUrl: 'https://images.pexels.com/photos/6646365/pexels-photo-6646365.jpeg',
+            type: 'children',
+            description: ''
+        },
+        {
+            id: 'b7',
+            categoryId: 'bakery',
+            name: t.menu1.categories.mchadi,
+            price: 2,
+            imageUrl: 'https://images.pexels.com/photos/6646074/pexels-photo-6646074.jpeg',
+            type: 'children',
+            description: ''
+        },
+
+        // 🍟 Garnish (parents)
+        {
+            id: 'g1',
+            categoryId: 'garnish',
+            name: t.menu1.categories.fries,
+            price: 5,
+            imageUrl: 'https://images.pexels.com/photos/1583884/pexels-photo-1583884.jpeg',
+            type: 'parents',
+            description: ''
+        },
+        {
+            id: 'g2',
+            categoryId: 'garnish',
+            name: t.menu1.categories.mexicanPotatoes,
+            price: 7,
+            imageUrl: 'https://images.pexels.com/photos/1893556/pexels-photo-1893556.jpeg',
+            type: 'parents',
+            description: ''
+        },
+        {
+            id: 'g3',
+            categoryId: 'garnish',
+            name: t.menu1.categories.snacks,
+            price: 12,
+            imageUrl: 'https://images.pexels.com/photos/1586943/pexels-photo-1586943.jpeg',
+            type: 'parents',
+            description: ''
+        },
+        {
+            id: 'g4',
+            categoryId: 'garnish',
+            name: t.menu1.categories.meatPancake,
+            price: 2.5,
+            imageUrl: 'https://images.pexels.com/photos/70497/pexels-photo-70497.jpeg',
+            type: 'parents',
+            description: ''
+        },
+
+        // 🍰 Desserts (children)
+        {
+            id: 'd1',
+            categoryId: 'desserts',
+            name: t.menu1.categories.fruitAssortment,
+            price: 30,
+            imageUrl: 'https://images.pexels.com/photos/1128678/pexels-photo-1128678.jpeg',
+            type: 'children',
+            description: ''
+        },
+        {
+            id: 'd2',
+            categoryId: 'desserts',
+            name: t.menu1.categories.fruitAssortmentSmall,
+            price: 15,
+            imageUrl: 'https://images.pexels.com/photos/1640773/pexels-photo-1640773.jpeg',
+            type: 'children',
+            description: ''
+        },
+        {
+            id: 'd3',
+            categoryId: 'desserts',
+            name: t.menu1.categories.watermelonMelon,
+            price: 40,
+            imageUrl: 'https://images.pexels.com/photos/594608/pexels-photo-594608.jpeg',
+            type: 'children',
+            description: ''
+        },
+
+        // 🥤 Drinks (children)
+        {
+            id: 'dr1',
+            categoryId: 'drinks',
+            name: t.menu1.categories.compote,
+            price: 10,
+            imageUrl: 'https://images.pexels.com/photos/616833/pexels-photo-616833.jpeg',
+            type: 'children',
+            description: ''
+        },
+        {
+            id: 'dr2',
+            categoryId: 'drinks',
+            name: t.menu1.categories.cocaCola,
+            price: 2.5,
+            imageUrl: 'https://images.pexels.com/photos/2775860/pexels-photo-2775860.jpeg',
+            type: 'children',
+            description: ''
+        },
+        {
+            id: 'dr3',
+            categoryId: 'drinks',
+            name: t.menu1.categories.fanta,
+            price: 2.5,
+            imageUrl: 'https://images.pexels.com/photos/2775863/pexels-photo-2775863.jpeg',
+            type: 'children',
+            description: ''
+        },
+        {
+            id: 'dr4',
+            categoryId: 'drinks',
+            name: t.menu1.categories.water,
+            price: 1.5,
+            imageUrl: 'https://images.pexels.com/photos/327090/pexels-photo-327090.jpeg',
+            type: 'children',
+            description: ''
+        },
+        {
+            id: 'dr5',
+            categoryId: 'drinks',
+            name: t.menu1.categories.borjomi,
+            price: 2.5,
+            imageUrl: 'https://images.pexels.com/photos/416528/pexels-photo-416528.jpeg',
+            type: 'children',
+            description: ''
+        },
     ];
+
 
 
     // ფილტრავს კატეგორიებს activeTab-ის მიხედვით

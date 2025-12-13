@@ -52,12 +52,12 @@ export const translations = {
         },
 
         service1: {
-            title: "პირველი სერვისი",
-            description: "პირველი სერვისი - ძირითადი მოხმარი პრიმარი...",
-            button: "ფოტო-ვიდეო",
-            details: "ფოტო-ვიდეო გადაღება",
-            faq: "რა არის ფოტო-ვიდეო სერვისი?",
-            faqAnswer: "საუკეთესო ფოტოგრაფი გვყავს დონალდოლენდში გიორგი თებიძე (GT Photography)",
+            title: "ბამბის ნაყინი",
+            description: "ბამბის ნაყინი",
+            button: "ბამბის ნაყინი",
+            details: "ბამბის ნაყინის შოუ",
+            // faq: "რა არის ფოტო-ვიდეო სერვისი?",
+            // faqAnswer: "საუკეთესო ფოტოგრაფი გვყავს დონალდოლენდში გიორგი თებიძე (GT Photography)",
             benefits: [
                 "ძირითადი ფუნქციონალობა",
                 "ყოველდღიური დახმარება",
@@ -71,12 +71,12 @@ export const translations = {
         },
 
         service2: {
-            title: "მეორე სერვისი",
-            description: "მეორე სერვისი - გაფართოებული მოხმარი...",
-            button: "გააქტივე",
-            details: "მეორე სერვისი - გაფართოებული მოხმარი",
-            faq: "რა განსხვავება არის მეორე სერვისსა და პირველს შორის?",
-            faqAnswer: "მეორე სერვისი მოიცავს ყველა პირველი სერვისის ფუნქციას...",
+            title: "საპნის ბუშტები",
+            description: "საპნის ბუშტები",
+            button: "საპნის ბუშტები",
+            details: "საპნის ბუშტების შოუ",
+            // faq: "რა განსხვავება არის მეორე სერვისსა და პირველს შორის?",
+            // faqAnswer: "მეორე სერვისი მოიცავს ყველა პირველი სერვისის ფუნქციას...",
             benefits: [
                 "ყველა პირველი სერვისის ფუნქცია",
                 "პრიორიტეტული მხარდაჭერა",
@@ -90,12 +90,12 @@ export const translations = {
         },
 
         service3: {
-            title: "მესამე სერვისი",
-            description: "მესამე სერვისი - პრემიუმ მოხმარი...",
-            button: "გააქტივე",
-            details: "მესამე სერვისი - პრემიუმ მოხმარი",
-            faq: "რა სახელმძღვანელო ფუნქციები აქვს მესამე სერვისს?",
-            faqAnswer: "მესამე სერვისი არის ჩვენი საბოლოო პაკეტი...",
+            title: "ფოტოგრაფი",
+            description: "ფოტოგრაფი",
+            button: "ფოტოგრაფი",
+            details: "ფოტო მომსაუხრება",
+            // faq: "რა სახელმძღვანელო ფუნქციები აქვს მესამე სერვისს?",
+            // faqAnswer: "მესამე სერვისი არის ჩვენი საბოლოო პაკეტი...",
             benefits: [
                 "ყველა მეორე სერვისის ფუნქცია",
                 "24/7 დედიკირებული მხარდაჭერა",
@@ -109,12 +109,183 @@ export const translations = {
         },
 
         service4: {
-            title: "მეოთხე სერვისი",
-            description: "მეოთხე სერვისი - ენტერპრაიზ მოხმარი...",
-            button: "გააქტივე",
-            details: "მეოთხე სერვისი - ენტერპრაიზ მოხმარი",
-            faq: "რა ცდის პერიოდში აქვს?",
-            faqAnswer: "ჩვენ გთავაზობთ 30 დღიან უფასო ცდას...",
+            title: "ვიდეო კოლაჟი",
+            description: "ვიდეო კოლაჟი",
+            button: "ვიდეო კოლაჟი",
+            details: "ვიდეო მომსახურება",
+            // faq: "რა ცდის პერიოდში აქვს?",
+            // faqAnswer: "ჩვენ გთავაზობთ 30 დღიან უფასო ცდას...",
+            benefits: [
+                "ყველა ფუნქცია ყველა პაკეტიდან",
+                "ენტერპრაიზ ხარჯი",
+                "დეტალური ანალიტიკა",
+                "უსაზღვრო სტორეიჯი",
+                "გაფართოებული დაცვა",
+                "კასტომ ინტეგრაცია",
+                "დეტალური რეპორტი",
+                "სპეციალური მენეჯერი"
+            ]
+        },
+
+        service5: {
+            title: "ვიდეო კლიპი",
+            description: "ვიდეო კლიპი",
+            button: "ვიდეო კლიპი",
+            details: "ვიდეო მომსახურება",
+            // faq: "რა ცდის პერიოდში აქვს?",
+            // faqAnswer: "ჩვენ გთავაზობთ 30 დღიან უფასო ცდას...",
+            benefits: [
+                "ყველა ფუნქცია ყველა პაკეტიდან",
+                "ენტერპრაიზ ხარჯი",
+                "დეტალური ანალიტიკა",
+                "უსაზღვრო სტორეიჯი",
+                "გაფართოებული დაცვა",
+                "კასტომ ინტეგრაცია",
+                "დეტალური რეპორტი",
+                "სპეციალური მენეჯერი"
+            ]
+        },
+
+        service6: {
+            title: "ფოირვერკი",
+            description: "ფოირვერკი ტორტის დროს",
+            button: "ფოირვერკი",
+            details: "ფოირვერკი ტორტის დროს",
+            // faq: "რა ცდის პერიოდში აქვს?",
+            // faqAnswer: "ჩვენ გთავაზობთ 30 დღიან უფასო ცდას...",
+            benefits: [
+                "ყველა ფუნქცია ყველა პაკეტიდან",
+                "ენტერპრაიზ ხარჯი",
+                "დეტალური ანალიტიკა",
+                "უსაზღვრო სტორეიჯი",
+                "გაფართოებული დაცვა",
+                "კასტომ ინტეგრაცია",
+                "დეტალური რეპორტი",
+                "სპეციალური მენეჯერი"
+            ]
+        },
+
+        service7: {
+            title: "ფოირვერკ ლუქსი",
+            description: "ფოირვერკი ლუქსი",
+            button: "ფოირვერკი ლუქსი",
+            details: "ფოირვერკი ლუქსი",
+            // faq: "რა ცდის პერიოდში აქვს?",
+            // faqAnswer: "ჩვენ გთავაზობთ 30 დღიან უფასო ცდას...",
+            benefits: [
+                "ყველა ფუნქცია ყველა პაკეტიდან",
+                "ენტერპრაიზ ხარჯი",
+                "დეტალური ანალიტიკა",
+                "უსაზღვრო სტორეიჯი",
+                "გაფართოებული დაცვა",
+                "კასტომ ინტეგრაცია",
+                "დეტალური რეპორტი",
+                "სპეციალური მენეჯერი"
+            ]
+        },
+
+        service8: {
+            title: "ბუშტების წვიმა",
+            description: "საპნის ბუშტების წვიმა ტორტის დროს",
+            button: "საპნის ბუშტები",
+            details: "საპნის ბუშტების შოუ",
+            // faq: "რა ცდის პერიოდში აქვს?",
+            // faqAnswer: "ჩვენ გთავაზობთ 30 დღიან უფასო ცდას...",
+            benefits: [
+                "ყველა ფუნქცია ყველა პაკეტიდან",
+                "ენტერპრაიზ ხარჯი",
+                "დეტალური ანალიტიკა",
+                "უსაზღვრო სტორეიჯი",
+                "გაფართოებული დაცვა",
+                "კასტომ ინტეგრაცია",
+                "დეტალური რეპორტი",
+                "სპეციალური მენეჯერი"
+            ]
+        },
+
+        service9: {
+            title: "ვარსკვლავის გახსნა",
+            description: "ვარსკვლავის გახსნა",
+            button: "ვარსკვლავი",
+            details: "ვარსკვლავის გახსნა",
+            // faq: "რა ცდის პერიოდში აქვს?",
+            // faqAnswer: "ჩვენ გთავაზობთ 30 დღიან უფასო ცდას...",
+            benefits: [
+                "ყველა ფუნქცია ყველა პაკეტიდან",
+                "ენტერპრაიზ ხარჯი",
+                "დეტალური ანალიტიკა",
+                "უსაზღვრო სტორეიჯი",
+                "გაფართოებული დაცვა",
+                "კასტომ ინტეგრაცია",
+                "დეტალური რეპორტი",
+                "სპეციალური მენეჯერი"
+            ]
+        },
+
+        service10: {
+            title: "სახეზე მოხატვა",
+            description: "სახეზე მოხატვა",
+            button: "სახეზე მოხატვა",
+            details: "სახეზე მოხატვა",
+            // faq: "რა ცდის პერიოდში აქვს?",
+            // faqAnswer: "ჩვენ გთავაზობთ 30 დღიან უფასო ცდას...",
+            benefits: [
+                "ყველა ფუნქცია ყველა პაკეტიდან",
+                "ენტერპრაიზ ხარჯი",
+                "დეტალური ანალიტიკა",
+                "უსაზღვრო სტორეიჯი",
+                "გაფართოებული დაცვა",
+                "კასტომ ინტეგრაცია",
+                "დეტალური რეპორტი",
+                "სპეციალური მენეჯერი"
+            ]
+        },
+
+        service11: {
+            title: "კონფეტების წვიმა",
+            description: "ფერადი კონფეტების წვიმა",
+            button: "კონფეტების წვიმა",
+            details: "ფერადი კონფეტების წვიმა",
+            // faq: "რა ცდის პერიოდში აქვს?",
+            // faqAnswer: "ჩვენ გთავაზობთ 30 დღიან უფასო ცდას...",
+            benefits: [
+                "ყველა ფუნქცია ყველა პაკეტიდან",
+                "ენტერპრაიზ ხარჯი",
+                "დეტალური ანალიტიკა",
+                "უსაზღვრო სტორეიჯი",
+                "გაფართოებული დაცვა",
+                "კასტომ ინტეგრაცია",
+                "დეტალური რეპორტი",
+                "სპეციალური მენეჯერი"
+            ]
+        },
+
+        service12: {
+            title: "ბენდი",
+            description: "ბენდი",
+            button: "ბენდი",
+            details: "ბენდის მომსახურება",
+            // faq: "რა ცდის პერიოდში აქვს?",
+            // faqAnswer: "ჩვენ გთავაზობთ 30 დღიან უფასო ცდას...",
+            benefits: [
+                "ყველა ფუნქცია ყველა პაკეტიდან",
+                "ენტერპრაიზ ხარჯი",
+                "დეტალური ანალიტიკა",
+                "უსაზღვრო სტორეიჯი",
+                "გაფართოებული დაცვა",
+                "კასტომ ინტეგრაცია",
+                "დეტალური რეპორტი",
+                "სპეციალური მენეჯერი"
+            ]
+        },
+
+        service13: {
+            title: "ნეონის შოუ",
+            description: "ნეონის ქაღალდების შოუ",
+            button: "ნეონის შოუ",
+            details: "ნეონის ქაღალდების შოუ",
+            // faq: "რა ცდის პერიოდში აქვს?",
+            // faqAnswer: "ჩვენ გთავაზობთ 30 დღიან უფასო ცდას...",
             benefits: [
                 "ყველა ფუნქცია ყველა პაკეტიდან",
                 "ენტერპრაიზ ხარჯი",
@@ -145,39 +316,39 @@ export const translations = {
             added: "დამატებულია",
             bookNow: "დაჯავშნა",
 
-            title: "სამეფეხი 1",
+            title: "სტანდარტული პროგრამა",
             guests: '2 საათი',
             duration: '10 დამსაქმე',
             price: '250 ₾',
-            features: ['1 წამყვანი', 'DJ', 'Laser Show', 'X-BOX', 'კარაოკე'],
-            description: 'დაზღვეულის ფლირტირება კმ ზღვა აღმიოსებელი. 10-ს. ხარწილდელიკილა - 2 საათი; დამსაქმელი ახალი მოთხოვილებელი პროგრამა (მხარდელების გამოცემა, რომლებმა შეხვდნენ 1 ნამსხვევი, DJ - ის მენეჯერი ფელიციიდა, Laser Show-ს ექსპლორერი კარაოკე, X-BOX მედავითი, კარაოკე სემელთიდან',
+            features: ['2 წამყვანი', 'DJ', 'Laser Show', 'ეფექტური კვამლი', 'X-BOX', 'კარაოკე'],
+            description: '2 საათიანი ასაკზე მორგებული პროგრამა ბავშვებისთვის და მშობლების გართობა',
         },
 
         birthprogram2: {
-            title: "სამეფეხი 2",
+            title: "საბავშვო პროგრამა",
             guests: '2 საათი',
             duration: '10 დამსაქმე',
             price: '250 ₾',
-            features: ['1 წამყვანი', 'DJ', 'Laser Show', 'X-BOX', 'კარაოკე'],
-            description: 'დაზღვეულის ფლირტირება კმ ზღვა აღმიოსებელი. 10-ს. ხარწილდელიკილა - 2 საათი; დამსაქმელი ახალი მოთხოვილებელი პროგრამა (მხარდელების გამოცემა, რომლებმა შეხვდნენ 1 ნამსხვევი, DJ - ის მენეჯერი ფელიციიდა, Laser Show-ს ექსპლორერი კარაოკე, X-BOX მედავითი, კარაოკე სემელთიდან',
+            features: ['1 წამყვანი', 'DJ', 'Laser Show', 'ეფექტური კვამლი', 'X-BOX', 'კარაოკე'],
+            description: 'თოჯინების შოუ (წატმოდგენა ქართული მულტფილმებიდან) ასაკზე მორგებული პროგრამა ბავშვებისთვის და მშობლების გართობა (ასაკი 1 წლიდან 5 წლამდე)',
         },
 
         birthprogram3: {
-            title: "სამეფეხი 3",
+            title: "პროგრამა სტანდარტი",
             guests: '2 საათი',
             duration: '10 დამსაქმე',
             price: '250 ₾',
-            features: ['1 წამყვანი', 'DJ', 'Laser Show', 'X-BOX', 'კარაოკე'],
-            description: 'დაზღვეულის ფლირტირება კმ ზღვა აღმიოსებელი. 10-ს. ხარწილდელიკილა - 2 საათი; დამსაქმელი ახალი მოთხოვილებელი პროგრამა (მხარდელების გამოცემა, რომლებმა შეხვდნენ 1 ნამსხვევი, DJ - ის მენეჯერი ფელიციიდა, Laser Show-ს ექსპლორერი კარაოკე, X-BOX მედავითი, კარაოკე სემელთიდან',
+            features: ['1 წამყვანი', 'DJ', 'Laser Show', 'ეფექტური კვამლი', 'X-BOX', 'კარაოკე'],
+            description: '(ბავშვების რაოდენობა არ უნდა აღემატებოდეს 10-ს) ასაკზე მორგებული პროგრამა ბავშვებისთვის და მშობლების გართობა',
         },
 
         birthprogram4: {
-            title: "სამეფეხი 4",
+            title: "ფეხბურთის პროგრამა",
             guests: '2 საათი',
             duration: '10 დამსაქმე',
             price: '250 ₾',
-            features: ['1 წამყვანი', 'DJ', 'Laser Show', 'X-BOX', 'კარაოკე'],
-            description: 'დაზღვეულის ფლირტირება კმ ზღვა აღმიოსებელი. 10-ს. ხარწილდელიკილა - 2 საათი; დამსაქმელი ახალი მოთხოვილებელი პროგრამა (მხარდელების გამოცემა, რომლებმა შეხვდნენ 1 ნამსხვევი, DJ - ის მენეჯერი ფელიციიდა, Laser Show-ს ექსპლორერი კარაოკე, X-BOX მედავითი, კარაოკე სემელთიდან',
+            features: ['1 წამყვანი', 'DJ', 'Laser Show', 'ეფექტური კვამლი', 'X-BOX', 'კარაოკე'],
+            description: '(პროგრამის სტილი მორგებულია ფეხბურთზე) ასაკზე მორგებული პროგრამა ბავშვებისთვის და მშობლების გართობა რომელშიც შედის 2 (,,ფეხბურთელი" წამყვანი )',
         },
 
         // heros
@@ -238,25 +409,68 @@ export const translations = {
         // menu
         menu1: {
             categories: {
+                // tabs
                 children: "ბავშვებისთვის",
                 parents: "მშობლებისთვის",
-                desserts: "დესერტები",
-                hotDishes: "ცხელი კერძები",
-                drinks: "სასმელები",
+
+                // categories
                 coldDishes: "ცივი კერძები",
+                hotDishes: "ცხელი კერძები",
                 bakery: "ცომეული",
                 garnish: "გარნირი",
-                foodName: 'ხილის პონჩიკი',
-                foodName1: 'შოკოლადის დონატი',
-                foodName2: 'ხაშლამა',
-                foodDescription: 'ვანილი, ცვების, სახვევი...',
-                foodDescription1: 'ვანილი, ფქვილი, შაქარი...',
-                foodDescription2: 'ხორცი, კარტოფილი, სახვევი...',
+                desserts: "დესერტები",
+                drinks: "სასმელები",
+
+                // ცივი კერძები
+                caesar: "ცეზარი",
+                assortedCheese: "ყველის ასორტი",
+                pkhali: "ფხალი ასორტი",
+                cucumberTomato: "კიტრი პომიდორი",
+                chickenSalad: "ქათმის სალათი",
+
+                // ცხელი კერძები
+                porkBarbecue: "ღორის მწვადი",
+                chickenBarbecue: "ქათმის მწვადი",
+                hamMushroom: "ლორი სოკოთი სულგუნით",
+                ojakhuri: "ოჯახური",
+
+                // ცომეული
+                imeruliKhachapuri: "იმერული ხაჭაპური",
+                megruliKhachapuri: "მეგრული ხაჭაპური",
+                pepperoniPizza: "პიცა პეპერონი",
+                margaritaPizza: "პიცა მარგარიტა",
+                lentPizza: "სამარხვო პიცა",
+                beans: "ლობიო",
+                mchadi: "მჭადი",
+
+                // გარნირი
+                fries: "კარტოფილი ფრი",
+                mexicanPotatoes: "მექსიკური კარტოფილი",
+                snacks: "სნექების პორცია",
+                meatPancake: "ხორციანი ბლინი",
+
+                // დესერტი
+                fruitAssortment: "ხილის ასორტი დიდი",
+                fruitAssortmentSmall: "ხილის ასორტი პატარა",
+                watermelonMelon: "საზამთრო და ნესვი",
+
+                // სასმელები
+                compote: "კომპოტი 1 ლ",
+                cocaCola: "კოკა-კოლა",
+                fanta: "ფანტა",
+                water: "წყალი",
+                borjomi: "ბორჯომი",
+                turkishCoffee: "თურქული ყავა",
+                zedazeni: "ზედაზენი",
+                zedazeniHalf: "ზედაზენი 0.5",
+                chero: "ჩერო 900გრ",
+                cheroBig: "ჩერო 1.5ლ"
             },
             actions: {
                 returnBack: "უკან დაბრუნება",
             },
         },
+
 
         // otherprogram
         otherProgram: {
@@ -393,8 +607,8 @@ export const translations = {
             description: "First service - basic primary usage...",
             button: "Photo & Video",
             details: "Photo & Video Shooting",
-            faq: "What is the photo-video service?",
-            faqAnswer: "We have the best photographer in DonaldoLand – Giorgi Tebidze (GT Photography)",
+            // faq: "What is the photo-video service?",
+            // faqAnswer: "We have the best photographer in DonaldoLand – Giorgi Tebidze (GT Photography)",
             benefits: [
                 "Basic functionality",
                 "Daily assistance",
@@ -412,8 +626,8 @@ export const translations = {
             description: "Second service - advanced usage...",
             button: "Activate",
             details: "Second service - advanced usage",
-            faq: "What is the difference between the first and second service?",
-            faqAnswer: "Second service includes everything from the first service plus...",
+            // faq: "What is the difference between the first and second service?",
+            // faqAnswer: "Second service includes everything from the first service plus...",
             benefits: [
                 "All features of first service",
                 "Priority support",
@@ -431,8 +645,8 @@ export const translations = {
             description: "Third service - premium usage...",
             button: "Activate",
             details: "Third service - premium usage",
-            faq: "What features does the third service have?",
-            faqAnswer: "The third service is our final full package...",
+            // faq: "What features does the third service have?",
+            // faqAnswer: "The third service is our final full package...",
             benefits: [
                 "All features of second service",
                 "24/7 dedicated support",
@@ -450,8 +664,8 @@ export const translations = {
             description: "Fourth service - enterprise usage...",
             button: "Activate",
             details: "Fourth service - enterprise usage",
-            faq: "Is there a trial period?",
-            faqAnswer: "We offer a 30-day free trial...",
+            // faq: "Is there a trial period?",
+            // faqAnswer: "We offer a 30-day free trial...",
             benefits: [
                 "All features from all packages",
                 "Enterprise cost",
@@ -463,6 +677,161 @@ export const translations = {
                 "Dedicated manager"
             ]
         },
+
+        service5: {
+            title: "Video Clip",
+            description: "Video clip",
+            button: "Video clip",
+            details: "Video service",
+            benefits: [
+                "All features from all packages",
+                "Enterprise-level cost",
+                "Detailed analytics",
+                "Unlimited storage",
+                "Enhanced security",
+                "Custom integration",
+                "Detailed report",
+                "Dedicated manager"
+            ]
+        },
+
+        service6: {
+            title: "Fireworks",
+            description: "Fireworks during the cake moment",
+            button: "Fireworks",
+            details: "Fireworks during the cake moment",
+            benefits: [
+                "All features from all packages",
+                "Enterprise-level cost",
+                "Detailed analytics",
+                "Unlimited storage",
+                "Enhanced security",
+                "Custom integration",
+                "Detailed report",
+                "Dedicated manager"
+            ]
+        },
+
+        service7: {
+            title: "Fireworks Luxury",
+            description: "Luxury fireworks",
+            button: "Fireworks Luxury",
+            details: "Luxury fireworks",
+            benefits: [
+                "All features from all packages",
+                "Enterprise-level cost",
+                "Detailed analytics",
+                "Unlimited storage",
+                "Enhanced security",
+                "Custom integration",
+                "Detailed report",
+                "Dedicated manager"
+            ]
+        },
+
+        service8: {
+            title: "Bubble Rain",
+            description: "Soap bubble rain during the cake moment",
+            button: "Soap bubbles",
+            details: "Soap bubble show",
+            benefits: [
+                "All features from all packages",
+                "Enterprise-level cost",
+                "Detailed analytics",
+                "Unlimited storage",
+                "Enhanced security",
+                "Custom integration",
+                "Detailed report",
+                "Dedicated manager"
+            ]
+        },
+
+        service9: {
+            title: "Star Opening",
+            description: "Star opening ceremony",
+            button: "Star",
+            details: "Star opening ceremony",
+            benefits: [
+                "All features from all packages",
+                "Enterprise-level cost",
+                "Detailed analytics",
+                "Unlimited storage",
+                "Enhanced security",
+                "Custom integration",
+                "Detailed report",
+                "Dedicated manager"
+            ]
+        },
+
+        service10: {
+            title: "Face Painting",
+            description: "Face painting",
+            button: "Face painting",
+            details: "Face painting",
+            benefits: [
+                "All features from all packages",
+                "Enterprise-level cost",
+                "Detailed analytics",
+                "Unlimited storage",
+                "Enhanced security",
+                "Custom integration",
+                "Detailed report",
+                "Dedicated manager"
+            ]
+        },
+
+        service11: {
+            title: "Confetti Rain",
+            description: "Colorful confetti rain",
+            button: "Confetti rain",
+            details: "Colorful confetti rain",
+            benefits: [
+                "All features from all packages",
+                "Enterprise-level cost",
+                "Detailed analytics",
+                "Unlimited storage",
+                "Enhanced security",
+                "Custom integration",
+                "Detailed report",
+                "Dedicated manager"
+            ]
+        },
+
+        service12: {
+            title: "Band",
+            description: "Band",
+            button: "Band",
+            details: "Band service",
+            benefits: [
+                "All features from all packages",
+                "Enterprise-level cost",
+                "Detailed analytics",
+                "Unlimited storage",
+                "Enhanced security",
+                "Custom integration",
+                "Detailed report",
+                "Dedicated manager"
+            ]
+        },
+
+        service13: {
+            title: "Neon Show",
+            description: "Neon paper show",
+            button: "Neon show",
+            details: "Neon paper show",
+            benefits: [
+                "All features from all packages",
+                "Enterprise-level cost",
+                "Detailed analytics",
+                "Unlimited storage",
+                "Enhanced security",
+                "Custom integration",
+                "Detailed report",
+                "Dedicated manager"
+            ]
+        },
+
+
 
         // about
         about: {
@@ -477,46 +846,48 @@ export const translations = {
 
         // birthprogram
 
+        // birthprogram
         birthprogram1: {
-            back: "Back",
-            viewAll: "View More",
+            back: "Go back",
+            viewAll: "View all",
             added: "Added",
-            bookNow: "Book Now",
+            bookNow: "Book now",
 
-            title: "Program 1",
+            title: "Standard Program",
             guests: "2 hours",
             duration: "10 participants",
             price: "250 ₾",
-            features: ["1 host", "DJ", "Laser Show", "X-BOX", "Karaoke"],
-            description: "A fun and engaging birthday program. Duration: 2 hours; suitable for 10 participants. Includes a host, DJ, Laser Show, X-BOX, and Karaoke.",
+            features: ['2 hosts', 'DJ', 'Laser Show', 'Smoke effects', 'X-BOX', 'Karaoke'],
+            description: 'A 2-hour age-appropriate program for children and entertainment for parents.',
         },
 
         birthprogram2: {
-            title: "Program 2",
+            title: "Kids Program",
             guests: "2 hours",
             duration: "10 participants",
             price: "250 ₾",
-            features: ["1 host", "DJ", "Laser Show", "X-BOX", "Karaoke"],
-            description: "A fun and engaging birthday program. Duration: 2 hours; suitable for 10 participants. Includes a host, DJ, Laser Show, X-BOX, and Karaoke.",
+            features: ['1 host', 'DJ', 'Laser Show', 'Smoke effects', 'X-BOX', 'Karaoke'],
+            description: 'Puppet show (characters from Georgian cartoons). An age-appropriate program for children and entertainment for parents (ages 1 to 5).',
         },
 
         birthprogram3: {
-            title: "Program 3",
+            title: "Standard Program",
             guests: "2 hours",
             duration: "10 participants",
             price: "250 ₾",
-            features: ["1 host", "DJ", "Laser Show", "X-BOX", "Karaoke"],
-            description: "A fun and engaging birthday program. Duration: 2 hours; suitable for 10 participants. Includes a host, DJ, Laser Show, X-BOX, and Karaoke.",
+            features: ['1 host', 'DJ', 'Laser Show', 'Smoke effects', 'X-BOX', 'Karaoke'],
+            description: '(Number of children must not exceed 10) An age-appropriate program for children and entertainment for parents.',
         },
 
         birthprogram4: {
-            title: "Program 4",
+            title: "Football Program",
             guests: "2 hours",
             duration: "10 participants",
             price: "250 ₾",
-            features: ["1 host", "DJ", "Laser Show", "X-BOX", "Karaoke"],
-            description: "A fun and engaging birthday program. Duration: 2 hours; suitable for 10 participants. Includes a host, DJ, Laser Show, X-BOX, and Karaoke.",
+            features: ['1 host', 'DJ', 'Laser Show', 'Smoke effects', 'X-BOX', 'Karaoke'],
+            description: '(Program style adapted to football) An age-appropriate program for children and entertainment for parents, featuring 2 “football player” hosts.',
         },
+
 
         // heros
         hero1: {
@@ -573,28 +944,62 @@ export const translations = {
             ],
         },
 
+        // menu
         menu1: {
             categories: {
                 children: "For children",
                 parents: "For parents",
-                desserts: "Desserts",
-                hotDishes: "Hot dishes",
-                drinks: "Drinks",
-                coldDishes: "Cold dishes",
+                coldDishes: "Cold Dishes",
+                hotDishes: "Hot Dishes",
                 bakery: "Bakery",
                 garnish: "Garnish",
+                desserts: "Desserts",
+                drinks: "Drinks",
 
-                foodName: 'Fruit Donut',
-                foodName1: 'Chocolate Donut',
-                foodName2: 'Khashlama',
-                foodDescription: 'Vanilla, eggs, frosting...',
-                foodDescription1: 'Vanilla, flour, sugar...',
-                foodDescription2: 'Meat, potatoes, dough...',
+                caesar: "Caesar Salad",
+                assortedCheese: "Assorted Cheese",
+                pkhali: "Assorted Pkhali",
+                cucumberTomato: "Cucumber & Tomato",
+                chickenSalad: "Chicken Salad",
+
+                porkBarbecue: "Pork Barbecue",
+                chickenBarbecue: "Chicken Barbecue",
+                hamMushroom: "Ham with Mushrooms and Sulguni",
+                ojakhuri: "Ojakhuri",
+
+                imeruliKhachapuri: "Imeretian Khachapuri",
+                megruliKhachapuri: "Megrelian Khachapuri",
+                pepperoniPizza: "Pepperoni Pizza",
+                margaritaPizza: "Margherita Pizza",
+                lentPizza: "Lenten Pizza",
+                beans: "Beans",
+                mchadi: "Cornbread",
+
+                fries: "French Fries",
+                mexicanPotatoes: "Mexican Potatoes",
+                snacks: "Snack Portion",
+                meatPancake: "Meat Pancake",
+
+                fruitAssortment: "Fruit Assortment Large",
+                fruitAssortmentSmall: "Fruit Assortment Small",
+                watermelonMelon: "Watermelon & Melon",
+
+                compote: "Compote 1L",
+                cocaCola: "Coca-Cola",
+                fanta: "Fanta",
+                water: "Water",
+                borjomi: "Borjomi",
+                turkishCoffee: "Turkish Coffee",
+                zedazeni: "Zedazeni",
+                zedazeniHalf: "Zedazeni 0.5L",
+                chero: "Chero 900g",
+                cheroBig: "Chero 1.5L"
             },
             actions: {
-                returnBack: "Go back",
+                returnBack: "Go Back",
             },
         },
+
 
         // other program
         otherProgram: {
@@ -734,8 +1139,8 @@ export const translations = {
             description: "Первый сервис — базовое использование...",
             button: "Фото-Видео",
             details: "Фото и видеосъёмка",
-            faq: "Что такое фото-видео сервис?",
-            faqAnswer: "У нас лучший фотограф — Георгий Тебидзе (GT Photography)",
+            // faq: "Что такое фото-видео сервис?",
+            // faqAnswer: "У нас лучший фотограф — Георгий Тебидзе (GT Photography)",
             benefits: [
                 "Базовый функционал",
                 "Ежедневная помощь",
@@ -753,8 +1158,8 @@ export const translations = {
             description: "Второй сервис — расширенное использование...",
             button: "Активировать",
             details: "Второй сервис — расширенное использование",
-            faq: "Чем отличается первый сервис от второго?",
-            faqAnswer: "Второй сервис включает всё из первого плюс...",
+            // faq: "Чем отличается первый сервис от второго?",
+            // faqAnswer: "Второй сервис включает всё из первого плюс...",
             benefits: [
                 "Все функции первого",
                 "Приоритетная поддержка",
@@ -772,8 +1177,8 @@ export const translations = {
             description: "Третий сервис — премиум использование...",
             button: "Активировать",
             details: "Третий сервис — премиум использование",
-            faq: "Какие функции у третьего сервиса?",
-            faqAnswer: "Третий сервис — наш полный финальный пакет...",
+            // faq: "Какие функции у третьего сервиса?",
+            // faqAnswer: "Третий сервис — наш полный финальный пакет...",
             benefits: [
                 "Все функции второго",
                 "Поддержка 24/7",
@@ -791,8 +1196,8 @@ export const translations = {
             description: "Четвёртый сервис — корпоративное использование...",
             button: "Активировать",
             details: "Четвёртый сервис — корпоративное использование",
-            faq: "Есть ли пробный период?",
-            faqAnswer: "Мы предлагаем 30-дневный бесплатный пробный период...",
+            // faq: "Есть ли пробный период?",
+            // faqAnswer: "Мы предлагаем 30-дневный бесплатный пробный период...",
             benefits: [
                 "Все функции всех пакетов",
                 "Корпоративные возможности",
@@ -804,6 +1209,160 @@ export const translations = {
                 "Выделенный менеджер"
             ]
         },
+
+        service5: {
+            title: "Видеоклип",
+            description: "Видеоклип",
+            button: "Видеоклип",
+            details: "Видео-обслуживание",
+            benefits: [
+                "Все функции из всех пакетов",
+                "Корпоративный уровень затрат",
+                "Подробная аналитика",
+                "Безлимитное хранилище",
+                "Расширенная защита",
+                "Кастомная интеграция",
+                "Подробный отчёт",
+                "Персональный менеджер"
+            ]
+        },
+
+        service6: {
+            title: "Фейерверк",
+            description: "Фейерверк во время подачи торта",
+            button: "Фейерверк",
+            details: "Фейерверк во время подачи торта",
+            benefits: [
+                "Все функции из всех пакетов",
+                "Корпоративный уровень затрат",
+                "Подробная аналитика",
+                "Безлимитное хранилище",
+                "Расширенная защита",
+                "Кастомная интеграция",
+                "Подробный отчёт",
+                "Персональный менеджер"
+            ]
+        },
+
+        service7: {
+            title: "Фейерверк Люкс",
+            description: "Фейерверк Люкс",
+            button: "Фейерверк Люкс",
+            details: "Фейерверк Люкс",
+            benefits: [
+                "Все функции из всех пакетов",
+                "Корпоративный уровень затрат",
+                "Подробная аналитика",
+                "Безлимитное хранилище",
+                "Расширенная защита",
+                "Кастомная интеграция",
+                "Подробный отчёт",
+                "Персональный менеджер"
+            ]
+        },
+
+        service8: {
+            title: "Дождь из пузырей",
+            description: "Дождь из мыльных пузырей во время торта",
+            button: "Мыльные пузыри",
+            details: "Шоу мыльных пузырей",
+            benefits: [
+                "Все функции из всех пакетов",
+                "Корпоративный уровень затрат",
+                "Подробная аналитика",
+                "Безлимитное хранилище",
+                "Расширенная защита",
+                "Кастомная интеграция",
+                "Подробный отчёт",
+                "Персональный менеджер"
+            ]
+        },
+
+        service9: {
+            title: "Открытие звезды",
+            description: "Открытие звезды",
+            button: "Звезда",
+            details: "Открытие звезды",
+            benefits: [
+                "Все функции из всех пакетов",
+                "Корпоративный уровень затрат",
+                "Подробная аналитика",
+                "Безлимитное хранилище",
+                "Расширенная защита",
+                "Кастомная интеграция",
+                "Подробный отчёт",
+                "Персональный менеджер"
+            ]
+        },
+
+        service10: {
+            title: "Аквагрим",
+            description: "Аквагрим",
+            button: "Аквагрим",
+            details: "Аквагрим",
+            benefits: [
+                "Все функции из всех пакетов",
+                "Корпоративный уровень затрат",
+                "Подробная аналитика",
+                "Безлимитное хранилище",
+                "Расширенная защита",
+                "Кастомная интеграция",
+                "Подробный отчёт",
+                "Персональный менеджер"
+            ]
+        },
+
+        service11: {
+            title: "Дождь из конфетти",
+            description: "Дождь из цветного конфетти",
+            button: "Дождь из конфетти",
+            details: "Дождь из цветного конфетти",
+            benefits: [
+                "Все функции из всех пакетов",
+                "Корпоративный уровень затрат",
+                "Подробная аналитика",
+                "Безлимитное хранилище",
+                "Расширенная защита",
+                "Кастомная интеграция",
+                "Подробный отчёт",
+                "Персональный менеджер"
+            ]
+        },
+
+        service12: {
+            title: "Музыкальная группа",
+            description: "Музыкальная группа",
+            button: "Группа",
+            details: "Услуги музыкальной группы",
+            benefits: [
+                "Все функции из всех пакетов",
+                "Корпоративный уровень затрат",
+                "Подробная аналитика",
+                "Безлимитное хранилище",
+                "Расширенная защита",
+                "Кастомная интеграция",
+                "Подробный отчёт",
+                "Персональный менеджер"
+            ]
+        },
+
+        service13: {
+            title: "Неоновое шоу",
+            description: "Неоновое бумажное шоу",
+            button: "Неоновое шоу",
+            details: "Неоновое бумажное шоу",
+            benefits: [
+                "Все функции из всех пакетов",
+                "Корпоративный уровень затрат",
+                "Подробная аналитика",
+                "Безлимитное хранилище",
+                "Расширенная защита",
+                "Кастомная интеграция",
+                "Подробный отчёт",
+                "Персональный менеджер"
+            ]
+        },
+
 
         // about
         about: {
@@ -818,46 +1377,48 @@ export const translations = {
 
         // birthprogram
 
+        // birthprogram
         birthprogram1: {
             back: "Назад",
-            viewAll: "Смотреть полностью",
+            viewAll: "Посмотреть все",
             added: "Добавлено",
             bookNow: "Забронировать",
 
-            title: "Программа 1",
+            title: "Стандартная программа",
             guests: "2 часа",
             duration: "10 участников",
             price: "250 ₾",
-            features: ["1 ведущий", "DJ", "Лазерное шоу", "X-BOX", "Караоке"],
-            description: "Весёлая и увлекательная программа для дня рождения. Продолжительность: 2 часа; для 10 участников. Включает ведущего, DJ, Лазерное шоу, X-BOX и Караоке.",
+            features: ['2 ведущих', 'DJ', 'Лазерное шоу', 'Дымовые эффекты', 'X-BOX', 'Караоке'],
+            description: '2-часовая программа, адаптированная по возрасту детей, и развлечение для родителей.',
         },
 
         birthprogram2: {
-            title: "Программа 2",
+            title: "Детская программа",
             guests: "2 часа",
             duration: "10 участников",
             price: "250 ₾",
-            features: ["1 ведущий", "DJ", "Лазерное шоу", "X-BOX", "Караоке"],
-            description: "Весёлая и увлекательная программа для дня рождения. Продолжительность: 2 часа; для 10 участников. Включает ведущего, DJ, Лазерное шоу, X-BOX и Караоке.",
+            features: ['1 ведущий', 'DJ', 'Лазерное шоу', 'Дымовые эффекты', 'X-BOX', 'Караоке'],
+            description: 'Кукольное шоу (персонажи из грузинских мультфильмов). Программа по возрасту для детей и развлечение для родителей (возраст от 1 до 5 лет).',
         },
 
         birthprogram3: {
-            title: "Программа 3",
+            title: "Программа Стандарт",
             guests: "2 часа",
             duration: "10 участников",
             price: "250 ₾",
-            features: ["1 ведущий", "DJ", "Лазерное шоу", "X-BOX", "Караоке"],
-            description: "Весёлая и увлекательная программа для дня рождения. Продолжительность: 2 часа; для 10 участников. Включает ведущего, DJ, Лазерное шоу, X-BOX и Караоке.",
+            features: ['1 ведущий', 'DJ', 'Лазерное шоу', 'Дымовые эффекты', 'X-BOX', 'Караоке'],
+            description: '(Количество детей не должно превышать 10) Программа по возрасту для детей и развлечение для родителей.',
         },
 
         birthprogram4: {
-            title: "Программа 4",
+            title: "Футбольная программа",
             guests: "2 часа",
             duration: "10 участников",
             price: "250 ₾",
-            features: ["1 ведущий", "DJ", "Лазерное шоу", "X-BOX", "Караоке"],
-            description: "Весёлая и увлекательная программа для дня рождения. Продолжительность: 2 часа; для 10 участников. Включает ведущего, DJ, Лазерное шоу, X-BOX и Караоке.",
+            features: ['1 ведущий', 'DJ', 'Лазерное шоу', 'Дымовые эффекты', 'X-BOX', 'Караоке'],
+            description: '(Стиль программы адаптирован под футбол) Программа по возрасту для детей и развлечение для родителей, в которой участвуют 2 ведущих «футболиста».',
         },
+
 
         // heros
         hero1: {
@@ -914,28 +1475,62 @@ export const translations = {
             ],
         },
 
+        // menu
         menu1: {
             categories: {
                 children: "Для детей",
                 parents: "Для родителей",
-                desserts: "Десерты",
-                hotDishes: "Горячие блюда",
-                drinks: "Напитки",
                 coldDishes: "Холодные блюда",
+                hotDishes: "Горячие блюда",
                 bakery: "Выпечка",
                 garnish: "Гарнир",
+                desserts: "Десерты",
+                drinks: "Напитки",
 
-                foodName: 'Фруктовый пончик',
-                foodName1: 'Шоколадный пончик',
-                foodName2: 'Хашлама',
-                foodDescription: 'Ваниль, яйца, глазурь...',
-                foodDescription1: 'Ваниль, мука, сахар...',
-                foodDescription2: 'Мясо, картофель, тесто...',
+                caesar: "Салат Цезарь",
+                assortedCheese: "Ассорти сыров",
+                pkhali: "Ассорти пхали",
+                cucumberTomato: "Огурцы и помидоры",
+                chickenSalad: "Куриный салат",
+
+                porkBarbecue: "Шашлык из свинины",
+                chickenBarbecue: "Шашлык из курицы",
+                hamMushroom: "Ветчина с грибами и сулугуни",
+                ojakhuri: "Оджахури",
+
+                imeruliKhachapuri: "Имеретинский хачапури",
+                megruliKhachapuri: "Мегрельский хачапури",
+                pepperoniPizza: "Пицца Пепперони",
+                margaritaPizza: "Пицца Маргарита",
+                lentPizza: "Постная пицца",
+                beans: "Лобио",
+                mchadi: "Мчади",
+
+                fries: "Картофель фри",
+                mexicanPotatoes: "Картофель по-мексикански",
+                snacks: "Порция снеков",
+                meatPancake: "Мясной блин",
+
+                fruitAssortment: "Фруктовое ассорти большое",
+                fruitAssortmentSmall: "Фруктовое ассорти маленькое",
+                watermelonMelon: "Арбуз и дыня",
+
+                compote: "Компот 1 л",
+                cocaCola: "Кока-Кола",
+                fanta: "Фанта",
+                water: "Вода",
+                borjomi: "Боржоми",
+                turkishCoffee: "Турецкий кофе",
+                zedazeni: "Зедазени",
+                zedazeniHalf: "Зедазени 0.5",
+                chero: "Черo 900 г",
+                cheroBig: "Черo 1.5 л"
             },
             actions: {
                 returnBack: "Назад",
             },
         },
+
 
         // otherprogram
         otherProgram: {
