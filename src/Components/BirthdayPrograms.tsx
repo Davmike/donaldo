@@ -1,7 +1,13 @@
 import { useState } from 'react';
 import { ChevronLeft, Check, ArrowRight, ShoppingCart } from 'lucide-react';
 import { useLanguage } from '../contexts/LanguageContext';
-
+import standart from "../../public/assets/standart.jpg"
+import photo1 from "../../public/assets/photo1.jpg"
+import photo2 from "../../public/assets/photo2.jpg"
+import photo3 from "../../public/assets/photo3.jpg"
+import photo4 from "../../public/assets/photo4.jpg"
+import photo5 from "../../public/assets/photo5.jpg"
+import football from "../../public/assets/footbal.jpg"
 
 interface Service {
     id: number;
@@ -42,7 +48,7 @@ function BirthdayPrograms({ addToCart, cartItems }: any) {
             price: '350 ₾',
             features: t.birthprogram1.features,
             description: t.birthprogram1.description,
-            image: 'https://images.pexels.com/photos/3807517/pexels-photo-3807517.jpeg?auto=compress&cs=tinysrgb&w=600',
+            image: standart,
             color: 'blue'
         },
         {
@@ -53,7 +59,7 @@ function BirthdayPrograms({ addToCart, cartItems }: any) {
             price: '300 ₾',
             features: t.birthprogram2.features,
             description: t.birthprogram2.description,
-            image: 'https://images.pexels.com/photos/1444716/pexels-photo-1444716.jpeg?auto=compress&cs=tinysrgb&w=600',
+            image: standart,
             color: 'blue'
         },
         {
@@ -64,7 +70,7 @@ function BirthdayPrograms({ addToCart, cartItems }: any) {
             price: '250 ₾',
             features: t.birthprogram3.features,
             description: t.birthprogram3.description,
-            image: 'https://images.pexels.com/photos/3452361/pexels-photo-3452361.jpeg?auto=compress&cs=tinysrgb&w=600',
+            image: standart,
             color: 'blue'
         },
         {
@@ -75,7 +81,7 @@ function BirthdayPrograms({ addToCart, cartItems }: any) {
             price: '350 ₾',
             features: t.birthprogram4.features,
             description: t.birthprogram4.description,
-            image: 'https://images.pexels.com/photos/3375971/pexels-photo-3375971.jpeg?auto=compress&cs=tinysrgb&w=600',
+            image: standart,
             color: 'blue'
         },
     ];

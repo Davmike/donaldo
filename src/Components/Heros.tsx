@@ -139,6 +139,7 @@ function Heros({ addToCart, cartItems }: any) {
                                                         image: selectedHero.image,
                                                         description: selectedHero.description,
                                                         section: "Heroes"
+
                                                     })
                                                 }
                                                 disabled={cartItems.some(

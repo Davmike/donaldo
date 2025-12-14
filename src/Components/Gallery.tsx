@@ -1,6 +1,11 @@
 import { useState } from 'react';
 import { Play, ChevronLeft, ChevronRight } from 'lucide-react';
 import { useLanguage } from "../contexts/LanguageContext";
+import photo1 from "../../public/assets/photo1.jpg"
+import photo2 from "../../public/assets/photo2.jpg"
+import photo3 from "../../public/assets/photo3.jpg"
+import photo4 from "../../public/assets/photo4.jpg"
+import photo5 from "../../public/assets/photo5.jpg"
 
 
 function Gallery() {
@@ -23,44 +28,30 @@ function Gallery() {
         photo: [
             {
                 id: 1,
-                image: 'https://images.pexels.com/photos/1674752/pexels-photo-1674752.jpeg?auto=compress&cs=tinysrgb&w=800',
+                image: photo1,
                 isVideo: false,
             },
             {
                 id: 2,
-                image: 'https://images.pexels.com/photos/1648374/pexels-photo-1648374.jpeg?auto=compress&cs=tinysrgb&w=800',
+                image: photo2,
                 isVideo: false,
             },
             {
                 id: 3,
-                image: 'https://images.pexels.com/photos/1857157/pexels-photo-1857157.jpeg?auto=compress&cs=tinysrgb&w=800',
+                image: photo3,
                 isVideo: false,
             },
             {
                 id: 4,
-                image: 'https://images.pexels.com/photos/1416736/pexels-photo-1416736.jpeg?auto=compress&cs=tinysrgb&w=800',
+                image: photo4,
                 isVideo: false,
             },
             {
                 id: 5,
-                image: 'https://images.pexels.com/photos/1720186/pexels-photo-1720186.jpeg?auto=compress&cs=tinysrgb&w=800',
+                image: photo5,
                 isVideo: false,
             },
-            {
-                id: 6,
-                image: 'https://images.pexels.com/photos/1729797/pexels-photo-1729797.jpeg?auto=compress&cs=tinysrgb&w=800',
-                isVideo: false,
-            },
-            {
-                id: 7,
-                image: 'https://images.pexels.com/photos/1536619/pexels-photo-1536619.jpeg?auto=compress&cs=tinysrgb&w=800',
-                isVideo: false,
-            },
-            {
-                id: 8,
-                image: 'https://images.pexels.com/photos/1739970/pexels-photo-1739970.jpeg?auto=compress&cs=tinysrgb&w=800',
-                isVideo: false,
-            },
+
         ],
         video: [
             {
@@ -113,11 +104,6 @@ function Gallery() {
             {
                 id: 5,
                 image: 'https://images.pexels.com/photos/1536619/pexels-photo-1536619.jpeg?auto=compress&cs=tinysrgb&w=800',
-                isVideo: false,
-            },
-            {
-                id: 6,
-                image: 'https://images.pexels.com/photos/1739970/pexels-photo-1739970.jpeg?auto=compress&cs=tinysrgb&w=800',
                 isVideo: false,
             },
         ],
