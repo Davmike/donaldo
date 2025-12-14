@@ -1,4 +1,5 @@
 import { useLanguage } from "../contexts/LanguageContext";
+import test from "../../public/assets/test.jpg"
 
 function About() {
     const { t } = useLanguage();
@@ -19,7 +20,7 @@ function About() {
                         <div className="w-full md:w-1/2 relative z-10">
                             <div className="rounded-2xl overflow-hidden shadow-2xl max-w-[472px] max-h-[542px]">
                                 <img
-                                    src='../../public/assets/test.jpg'
+                                    src={test}
                                     alt="Kids Play Area"
                                     className="w-full h-auto"
                                 />
