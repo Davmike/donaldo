@@ -151,10 +151,13 @@ ${formData.message}
 
                     <input
                         type="tel"
+                        inputMode="numeric"
+                        pattern="[0-9]*"
                         placeholder={t.contactForm.phone}
                         value={formData.mobile}
                         onChange={(e) => {
-                            setFormData({ ...formData, mobile: e.target.value });
+                            const onlyNumbers = e.target.value.replace(/\D/g, "");
+                            setFormData({ ...formData, mobile: onlyNumbers });
                             setErrors({ ...errors, mobile: false });
                         }}
                         className={`w-full px-6 py-4 bg-[#faf9f6] border rounded-xl
