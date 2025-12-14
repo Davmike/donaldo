@@ -1,6 +1,20 @@
 import { useState } from 'react';
 import { ChevronLeft, ChevronRight, ArrowLeft } from 'lucide-react';
 import { useLanguage } from "../contexts/LanguageContext";
+import spiderman from "../../public/assets/spiderman.png"
+import ironMan from "../../public/assets/ironman.png"
+import batman from "../../public/assets/batman.png"
+import steve from "../../public/assets/steve.png"
+import sonic from "../../public/assets/sonic.png"
+import miki from "../../public/assets/miki.png"
+import mini from "../../public/assets/mini.png"
+import joze from "../../public/assets/joze.png"
+import pepa from "../../public/assets/pepa.png"
+import robot from "../../public/assets/robor.png"
+import panda from "../../public/assets/panda.png"
+import pinkciyvi from "../../public/assets/SquirrelPink.png"
+import blueciyvi from "../../public/assets/SquirrelBlue.png"
+import datunia from "../../public/assets/bear.png"
 
 interface Hero {
     id: number;
@@ -21,48 +35,21 @@ function Heros({ addToCart, cartItems }: any) {
     const { t } = useLanguage();
 
     const heroes: Hero[] = [
-        {
-            id: 1,
-            name: t.hero1.name,
-            description: t.hero1.description,
-            fullDescription: t.hero1.fullDescription,
-            price: 50,
-            image: 'https://via.placeholder.com/200x300/4169E1/FFFFFF?text=Pinocchio'
-        },
-        {
-            id: 2,
-            name: t.hero2.name,
-            description: t.hero2.description,
-            fullDescription: t.hero2.fullDescription,
-            price: 50,
-            originalPrice: 60,
-            discount: '-20 %',
-            image: 'https://via.placeholder.com/200x300/DC143C/FFFFFF?text=Spider-Man'
-        },
-        {
-            id: 3,
-            name: t.hero3.name,
-            description: t.hero3.description,
-            fullDescription: t.hero3.fullDescription,
-            price: 50,
-            image: 'https://via.placeholder.com/200x300/FFD700/000000?text=Iron+Man'
-        },
-        {
-            id: 4,
-            name: t.hero4.name,
-            description: t.hero4.description,
-            fullDescription: t.hero4.fullDescription,
-            price: 50,
-            image: 'https://via.placeholder.com/200x300/000000/FFFFFF?text=Batman'
-        },
-        {
-            id: 5,
-            name: t.hero5.name,
-            description: t.hero5.description,
-            fullDescription: t.hero5.fullDescription,
-            price: 50,
-            image: 'https://via.placeholder.com/200x300/0066CC/FFFFFF?text=Sonic'
-        }
+        { id: 1, name: t.hero1.name, description: t.hero1.description, fullDescription: t.hero1.fullDescription, price: 40, image: spiderman },
+        { id: 2, name: t.hero2.name, description: t.hero2.description, fullDescription: t.hero2.fullDescription, price: 35, image: ironMan },
+        { id: 3, name: t.hero3.name, description: t.hero3.description, fullDescription: t.hero3.fullDescription, price: 35, image: batman },
+        { id: 4, name: t.hero4.name, description: t.hero4.description, fullDescription: t.hero4.fullDescription, price: 60, image: steve },
+        { id: 5, name: t.hero5.name, description: t.hero5.description, fullDescription: t.hero5.fullDescription, price: 50, image: joze },
+        { id: 6, name: t.hero6.name, description: t.hero6.description, fullDescription: t.hero6.fullDescription, price: 60, image: sonic },
+        { id: 7, name: t.hero7.name, description: t.hero7.description, fullDescription: t.hero7.fullDescription, price: 35, image: miki },
+        { id: 8, name: t.hero8.name, description: t.hero8.description, fullDescription: t.hero8.fullDescription, price: 35, image: mini },
+        { id: 9, name: t.hero9.name, description: t.hero9.description, fullDescription: t.hero9.fullDescription, price: 50, image: joze },
+        { id: 10, name: t.hero10.name, description: t.hero10.description, fullDescription: t.hero10.fullDescription, price: 50, image: pepa },
+        { id: 11, name: t.hero11.name, description: t.hero11.description, fullDescription: t.hero11.fullDescription, price: 100, image: robot },
+        { id: 12, name: t.hero12.name, description: t.hero12.description, fullDescription: t.hero12.fullDescription, price: 70, image: panda },
+        { id: 13, name: t.hero13.name, description: t.hero13.description, fullDescription: t.hero13.fullDescription, price: 60, image: pinkciyvi },
+        { id: 14, name: t.hero14.name, description: t.hero14.description, fullDescription: t.hero14.fullDescription, price: 60, image: blueciyvi },
+        { id: 15, name: t.hero15.name, description: t.hero15.description, fullDescription: t.hero15.fullDescription, price: 70, image: datunia },
     ];
 
 
@@ -101,11 +88,13 @@ function Heros({ addToCart, cartItems }: any) {
                         <div className="bg-[#1554A4] rounded-3xl overflow-hidden">
                             <div className="flex flex-col lg:flex-row items-start gap-8 p-8 lg:p-12">
                                 <div className="w-full lg:w-1/3 flex justify-center">
-                                    <div className="w-48 h-72 bg-white/10 rounded-2xl flex items-center justify-center">
-                                        {/* <div className="text-white text-center text-sm">
-                                            {selectedHero.name}
-                                        </div> */}
+                                    <div className="w-48 h-72 bg-white/10 rounded-2xl flex items-start justify-center p-2">
+                                        <img
+                                            src={selectedHero.image}
+                                            className="mt-2 h-64 w-40 object-contain rounded-xl"
+                                        />
                                     </div>
+
                                 </div>
 
                                 <div className="w-full lg:w-2/3 text-white">
@@ -231,21 +220,25 @@ function Heros({ addToCart, cartItems }: any) {
                                     >
                                         <div className="rounded-3xl border">
                                             <div className="bg-[#1554A4] rounded-3xl overflow-hidden">
-                                                <div className="relative h-64 bg-white/10 flex items-end justify-center p-4">
+                                                <div className="relative h-64 bg-white/10 flex items-start justify-center p-4">
+                                                    <img
+                                                        src={hero.image}
+                                                        alt=""
+                                                        className="mt-4 h-48 w-48 object-contain"
+                                                    />
                                                     {hero.discount && (
                                                         <div className="absolute top-4 right-4 bg-red-500 text-white px-3 py-1 rounded-full text-sm font-bold">
                                                             {hero.discount}
                                                         </div>
                                                     )}
-                                                    {/* <div className="text-white text-center text-sm">
-                                                        {hero.name}
-                                                    </div> */}
                                                 </div>
+
 
                                                 <div className="p-6">
                                                     <h3 className="text-xl font-bold mb-2 text-[#FFD472]">{hero.name}</h3>
                                                     <p className="text-sm mb-4 line-clamp-2 text-[#B4C4E5]">
-                                                        {t.hero1.description}
+                                                        {hero.description}
+
                                                     </p>
                                                     <div className="flex items-center justify-between mb-4">
                                                         <div className="flex items-center gap-2">
@@ -300,16 +293,19 @@ function Heros({ addToCart, cartItems }: any) {
                         <div className="w-full max-w-sm">
                             <div className="border rounded-3xl">
                                 <div className="bg-[#1554A4] rounded-3xl overflow-hidden">
-                                    <div className="relative h-80 bg-white/10 flex items-end justify-center p-4">
+                                    <div className="relative h-80 bg-white/10 flex items-start justify-center p-4">
+                                        <img
+                                            src={heroes[currentIndex].image}
+                                            alt={heroes[currentIndex].name}
+                                            className="mt-4 h-64 w-64 object-contain rounded-xl"
+                                        />
                                         {heroes[currentIndex].discount && (
                                             <div className="absolute top-4 right-4 bg-red-500 text-white px-3 py-1 rounded-full text-sm font-bold">
                                                 {heroes[currentIndex].discount}
                                             </div>
                                         )}
-                                        {/* <div className="text-white text-center">
-                                            {heroes[currentIndex].name}
-                                        </div> */}
                                     </div>
+
 
                                     <div className="p-6">
                                         <h3 className="font-bold mb-2 text-[#FFD472] text-[24px]">

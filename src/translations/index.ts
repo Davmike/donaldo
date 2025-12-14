@@ -362,49 +362,155 @@ export const translations = {
             gasvla: "გასვლითი ლოკაცია",
             adgilze: "ადგილზე",
 
-            name: 'პინოქიო',
-            description: 'მრავალჟანრიანი გამოსახულება თავ...',
+            name: 'სპაიდერმენი',
+            description: 'სწრაფი და მამაცი სუპერ გმირი',
             fullDescription: [
-                'ეროვნების სპეციალისტი, ჰაქერები ხუკერელ ხელოვო მეტწინების მის თევანდენი და ამისას',
-                'სისხლების დემდელიხერიო", სისხლიერებ თიხსალეს აბლევის ნატევნელელი ისხელებელს, რომელიკ ართის სისხლროელის თელის მინძებიელებს ფინასის, რა იქრეს ერგევერის ქორკოცი',
-                'შორენსი ერთიცების მადევიალუხრი კორპრიელი არმეკვა დიებსის" თქბროს, საბოლა მადწევრეს მორლაპწს ეკროთს ეთიიხების ერთისხოდეს შედებელობის.',
-                'ყკიბილექრე მელოეხისი", მხსიარკოდიი შესოსკელელრნე დიელესოტედის ვორლიებელის შადებოხოლობისი',
-                'ოლსსეხეხრე მელოსისფელო; კოლოლოძოოროხოტოლი დეოთოსოდასა პოროთოსია, პკკოჰებს და სხვა ვროთილების ელეროელდკოროსი.'
+                'სპაიდერმენი არის ბავშვების ერთ-ერთი ყველაზე საყვარელი სუპერ გმირი.',
+                'აქტიური, ენერგიული და შთამბეჭდავი შოუს გმირი.',
+                'იდეალურია სუპერ გმირების თემატიკის წვეულებებისთვის.'
             ],
         },
 
         hero2: {
-            name: 'ბიენადინი',
-            description: 'მრავალჟანრიანი გამოსახულება თავ...',
+            name: 'რკინის კაცი',
+            description: 'ტექნოლოგიური სუპერ გმირი',
             fullDescription: [
-                'დიველელების სარელესისანი, ჰექიხოთილა გალიარებელი ხნელებ მეგიმბორელს მის დიოთურელის და ამეხისა',
-                'დისხლიწის ყენდიხაროდისინი", მისხხოლიპს მაბთაინო გალივის მათშელენს ხამეხიდელსო, ხოზფელო სკოც სისხხორსისტო თელის მონქგობლებს მედორებთო, რა კალია მხალეხი ჰოდიოქელი'
+                'რკინის კაცი გამოირჩევა ძლიერი და ეფექტური ვიზუალით.',
+                'ბავშვებში იწვევს WOW ემოციებს.',
+                'შესანიშნავია აქტიური და შთამბეჭდავი წარმოდგენებისთვის.'
             ],
         },
 
         hero3: {
-            name: 'პინოქიო',
-            description: 'მრავალჟანრიანი გამოსახულება თავ...',
+            name: 'ბეტმენი',
+            description: 'ბნელი რაინდი და მამაცი გმირი',
             fullDescription: [
-                'დიველელების სარელესისანი, ჰექიხოთილა გალიარებელი ხნელებ მეგიმბორელს მის დიოთურელის და ამეხისა'
+                'ბეტმენი იცავს სამართლიანობას და მეგობრებს.',
+                'ძალიან პოპულარულია უფროს ბავშვებში.',
+                'იდეალურია სუპერ გმირების შოუსთვის.'
             ],
         },
 
         hero4: {
-            name: 'პინოქიო',
-            description: 'მრავალჟანრიანი გამოსახულება თავ...',
+            name: 'მაინქარაფთი',
+            description: 'პოპულარული თამაშის გმირი',
             fullDescription: [
-                'დიველელების სარელესისანი, ჰექიხოთილა გალიარებელი ხნელებ მეგიმბორელს მის დიოთურელის და ამეხისა'
+                'მაინქარაფთის გმირი ბავშვებისთვის ძალიან ნაცნობია.',
+                'შესანიშნავია თამაშზე დაფუძნებული თემატიკისთვის.',
+                'ატარებს ინტერაქტიულ და სახალისო აქტივობებს.'
             ],
         },
 
         hero5: {
-            name: 'პინოქიო',
-            description: 'მრავალჟანრიანი გამოსახულება თავ...',
+            name: 'ლოლი',
+            description: 'ფერადი და თანამედროვე გმირი',
             fullDescription: [
-                'დიველელების სარელესისანი, ჰექიხოთილა გალიარებელი ხნელებ მეგიმბორელს მის დიოთურელის და ამეხისა'
+                'ლოლი განსაკუთრებით პოპულარულია გოგონებში.',
+                'კაშკაშა სტილი და მხიარული ხასიათი.',
+                'იდეალურია ფოტოებისა და ცეკვებისთვის.'
             ],
         },
+
+        hero6: {
+            name: 'სონიკი',
+            description: 'სწრაფი და ენერგიული გმირი',
+            fullDescription: [
+                'სონიკი გამოირჩევა სისწრაფით და მხიარული ხასიათით.',
+                'ბავშვები აქტიურად ერთვებიან თამაშებში.',
+                'შესანიშნავია დინამიკური შოუებისთვის.'
+            ],
+        },
+
+        hero7: {
+            name: 'მიკი მაუსი',
+            description: 'მხიარული და ელეგანტური გმირი',
+            fullDescription: [
+                'მიკი მაუსი გამოირჩევა სილამაზით და სიკეთით.',
+                'ძალიან პოპულარულია ბიჭებში.',
+                'შესანიშნავია ზღაპრული წვეულებებისთვის.'
+            ],
+        },
+
+        hero8: {
+            name: 'მინი მაუსი',
+            description: 'მხიარული და ელეგანტური გმირი',
+            fullDescription: [
+                'მინი მაუსი გამოირჩევა სილამაზით და სიკეთით.',
+                'ძალიან პოპულარულია გოგონებში.',
+                'შესანიშნავია ზღაპრული წვეულებებისთვის.'
+            ],
+        },
+
+        hero9: {
+            name: 'ჟირაფი ჟოზე',
+            description: 'მაღალი და მხიარული გმირი',
+            fullDescription: [
+                'ჟირაფი ჟოზე ბავშვებისთვის ძალიან სახალისოა.',
+                'გამოირჩევა კაშკაშა ვიზუალით.',
+                'იდეალურია ფოტოსესიებისა და თამაშებისთვის.'
+            ],
+        },
+
+        hero10: {
+            name: 'გოჭი პეპა',
+            description: 'პოპულარული მულტფილმის გმირი',
+            fullDescription: [
+                'გოჭი პეპა ბავშვების ერთ-ერთი ფავორიტია.',
+                'მეგობრული და მხიარული პერსონაჟი.',
+                'კარგი არჩევანია პატარა ასაკის ბავშვებისთვის.'
+            ],
+        },
+
+        hero11: {
+            name: 'რობოტი რობო',
+            description: 'თანამედროვე და შთამბეჭდავი გმირი',
+            fullDescription: [
+                'რობოტი რობო ქმნის WOW ეფექტს.',
+                'ტექნოლოგიური და საინტერესო პერსონაჟი.',
+                'იდეალურია თემატური ღონისძიებებისთვის.'
+            ],
+        },
+
+        hero12: {
+            name: 'დათუნია პანდა',
+            description: 'კეთილი და საყვარელი გმირი',
+            fullDescription: [
+                'დათუნია პანდა ქმნის სითბოს და სიყვარულის ატმოსფეროს.',
+                'ძალიან მოსწონთ პატარებს.',
+                'იდეალურია მშვიდი ღონისძიებებისთვის.'
+            ],
+        },
+
+        hero13: {
+            name: 'ვარდისფერი ციყვუნია',
+            description: 'მხიარული და ფერადი გმირი',
+            fullDescription: [
+                'ვარდისფერი ციყვუნია არის ძალიან ენერგიული.',
+                'კაშკაშა და პოზიტიური პერსონაჟი.',
+                'ბავშვები სწრაფად ერთვებიან თამაშებში.'
+            ],
+        },
+
+        hero14: {
+            name: 'ლურჯი ციყვუნია',
+            description: 'კეთილი და მხიარული გმირი',
+            fullDescription: [
+                'ლურჯი ციყვუნია გამოირჩევა მეგობრული ხასიათით.',
+                'ქმნის სასიამოვნო ატმოსფეროს.',
+                'იდეალურია საბავშვო შოუებისთვის.'
+            ],
+        },
+
+        hero15: {
+            name: 'დათუნია წითელი',
+            description: 'მხიარული და აქტიური გმირი',
+            fullDescription: [
+                'დათუნია წითელი არის ძალიან ენერგიული პერსონაჟი.',
+                'ატარებს ცეკვებსა და თამაშებს.',
+                'ბავშვებისთვის ძალიან სახალისოა.'
+            ],
+        },
+
 
         // menu
         menu1: {
@@ -897,50 +1003,155 @@ export const translations = {
             bookNow: "Book now",
             viewAll: "View all",
             price: "Price",
-            gasvla: "On-site location",
-            adgilze: "At the venue",
+            gasvla: "Off-site location",
+            adgilze: "On-site",
 
-            name: 'Pinocchio',
-            description: 'Multigenre character representation...',
+            name: "Spiderman",
+            description: "Fast and brave superhero",
             fullDescription: [
-                'National specialist, hackers and other creative experts in their fields.',
-                'Expert in blood-based rituals and related performances, skilled in artistic interpretations.',
-                'Performer with exceptional coordination and presence, capable of engaging diverse audiences.',
-                'Specialist in visual storytelling, creating immersive and memorable experiences.',
-                'Master of unique crafts; works with tools, materials, and various interactive elements.',
+                "Spiderman is one of the most beloved superheroes among children.",
+                "An active, energetic, and impressive show character.",
+                "Perfect for superhero-themed parties."
             ],
         },
 
         hero2: {
-            name: 'Bienadini',
-            description: 'Multigenre character representation...',
+            name: "Iron Man",
+            description: "Technological superhero",
             fullDescription: [
-                'Specialist in creative performances, capable of managing large-scale events and productions.',
-                'Expert in dynamic choreography and engaging audience interaction, skilled in complex setups.',
+                "Iron Man stands out with a powerful and impressive appearance.",
+                "Creates WOW emotions for children.",
+                "Perfect for active and spectacular performances."
             ],
         },
 
         hero3: {
-            name: 'Pinocchio',
-            description: 'Multigenre character representation...',
+            name: "Batman",
+            description: "Dark knight and brave hero",
             fullDescription: [
-                'Specialist in creative performances, capable of managing large-scale events and productions.',
+                "Batman protects justice and his friends.",
+                "Very popular among older children.",
+                "Ideal for superhero shows."
             ],
         },
 
         hero4: {
-            name: 'Pinocchio',
-            description: 'Multigenre character representation...',
+            name: "Minecraft",
+            description: "Popular game character",
             fullDescription: [
-                'Specialist in creative performances, capable of managing large-scale events and productions.',
+                "The Minecraft character is very familiar to children.",
+                "Perfect for game-based themes.",
+                "Includes interactive and fun activities."
             ],
         },
 
         hero5: {
-            name: 'Pinocchio',
-            description: 'Multigenre character representation...',
+            name: "L.O.L",
+            description: "Colorful and modern character",
             fullDescription: [
-                'Specialist in creative performances, capable of managing large-scale events and productions.',
+                "L.O.L is especially popular among girls.",
+                "Bright style and cheerful personality.",
+                "Perfect for photos and dancing."
+            ],
+        },
+
+        hero6: {
+            name: "Sonic",
+            description: "Fast and energetic character",
+            fullDescription: [
+                "Sonic stands out with speed and a cheerful personality.",
+                "Children actively participate in games.",
+                "Perfect for dynamic shows."
+            ],
+        },
+
+        hero7: {
+            name: "Mickey Mouse",
+            description: "Cheerful and elegant character",
+            fullDescription: [
+                "Mickey Mouse stands out with kindness and charm.",
+                "Very popular among boys.",
+                "Perfect for fairy-tale parties."
+            ],
+        },
+
+        hero8: {
+            name: "Minnie Mouse",
+            description: "Cheerful and elegant character",
+            fullDescription: [
+                "Minnie Mouse stands out with kindness and charm.",
+                "Very popular among girls.",
+                "Perfect for fairy-tale parties."
+            ],
+        },
+
+        hero9: {
+            name: "Giraffe Jose",
+            description: "Tall and cheerful character",
+            fullDescription: [
+                "Giraffe Jose is very fun for children.",
+                "Stands out with a bright appearance.",
+                "Perfect for photo sessions and games."
+            ],
+        },
+
+        hero10: {
+            name: "Peppa Pig",
+            description: "Popular cartoon character",
+            fullDescription: [
+                "Peppa Pig is one of children's favorites.",
+                "A friendly and cheerful character.",
+                "A great choice for younger children."
+            ],
+        },
+
+        hero11: {
+            name: "Robot Robo",
+            description: "Modern and impressive character",
+            fullDescription: [
+                "Robot Robo creates a WOW effect.",
+                "A technological and engaging character.",
+                "Perfect for themed events."
+            ],
+        },
+
+        hero12: {
+            name: "Panda Bear",
+            description: "Kind and lovable character",
+            fullDescription: [
+                "Panda Bear creates a warm and loving atmosphere.",
+                "Very popular with younger kids.",
+                "Perfect for calm events."
+            ],
+        },
+
+        hero13: {
+            name: "Pink Squirrel",
+            description: "Cheerful and colorful character",
+            fullDescription: [
+                "Pink Squirrel is very energetic.",
+                "A bright and positive character.",
+                "Children quickly get involved in games."
+            ],
+        },
+
+        hero14: {
+            name: "Blue Squirrel",
+            description: "Kind and cheerful character",
+            fullDescription: [
+                "Blue Squirrel stands out with a friendly personality.",
+                "Creates a pleasant atmosphere.",
+                "Perfect for kids’ shows."
+            ],
+        },
+
+        hero15: {
+            name: "Red Bear",
+            description: "Cheerful and active character",
+            fullDescription: [
+                "Red Bear is a very energetic character.",
+                "Leads dances and games.",
+                "Very fun for children."
             ],
         },
 
@@ -1431,47 +1642,152 @@ export const translations = {
             gasvla: "Выездная локация",
             adgilze: "На месте",
 
-            name: 'Пиноккио',
-            description: 'Многожанровое изображение персонажа...',
+            name: "Человек-паук",
+            description: "Быстрый и смелый супергерой",
             fullDescription: [
-                'Национальный специалист, хакеры и другие творческие эксперты в своих областях.',
-                'Эксперт в кровавых ритуалах и связанных представлениях, мастер художественной интерпретации.',
-                'Исполнитель с исключительной координацией и присутствием, способный увлекать разнообразную аудиторию.',
-                'Специалист по визуальному повествованию, создающий захватывающий и запоминающийся опыт.',
-                'Мастер уникальных ремёсел; работает с инструментами, материалами и различными интерактивными элементами.',
+                "Человек-паук — один из самых любимых супергероев среди детей.",
+                "Активный, энергичный и впечатляющий герой шоу.",
+                "Идеально подходит для вечеринок в стиле супергероев."
             ],
         },
 
         hero2: {
-            name: 'Биенадини',
-            description: 'Многожанровое изображение персонажа...',
+            name: "Железный человек",
+            description: "Технологичный супергерой",
             fullDescription: [
-                'Специалист по креативным выступлениям, способный управлять масштабными событиями и постановками.',
-                'Эксперт в динамичной хореографии и взаимодействии с аудиторией, мастер сложных постановок.',
+                "Железный человек отличается мощным и эффектным внешним видом.",
+                "Вызывает WOW-эмоции у детей.",
+                "Отлично подходит для активных и зрелищных шоу."
             ],
         },
 
         hero3: {
-            name: 'Пиноккио',
-            description: 'Многожанровое изображение персонажа...',
+            name: "Бэтмен",
+            description: "Тёмный рыцарь и смелый герой",
             fullDescription: [
-                'Специалист по креативным выступлениям, способный управлять масштабными событиями и постановками.',
+                "Бэтмен защищает справедливость и друзей.",
+                "Очень популярен среди старших детей.",
+                "Идеален для супергеройских шоу."
             ],
         },
 
         hero4: {
-            name: 'Пиноккио',
-            description: 'Многожанровое изображение персонажа...',
+            name: "Майнкрафт",
+            description: "Герой популярной игры",
             fullDescription: [
-                'Специалист по креативным выступлениям, способный управлять масштабными событиями и постановками.',
+                "Герой Minecraft хорошо знаком детям.",
+                "Отлично подходит для игровых тематик.",
+                "Проводит интерактивные и весёлые активности."
             ],
         },
 
         hero5: {
-            name: 'Пиноккио',
-            description: 'Многожанровое изображение персонажа...',
+            name: "L.O.L",
+            description: "Яркий и современный персонаж",
             fullDescription: [
-                'Специалист по креативным выступлениям, способный управлять масштабными событиями и постановками.',
+                "L.O.L особенно популярна среди девочек.",
+                "Яркий стиль и весёлый характер.",
+                "Идеально для фото и танцев."
+            ],
+        },
+
+        hero6: {
+            name: "Соник",
+            description: "Быстрый и энергичный герой",
+            fullDescription: [
+                "Соник отличается скоростью и весёлым характером.",
+                "Дети активно участвуют в играх.",
+                "Отлично подходит для динамичных шоу."
+            ],
+        },
+
+        hero7: {
+            name: "Микки Маус",
+            description: "Весёлый и элегантный персонаж",
+            fullDescription: [
+                "Микки Маус отличается добротой и обаянием.",
+                "Очень популярен среди мальчиков.",
+                "Отлично подходит для сказочных праздников."
+            ],
+        },
+
+        hero8: {
+            name: "Минни Маус",
+            description: "Весёлый и элегантный персонаж",
+            fullDescription: [
+                "Минни Маус отличается добротой и обаянием.",
+                "Очень популярна среди девочек.",
+                "Отлично подходит для сказочных праздников."
+            ],
+        },
+
+        hero9: {
+            name: "Жираф Жозе",
+            description: "Высокий и весёлый персонаж",
+            fullDescription: [
+                "Жираф Жозе очень забавен для детей.",
+                "Отличается ярким внешним видом.",
+                "Идеален для фотосессий и игр."
+            ],
+        },
+
+        hero10: {
+            name: "Свинка Пеппа",
+            description: "Герой популярного мультфильма",
+            fullDescription: [
+                "Свинка Пеппа — один из любимых персонажей детей.",
+                "Дружелюбный и весёлый персонаж.",
+                "Отличный выбор для малышей."
+            ],
+        },
+
+        hero11: {
+            name: "Робот Робо",
+            description: "Современный и эффектный персонаж",
+            fullDescription: [
+                "Робот Робо создаёт WOW-эффект.",
+                "Технологичный и интересный персонаж.",
+                "Идеально подходит для тематических мероприятий."
+            ],
+        },
+
+        hero12: {
+            name: "Панда",
+            description: "Добрый и милый персонаж",
+            fullDescription: [
+                "Панда создаёт атмосферу тепла и любви.",
+                "Очень нравится маленьким детям.",
+                "Идеально подходит для спокойных мероприятий."
+            ],
+        },
+
+        hero13: {
+            name: "Розовая белочка",
+            description: "Весёлый и яркий персонаж",
+            fullDescription: [
+                "Розовая белочка очень энергична.",
+                "Яркий и позитивный персонаж.",
+                "Дети быстро включаются в игры."
+            ],
+        },
+
+        hero14: {
+            name: "Голубая белочка",
+            description: "Добрый и весёлый персонаж",
+            fullDescription: [
+                "Голубая белочка отличается дружелюбным характером.",
+                "Создаёт приятную атмосферу.",
+                "Идеально подходит для детских шоу."
+            ],
+        },
+
+        hero15: {
+            name: "Красный медвежонок",
+            description: "Весёлый и активный персонаж",
+            fullDescription: [
+                "Красный медвежонок — очень энергичный персонаж.",
+                "Проводит танцы и игры.",
+                "Очень нравится детям."
             ],
         },
 
