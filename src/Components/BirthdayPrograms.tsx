@@ -2,11 +2,6 @@ import { useState } from 'react';
 import { ChevronLeft, Check, ArrowRight, ShoppingCart } from 'lucide-react';
 import { useLanguage } from '../contexts/LanguageContext';
 import standart from "../../public/assets/standart.jpg"
-import photo1 from "../../public/assets/photo1.jpg"
-import photo2 from "../../public/assets/photo2.jpg"
-import photo3 from "../../public/assets/photo3.jpg"
-import photo4 from "../../public/assets/photo4.jpg"
-import photo5 from "../../public/assets/photo5.jpg"
 import football from "../../public/assets/footbal.jpg"
 
 interface Service {
@@ -59,7 +54,7 @@ function BirthdayPrograms({ addToCart, cartItems }: any) {
             price: '300 ₾',
             features: t.birthprogram2.features,
             description: t.birthprogram2.description,
-            image: standart,
+            image: football,
             color: 'blue'
         },
         {
@@ -81,7 +76,7 @@ function BirthdayPrograms({ addToCart, cartItems }: any) {
             price: '350 ₾',
             features: t.birthprogram4.features,
             description: t.birthprogram4.description,
-            image: standart,
+            image: football,
             color: 'blue'
         },
     ];
