@@ -1,5 +1,6 @@
 import { MapPin, Phone, Mail, Facebook, Instagram, Youtube, Music2 } from 'lucide-react';
 import { useLanguage } from "../contexts/LanguageContext";
+import logo from "../../public/assets/logo1.png"
 
 function Footer() {
 
@@ -16,9 +17,9 @@ function Footer() {
                         {/* LEFT — Logo + Text */}
                         <div className="flex flex-col items-start gap-4 md:w-1/3">
                             <img
-                                src='../../public/assets/donaldologo.png'
+                                src={logo}
                                 alt="Donald Duck Logo"
-                                className="w-16 h-16 rounded-full border-2 border-yellow-400"
+                                className="w-16 h-16"
                             />
                             <p className="text-white text-lg font-semibold leading-relaxed">
                                 {t.footer.slogan}<br />{t.footer.slogan1}

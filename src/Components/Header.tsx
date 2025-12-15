@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { ShoppingCart, Menu, X, Globe } from 'lucide-react';
 import { useNavigate, useLocation } from "react-router-dom";
 import { useLanguage } from "../contexts/LanguageContext";
+import logo from "../../public/assets/logo1.png"
 
 
 function Header({ openCart, setOpenCart, totalItems }: any) {
@@ -56,8 +57,12 @@ function Header({ openCart, setOpenCart, totalItems }: any) {
                     <div className="flex items-center justify-between py-3">
                         {/* ლოგო */}
                         <div className="flex items-center gap-4">
-                            <div className="w-12 h-12 bg-blue-400 rounded-full flex items-center justify-center">
-                                <span className="text-white font-bold text-sm">LOGO</span>
+                            <div className="w-14 h-14  flex items-center justify-center overflow-hidden">
+                                <img
+                                    src={logo}
+                                    alt=""
+                                    className="w-full h-full object-contain"
+                                />
                             </div>
                         </div>
 
