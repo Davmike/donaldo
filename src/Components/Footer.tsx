@@ -38,7 +38,7 @@ function Footer() {
                             <div className="flex items-center gap-2">
                                 <Phone size={20} className="text-white" />
                                 <a href="tel:+995555123456" className="text-white/90 text-[16px] hover:text-white">
-                                    +995 555 123 456
+                                    +995 579 12 40 74
                                 </a>
                             </div>
 
