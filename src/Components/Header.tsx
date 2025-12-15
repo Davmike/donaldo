@@ -51,7 +51,7 @@ function Header({ openCart, setOpenCart, totalItems }: any) {
                     {/* ცხელი ხაზი */}
                     <div className="flex justify-between items-center lg:block text-[#919baf] text-sm ">
                         <span>{t.hotLine}: </span>
-                        <span className="ml-2">+995 +995 579 12 40 74</span>
+                        <span className="ml-2">+995 579 12 40 74</span>
                     </div>
 
                     <div className="flex items-center justify-between py-3">
