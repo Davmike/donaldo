@@ -53,7 +53,7 @@ function Cart({ items = [], onRemoveItem, setOpenCart }: CartProps) {
             return;
         }
 
-        const whatsappNumber = "995555934074";
+        const whatsappNumber = "995579124074";
 
         let cartText = '';
         Object.entries(groupedItems).forEach(([section, sectionItems]) => {

@@ -91,7 +91,7 @@ function Contact() {
             message: t.contactForm.readyToSend
         });
 
-        const whatsappNumber = '995555925444';
+        const whatsappNumber = '995579124074';
 
         const whatsappMessage = `
 📩 ახალი ჯავშანი
