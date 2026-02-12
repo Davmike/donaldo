@@ -21,7 +21,7 @@ export const translations = {
             contactTitle: "საკონტაქტო",
             address: "ზურაბ გორგილაძის ქ. 88, ბათუმი",
             phone: "+995 555 123 456",
-            email: "info@donaldoland.ge",
+            email: "donaldoland23@gmail.com",
             followUs: "გამოგვყევით:",
             copyright: "© 2025 DonaldoLand. ყველა უფლება დაცულია.",
         },
@@ -302,7 +302,7 @@ export const translations = {
         about: {
             // title: "ჩვენს შესახებ",
             welcome: "კეთილი იყოს თქვენი მობრძანება დონალდოლენდში!",
-            description: "დონალდოლენდში გვჯერა, რომ ბავშვებისთვის უნდა შევქმნათ ემოციებით სავსე, ჯადოსნური გამოცდილება, რომელიც დაუვიწყარ მოგონებებად იქცევა. ჩვენი თანამედროვე გასართობი სივრცე შექმნილია იმისთვის, რომ გააღვივოს ბავშვების წარმოსახვა, დაეხმაროს სწავლაში და, რაც მთავარია, გაუჩინოს ბედნიერი განწყობა!",
+            description: "🧡 ჩვენს შესახებ ჩვენი ბავშვთა გასართობი ცენტრი შექმნილია სიყვარულით, სითბოთი და დიდი პასუხისმგებლობით.ჩვენი მთავარი მიზანია, თითოეულმა ბავშვმა აქ გაატაროს დაუვიწყარი, ბედნიერი და უსაფრთხო დრო. ჩვენ გვჯერა, რომ ბავშვობა ყველაზე ძვირფასი პერიოდია — სწორედ ამიტომ შევქმენით სივრცე, სადაც თამაში, გართობა და განვითარება ერთიანდება.თანამედროვე ატრაქციონები, თემატური დაბადების დღეები და მზრუნველი გუნდი ქმნის გარემოს, სადაც ბავშვები თავისუფლად, უსაფრთხოდ და სიხარულით ერთობიან. ჩვენთვის მნიშვნელოვანია არა მხოლოდ გართობა, არამედ მშობლების სიმშვიდეც.ამიტომ ვზრუნავთ სისუფთავეზე, უსაფრთხოების სტანდარტებზე და ხარისხიან მომსახურებაზე. ჩვენი მისიაა — გავხადოთ თითოეული დღე განსაკუთრებული, თითოეული დღესასწაული კი დაუვიწყარი. გელით სიყვარულით და ღიმილით 💛",
             point1: "სასიამოვნო და უსაფრთხო გარემო ყველა ასაკის ბავშვისთვის.",
             point2: "მრავალფეროვანი აქტივობები, რომლებიც ხელს უწყობს განვითარებას და სოციალური უნარების გაძლიერებას.",
             point3: "უნიკალური სათამაშო ზონები, რომლებიც ქმნის სწავლა-თამაშზე დაფუძნებულ საინტერესო გარემოს.",
@@ -336,14 +336,14 @@ export const translations = {
             guests: '2 საათი',
             duration: '10 დამსაქმე',
             features: ['1 წამყვანი', 'DJ', 'Laser Show', 'ეფექტური კვამლი', 'X-BOX', 'კარაოკე'],
-            description: '(ბავშვების რაოდენობა არ უნდა აღემატებოდეს 10-ს) ასაკზე მორგებული პროგრამა ბავშვებისთვის და მშობლების გართობა',
+            description: 'ასაკზე მორგებული პროგრამა ბავშვებისთვის და მშობლების გართობა',
         },
 
         birthprogram4: {
             title: "ფეხბურთის პროგრამა",
             guests: '2 საათი',
             duration: '10 დამსაქმე',
-            features: ['1 წამყვანი', 'DJ', 'Laser Show', 'ეფექტური კვამლი', 'X-BOX', 'კარაოკე'],
+            features: ['2 წამყვანი', 'DJ', 'Laser Show', 'ეფექტური კვამლი', 'X-BOX', 'კარაოკე'],
             description: '(პროგრამის სტილი მორგებულია ფეხბურთზე) ასაკზე მორგებული პროგრამა ბავშვებისთვის და მშობლების გართობა რომელშიც შედის 2 (,,ფეხბურთელი" წამყვანი )',
         },
 
@@ -351,7 +351,7 @@ export const translations = {
             title: "მეკობრეების პროგრამა",
             guests: '2 საათი',
             duration: '10 დამსაქმე',
-            features: ['1 წამყვანი', 'DJ', 'Laser Show', 'ეფექტური კვამლი', 'X-BOX', 'კარაოკე'],
+            features: ['2 წამყვანი', 'DJ', 'Laser Show', 'ეფექტური კვამლი', 'X-BOX', 'კარაოკე'],
             description: '(პროგრამის სტილი მორგებულია ფეხბურთზე) ასაკზე მორგებული პროგრამა ბავშვებისთვის და მშობლების გართობა რომელშიც შედის 2 (,,ფეხბურთელი" წამყვანი )',
         },
 
@@ -512,6 +512,46 @@ export const translations = {
                 'დათუნია წითელი არის ძალიან ენერგიული პერსონაჟი.',
                 'ატარებს ცეკვებსა და თამაშებს.',
                 'ბავშვებისთვის ძალიან სახალისოა.'
+            ],
+        },
+
+        hero16: {
+            name: 'სტიჩი',
+            description: 'მხიარული და აქტიური გმირი',
+            fullDescription: [
+                'სტიჩი არის ძალიან ენერგიული პერსონაჟი.',
+                'ატარებს ცეკვებსა და თამაშებს.',
+                'ბავშვებისთვის ძალიან სახალისოა.'
+            ],
+        },
+
+        hero17: {
+            name: 'ლაბუბუ',
+            description: 'მხიარული და აქტიური გმირი',
+            fullDescription: [
+                'ლაბუბუ არის ძალიან ენერგიული პერსონაჟი.',
+                'ატარებს ცეკვებსა და თამაშებს.',
+                'ბავშვებისთვის ძალიან სახალისოა.'
+            ],
+        },
+
+        hero18: {
+            name: 'პონი',
+            description: 'მხიარული და აქტიური გმირი',
+            fullDescription: [
+                'პონი არის ძალიან ენერგიული პერსონაჟი.',
+                'ატარებს ცეკვებსა და თამაშებს.',
+                'ბავშვებისთვის ძალიან სახალისოა.'
+            ],
+        },
+
+        hero19: {
+            name: 'ვენსდეი',
+            description: 'სერიოზული და აქტიური გმირი',
+            fullDescription: [
+                'ვენსდეი არის ძალიან სერიოზული პერსონაჟი.',
+                'ატარებს ცეკვებსა და თამაშებს.',
+                'ბავშვებისთვის ძალიან საინტერესოა.'
             ],
         },
 
@@ -682,7 +722,7 @@ export const translations = {
             contactTitle: "Contact",
             address: "88 Zurab Gorgiladze St, Batumi",
             phone: "+995 555 123 456",
-            email: "info@donaldoland.ge",
+            email: "donaldoland23@gmail.com",
             followUs: "Follow us:",
             copyright: "© 2025 DonaldoLand. All rights reserved.",
         },
@@ -947,7 +987,7 @@ export const translations = {
         about: {
             title: "About Us",
             welcome: "Welcome to DonaldoLand!",
-            description: "At DonaldoLand, we believe in creating magical, emotion-filled experiences that turn into unforgettable memories. Our modern entertainment center is designed to spark imagination, support learning, and most importantly, bring joy to children!",
+            description: "🧡 About us Our children's entertainment center is created with love, warmth and great responsibility. Our main goal is for each child to spend an unforgettable, happy and safe time here. We believe that childhood is the most precious - where play, fun and development come together. Modern attractions, themed birthday parties and a caring team create an environment where children can freely, safely and happily interact. It is important to us not only No matter what. That is why we take care of cleanliness, safety standards and quality service. Our mission is to make every day special, and every holiday unforgettable. We are waiting for you with love and a smile 💛",
             point1: "A pleasant and safe environment for children of all ages.",
             point2: "A variety of activities that support development and social skills.",
             point3: "Unique play zones that create a fun, learning-oriented atmosphere.",
@@ -986,7 +1026,7 @@ export const translations = {
             duration: "10 participants",
             price: "250 ₾",
             features: ['1 host', 'DJ', 'Laser Show', 'Smoke effects', 'X-BOX', 'Karaoke'],
-            description: '(Number of children must not exceed 10) An age-appropriate program for children and entertainment for parents.',
+            description: 'An age-appropriate program for children and entertainment for parents.',
         },
 
         birthprogram4: {
@@ -1168,6 +1208,47 @@ export const translations = {
             ],
         },
 
+        hero16: {
+            name: 'Stitch',
+            description: 'Cheerful and energetic character',
+            fullDescription: [
+                'Stitch is a very energetic character.',
+                'He leads dances and fun games.',
+                'He is very entertaining for children.'
+            ],
+        },
+
+        hero17: {
+            name: 'Labubu',
+            description: 'Cheerful and energetic character',
+            fullDescription: [
+                'Labubu is a very energetic character.',
+                'Leads dances and fun games.',
+                'Very entertaining for children.'
+            ],
+        },
+
+        hero18: {
+            name: 'Pony',
+            description: 'Cheerful and energetic character',
+            fullDescription: [
+                'Pony is a very energetic character.',
+                'Leads dances and fun games.',
+                'Very entertaining for children.'
+            ],
+        },
+
+        hero19: {
+            name: 'Wednesday',
+            description: 'Serious and active character',
+            fullDescription: [
+                'Wednesday is a very serious character.',
+                'Leads dances and fun games.',
+                'Very interesting for children.'
+            ],
+        },
+
+
         // menu
         menu1: {
             categories: {
@@ -1328,7 +1409,7 @@ export const translations = {
             contactTitle: "Контакт",
             address: "ул. Зураба Горгиладзе, 88, Батуми",
             phone: "+995 555 123 456",
-            email: "info@donaldoland.ge",
+            email: "donaldoland23@gmail.com",
             followUs: "Следите за нами:",
             copyright: "© 2025 DonaldoLand. Все права защищены.",
         },
@@ -1592,7 +1673,7 @@ export const translations = {
         about: {
             title: "О нас",
             welcome: "Добро пожаловать в Доналдоленд!",
-            description: "В Доналдоленде мы верим в создание волшебных и эмоциональных моментов, которые превращаются в незабываемые воспоминания. Наш современный развлекательный центр создан для того, чтобы вдохновлять детей, помогать им в обучении и, самое главное, дарить радость!",
+            description: "🧡 О нас Наш детский развлекательный центр создан с любовью, теплотой и большой ответственностью. Наша главная цель — чтобы каждый ребенок провел здесь незабываемое, счастливое и безопасное время. Мы верим, что детство — самое ценное время, когда игра, веселье и развитие сливаются воедино. Современные аттракционы, тематические дни рождения и заботливая команда создают среду, где дети могут свободно, безопасно и счастливо взаимодействовать друг с другом. Для нас важно не только «Что бы ни случилось». Именно поэтому мы заботимся о чистоте, стандартах безопасности и качестве обслуживания. Наша миссия — сделать каждый день особенным, а каждый праздник незабываемым. Мы ждем вас с любовью и улыбкой 💛",
             point1: "Комфортная и безопасная среда для детей всех возрастов.",
             point2: "Разнообразные активности, способствующие развитию и социализации.",
             point3: "Уникальные игровые зоны, создающие интересную обучающую атмосферу.",
@@ -1631,7 +1712,7 @@ export const translations = {
             duration: "10 участников",
             price: "250 ₾",
             features: ['1 ведущий', 'DJ', 'Лазерное шоу', 'Дымовые эффекты', 'X-BOX', 'Караоке'],
-            description: '(Количество детей не должно превышать 10) Программа по возрасту для детей и развлечение для родителей.',
+            description: 'Программа по возрасту для детей и развлечение для родителей.',
         },
 
         birthprogram4: {
@@ -1812,6 +1893,47 @@ export const translations = {
                 "Очень нравится детям."
             ],
         },
+
+        hero16: {
+            name: 'Стич',
+            description: 'Весёлый и энергичный персонаж',
+            fullDescription: [
+                'Стич — очень энергичный персонаж.',
+                'Проводит танцы и весёлые игры.',
+                'Очень развлекает детей.'
+            ],
+        },
+
+        hero17: {
+            name: 'Лабубу',
+            description: 'Весёлый и энергичный персонаж',
+            fullDescription: [
+                'Лабубу — очень энергичный персонаж.',
+                'Проводит танцы и весёлые игры.',
+                'Очень развлекает детей.'
+            ],
+        },
+
+        hero18: {
+            name: 'Пони',
+            description: 'Весёлый и энергичный персонаж',
+            fullDescription: [
+                'Пони — очень энергичный персонаж.',
+                'Проводит танцы и весёлые игры.',
+                'Очень развлекает детей.'
+            ],
+        },
+
+        hero19: {
+            name: 'Уэнсдей',
+            description: 'Серьёзный и активный персонаж',
+            fullDescription: [
+                'Уэнсдей — очень серьёзный персонаж.',
+                'Проводит танцы и игры.',
+                'Очень интересна для детей.'
+            ],
+        },
+
 
         // menu
         menu1: {

@@ -224,42 +224,6 @@ function Services({ addToCart, cartItems }: any) {
             faqAnswer: ''
         },
         {
-            id: 11,
-            title: t.service11.title,
-            description: t.service11.description,
-            image: 'https://images.pexels.com/photos/3862632/pexels-photo-3862632.jpeg',
-            buttonText: t.service11.button,
-            color: 'yellow',
-            details: t.service11.details,
-            benefits: [...t.service11.benefits],
-            // faq: t.service4.faq,
-            // faqAnswer: t.service4.faqAnswer,
-            packages: [
-                { name: 'ენტერპრაიზ', discount: '-20%', period: 'ენტერპრაიზ', color: 'blue' },
-                { name: 'კასტომ', period: 'კასტომ', color: 'yellow' },
-            ],
-            faq: '',
-            faqAnswer: ''
-        },
-        {
-            id: 12,
-            title: t.service12.title,
-            description: t.service12.description,
-            image: 'https://images.pexels.com/photos/3862632/pexels-photo-3862632.jpeg',
-            buttonText: t.service12.button,
-            color: 'blue',
-            details: t.service12.details,
-            benefits: [...t.service12.benefits],
-            // faq: t.service4.faq,
-            // faqAnswer: t.service4.faqAnswer,
-            packages: [
-                { name: 'ენტერპრაიზ', discount: '-20%', period: 'ენტერპრაიზ', color: 'blue' },
-                { name: 'კასტომ', period: 'კასტომ', color: 'yellow' },
-            ],
-            faq: '',
-            faqAnswer: ''
-        },
-        {
             id: 13,
             title: t.service13.title,
             description: t.service13.description,

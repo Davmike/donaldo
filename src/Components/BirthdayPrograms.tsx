@@ -4,6 +4,8 @@ import { useLanguage } from '../contexts/LanguageContext';
 import standart from "../../public/assets/standart.jpg"
 import football from "../../public/assets/footbal.jpg"
 import mekobreebi from "../../public/assets/mekobreebi.png"
+import kalmari from "../../public/assets/squidgame.png"
+import tojinebi from "../../public/assets/tojinebi.jpg"
 
 interface Service {
     id: number;
@@ -42,7 +44,7 @@ function BirthdayPrograms({ addToCart, cartItems }: any) {
             title: t.birthprogram1.title,
             guests: t.birthprogram1.guests,
             duration: t.birthprogram1.duration,
-            price: '350 ₾',
+            price: '300 ₾',
             features: t.birthprogram1.features,
             description: t.birthprogram1.description,
             image: standart,
@@ -53,10 +55,10 @@ function BirthdayPrograms({ addToCart, cartItems }: any) {
             title: t.birthprogram2.title,
             guests: t.birthprogram2.guests,
             duration: t.birthprogram2.duration,
-            price: '300 ₾',
+            price: '350 ₾',
             features: t.birthprogram2.features,
             description: t.birthprogram2.description,
-            image: football,
+            image: tojinebi,
             color: 'blue'
         },
         {
@@ -64,10 +66,10 @@ function BirthdayPrograms({ addToCart, cartItems }: any) {
             title: t.birthprogram3.title,
             guests: t.birthprogram3.guests,
             duration: t.birthprogram3.duration,
-            price: '250 ₾',
+            price: '400 ₾',
             features: t.birthprogram3.features,
             description: t.birthprogram3.description,
-            image: standart,
+            image: kalmari,
             color: 'blue'
         },
         {
@@ -86,7 +88,7 @@ function BirthdayPrograms({ addToCart, cartItems }: any) {
             id: 5,
             title: t.birthprogram5.title,
             guests: t.birthprogram5.guests,
-            price: '350 ₾',
+            price: '400 ₾',
             duration: t.birthprogram5.guests,
             features: t.birthprogram5.features,
             description: t.birthprogram5.description,

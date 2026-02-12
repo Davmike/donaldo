@@ -1,4 +1,4 @@
-import { MapPin, Phone, Mail, Facebook, Instagram, Youtube, Music2 } from 'lucide-react';
+import { MapPin, Phone, Mail, Facebook, Instagram, Music2 } from 'lucide-react';
 import { useLanguage } from "../contexts/LanguageContext";
 import logo from "../../public/assets/logo1.png"
 
@@ -57,13 +57,10 @@ function Footer() {
                                 <a href="https://www.facebook.com/profile.php?id=100093144237657" target='_blank' className="bg-white/20 hover:bg-white/30 rounded-full p-3 transition">
                                     <Facebook size={24} className="text-white" />
                                 </a>
-                                <a href="#" className="bg-white/20 hover:bg-white/30 rounded-full p-3 transition">
+                                <a href="https://www.instagram.com/_donaldoland_?igsh=MTBxeGNieHFhcTBiOQ%3D%3D" className="bg-white/20 hover:bg-white/30 rounded-full p-3 transition">
                                     <Instagram size={24} className="text-white" />
                                 </a>
-                                <a href="#" className="bg-white/20 hover:bg-white/30 rounded-full p-3 transition">
-                                    <Youtube size={24} className="text-white" />
-                                </a>
-                                <a href="#" className="bg-white/20 hover:bg-white/30 rounded-full p-3 transition">
+                                <a href="https://www.tiktok.com/@donaldoland?_r=1&_t=ZS-93rrb4SiM0S" className="bg-white/20 hover:bg-white/30 rounded-full p-3 transition">
                                     <Music2 size={24} className="text-white" />
                                 </a>
                             </div>

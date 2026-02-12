@@ -15,6 +15,11 @@ import panda from "../../public/assets/panda.png"
 import pinkciyvi from "../../public/assets/SquirrelPink.png"
 import blueciyvi from "../../public/assets/SquirrelBlue.png"
 import datunia from "../../public/assets/bear.png"
+import stichi from "../../public/assets/stichi.png"
+import labubu from "../../public/assets/labubu.png"
+import poni from "../../public/assets/poni.png"
+import loli from "../../public/assets/loli.png"
+import vensdey from "../../public/assets/vensdey.png"
 
 interface Hero {
     id: number;
@@ -39,7 +44,7 @@ function Heros({ addToCart, cartItems }: any) {
         { id: 2, name: t.hero2.name, description: t.hero2.description, fullDescription: t.hero2.fullDescription, price: 35, image: ironMan },
         { id: 3, name: t.hero3.name, description: t.hero3.description, fullDescription: t.hero3.fullDescription, price: 35, image: batman },
         { id: 4, name: t.hero4.name, description: t.hero4.description, fullDescription: t.hero4.fullDescription, price: 60, image: steve },
-        { id: 5, name: t.hero5.name, description: t.hero5.description, fullDescription: t.hero5.fullDescription, price: 50, image: joze },
+        { id: 5, name: t.hero5.name, description: t.hero5.description, fullDescription: t.hero5.fullDescription, price: 50, image: loli },
         { id: 6, name: t.hero6.name, description: t.hero6.description, fullDescription: t.hero6.fullDescription, price: 60, image: sonic },
         { id: 7, name: t.hero7.name, description: t.hero7.description, fullDescription: t.hero7.fullDescription, price: 35, image: miki },
         { id: 8, name: t.hero8.name, description: t.hero8.description, fullDescription: t.hero8.fullDescription, price: 35, image: mini },
@@ -50,6 +55,10 @@ function Heros({ addToCart, cartItems }: any) {
         { id: 13, name: t.hero13.name, description: t.hero13.description, fullDescription: t.hero13.fullDescription, price: 60, image: pinkciyvi },
         { id: 14, name: t.hero14.name, description: t.hero14.description, fullDescription: t.hero14.fullDescription, price: 60, image: blueciyvi },
         { id: 15, name: t.hero15.name, description: t.hero15.description, fullDescription: t.hero15.fullDescription, price: 70, image: datunia },
+        { id: 16, name: t.hero16.name, description: t.hero16.description, fullDescription: t.hero16.fullDescription, price: 50, image: stichi },
+        { id: 17, name: t.hero17.name, description: t.hero17.description, fullDescription: t.hero17.fullDescription, price: 50, image: labubu },
+        { id: 18, name: t.hero18.name, description: t.hero18.description, fullDescription: t.hero18.fullDescription, price: 50, image: poni },
+        { id: 20, name: t.hero19.name, description: t.hero19.description, fullDescription: t.hero19.fullDescription, price: 40, image: vensdey },
     ];
 
 

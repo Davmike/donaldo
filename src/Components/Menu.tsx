@@ -332,6 +332,53 @@ function Menu({ addToCart, cartItems }: any) {
             type: 'children',
             description: ''
         },
+
+        {
+            id: 'dr6',
+            categoryId: 'drinks',
+            name: t.menu1.categories.turkishCoffee,
+            price: 2,
+            imageUrl: 'https://images.pexels.com/photos/302899/pexels-photo-302899.jpeg',
+            type: 'children',
+            description: ''
+        },
+        {
+            id: 'dr7',
+            categoryId: 'drinks',
+            name: t.menu1.categories.zedazeni,
+            price: 7,
+            imageUrl: 'https://images.pexels.com/photos/159291/beer-alcohol-drink-pub-159291.jpeg',
+            type: 'children',
+            description: ''
+        },
+        {
+            id: 'dr8',
+            categoryId: 'drinks',
+            name: t.menu1.categories.zedazeniHalf,
+            price: 3,
+            imageUrl: 'https://images.pexels.com/photos/159291/beer-alcohol-drink-pub-159291.jpeg',
+            type: 'children',
+            description: ''
+        },
+        {
+            id: 'dr9',
+            categoryId: 'drinks',
+            name: t.menu1.categories.chero,
+            price: 9,
+            imageUrl: 'https://images.pexels.com/photos/2775860/pexels-photo-2775860.jpeg',
+            type: 'children',
+            description: ''
+        },
+        {
+            id: 'dr10',
+            categoryId: 'drinks',
+            name: t.menu1.categories.cheroBig,
+            price: 13,
+            imageUrl: 'https://images.pexels.com/photos/2775860/pexels-photo-2775860.jpeg',
+            type: 'children',
+            description: ''
+        },
+
     ];
 
 
