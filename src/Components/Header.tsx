@@ -23,7 +23,7 @@ function Header({ openCart, setOpenCart, totalItems }: any) {
         { text: t.birthday, path: "/birthdayPrograms" },
         { text: t.heroes, path: "/heros" },
         { text: t.menu, path: "/menu" },
-        { text: t.other, path: "/otherProgram" },
+        // { text: t.other, path: "/otherProgram" },
         { text: t.gallery, path: "/gallery" },
         { text: t.contact, path: "/contact" },
     ];

@@ -3,6 +3,7 @@ import { ChevronLeft, Check, ArrowRight, ShoppingCart } from 'lucide-react';
 import { useLanguage } from '../contexts/LanguageContext';
 import standart from "../../public/assets/standart.jpg"
 import football from "../../public/assets/footbal.jpg"
+import mekobreebi from "../../public/assets/mekobreebi.png"
 
 interface Service {
     id: number;
@@ -25,6 +26,7 @@ const getServiceColor = (id: number) => {
     if (id === 2) return 'bg-[#B4C4E5]';
     if (id === 3) return 'bg-[#B4C4E5]';
     if (id === 4) return 'bg-[#B4C4E5]';
+    if (id === 5) return 'bg-[#B4C4E5]';
     return 'bg-[#3B5998]';
 };
 
@@ -77,6 +79,18 @@ function BirthdayPrograms({ addToCart, cartItems }: any) {
             features: t.birthprogram4.features,
             description: t.birthprogram4.description,
             image: football,
+            color: 'blue'
+        },
+
+        {
+            id: 5,
+            title: t.birthprogram5.title,
+            guests: t.birthprogram5.guests,
+            price: '350 ₾',
+            duration: t.birthprogram5.guests,
+            features: t.birthprogram5.features,
+            description: t.birthprogram5.description,
+            image: mekobreebi,
             color: 'blue'
         },
     ];

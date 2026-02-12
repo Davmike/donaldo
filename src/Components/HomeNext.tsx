@@ -5,6 +5,10 @@ import thumb from "../../public/assets/thumbtack.png"
 import thumbBlue from "../../public/assets/thumbtackBlue.png"
 import vector from "../../public/assets/Vector 1.png"
 import { useLanguage } from "../contexts/LanguageContext";
+import programebi from "../../public/assets/programebi.png";
+import gmirebi from "../../public/assets/gmirebi.png";
+import menuu from "../../public/assets/menuu.png";
+import gallerea from "../../public/assets/gallerea.png";
 
 function HomeNext() {
     const { t } = useLanguage();
@@ -15,15 +19,7 @@ function HomeNext() {
 
 
     const cards = [
-        {
-            id: 1,
-            title: t.homenext.otherPrograms,
-            color: 'bg-[#FFD472]',
-            textColor: 'text-orange-500',
-            buttonColor: "#F67524",
-            path: "/otherProgram",
-            img: thumb
-        },
+
         {
             id: 2,
             title: t.homenext.heroes,
@@ -31,7 +27,8 @@ function HomeNext() {
             textColor: 'text-blue-700',
             buttonColor: "#1554A4",
             path: "/heros",
-            img: thumbBlue
+            img: thumbBlue,
+            image: gmirebi,
         },
         {
             id: 3,
@@ -40,7 +37,8 @@ function HomeNext() {
             textColor: 'text-orange-500',
             buttonColor: "#F67524",
             path: "/gallery",
-            img: thumb
+            img: thumb,
+            image: gallerea,
         },
         {
             id: 4,
@@ -49,7 +47,8 @@ function HomeNext() {
             textColor: 'text-blue-700',
             buttonColor: "#1554A4",
             path: "/menu",
-            img: thumbBlue
+            img: thumbBlue,
+            image: menuu,
         }
     ];
 
@@ -81,7 +80,9 @@ function HomeNext() {
 
                             <div className=" z-10 cursor-pointer">
                                 <div className="w-full h-40 md:h-48 bg-gray-100 rounded-2xl mb-6 flex items-center justify-center">
-                                    <div className="w-full h-full bg-linear-to-br from-gray-200 to-gray-300 rounded-2xl opacity-40"></div>
+                                    <div className="w-full h-full bg-linear-to-br from-gray-200 to-gray-300 rounded-2xl overflow-hidden">
+                                        <img src={programebi} className="w-full h-full object-cover" />
+                                    </div>
                                 </div>
 
                                 <div onClick={() => navigate("/birthdayPrograms")} className="bg-[#B4C4E5] rounded-full py-3 md:py-4 px-6 text-center cursor pointer">
@@ -98,7 +99,7 @@ function HomeNext() {
                             ჩვენი სერვისები
                         </h2> */}
 
-                        <div className="hidden md:grid grid-cols-4 gap-6  max-w-[1108px] cursor-pointer relative">
+                        <div className="hidden md:grid grid-cols-3 gap-6  max-w-[1108px] cursor-pointer relative">
                             {cards.map((card) => (
                                 <div
                                     key={card.id}
@@ -108,7 +109,9 @@ function HomeNext() {
                                         <img src={card.img} alt="" />
                                     </div>
 
-                                    <div className="w-full h-24 bg-white rounded-xl mb-4 opacity-60"></div>
+                                    <div className="w-full h-24 bg-white rounded-xl mb-4 overflow-hidden">
+                                        <img src={card.image} alt="" />
+                                    </div>
 
                                     <button
                                         onClick={() => navigate(card.path)}

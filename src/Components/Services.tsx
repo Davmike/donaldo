@@ -1,15 +1,24 @@
 import { useState } from 'react';
 import { ChevronLeft, ChevronRight, ArrowLeft, Check, ShoppingCart } from 'lucide-react';
 import { useLanguage } from "../contexts/LanguageContext";
+import nayini from "../../public/assets/bambisnayini.png";
+import sapnis from "../../public/assets/sapnis.png";
+import neonebi from "../../public/assets/neonebi.png";
+import foto from "../../public/assets/photo.png";
+import video from "../../public/assets/video.png";
+import klipi from "../../public/assets/klipi.png";
+import foirverki from "../../public/assets/foiverki.png";
+import varskvlavi from "../../public/assets/varskvlavi.png";
+import bushtebi from "../../public/assets/bushtebi.png";
+import gaxsna from "../../public/assets/gaxsna.png";
+import moxatva from "../../public/assets/moxatva.png";
+
 
 interface Service {
     id: number;
     title: string;
     description: string;
     image: string;
-    price: string;
-    originalPrice: string;
-    discount: string;
     buttonText: string;
     color: 'yellow' | 'blue';
     details: string;
@@ -20,8 +29,6 @@ interface Service {
         name: string;
         discount?: string;
         period: string;
-        price: string;
-        originalPrice?: string;
         color: 'yellow' | 'blue';
     }>;
 }
@@ -40,10 +47,7 @@ function Services({ addToCart, cartItems }: any) {
             id: 1,
             title: t.service1.title,
             description: t.service1.description,
-            image: 'https://images.pexels.com/photos/3962286/pexels-photo-3962286.jpeg',
-            price: '80₾',
-            originalPrice: '80₾',
-            discount: '-20%',
+            image: nayini,
             buttonText: t.service1.button,
             color: 'yellow',
             details: t.service1.details,
@@ -51,8 +55,8 @@ function Services({ addToCart, cartItems }: any) {
             // faq: t.service1.faq,
             // faqAnswer: t.service1.faqAnswer,
             packages: [
-                { name: 'ექვსი ნიშიერი', discount: '-20%', period: '6 ღრმან', price: '15 ₾', originalPrice: '20 ₾', color: 'blue' },
-                { name: 'ექვსი ღრმ, ნაწილი', discount: '-20%', period: '6 ღრმ, ნაწილი', price: '15 ₾', originalPrice: '20 ₾', color: 'yellow' },
+                { name: 'ექვსი ნიშიერი', discount: '-20%', period: '6 ღრმან', color: 'blue' },
+                { name: 'ექვსი ღრმ, ნაწილი', discount: '-20%', period: '6 ღრმ, ნაწილი', color: 'yellow' },
             ],
             faq: '',
             faqAnswer: ''
@@ -61,10 +65,7 @@ function Services({ addToCart, cartItems }: any) {
             id: 2,
             title: t.service2.title,
             description: t.service2.description,
-            image: 'https://images.pexels.com/photos/3587478/pexels-photo-3587478.jpeg',
-            price: '120₾',
-            originalPrice: '150₾',
-            discount: '-20%',
+            image: sapnis,
             buttonText: t.service2.button,
             color: 'blue',
             details: t.service2.details,
@@ -72,8 +73,8 @@ function Services({ addToCart, cartItems }: any) {
             // faq: t.service2.faq,
             // faqAnswer: t.service2.faqAnswer,
             packages: [
-                { name: 'ორი ნიშიერი', discount: '-20%', period: '2 სამენი', price: '25 ₾', originalPrice: '30 ₾', color: 'blue' },
-                { name: 'ათი ღრმის კრეფი', period: '10 ღრმის კრეფი', price: 'XX ₾', color: 'yellow' },
+                { name: 'ორი ნიშიერი', discount: '-20%', period: '2 სამენი', color: 'blue' },
+                { name: 'ათი ღრმის კრეფი', period: '10 ღრმის კრეფი', color: 'yellow' },
             ],
             faq: '',
             faqAnswer: ''
@@ -82,10 +83,7 @@ function Services({ addToCart, cartItems }: any) {
             id: 3,
             title: t.service3.title,
             description: t.service3.description,
-            image: 'https://images.pexels.com/photos/3307758/pexels-photo-3307758.jpeg',
-            price: '200₾',
-            originalPrice: '250₾',
-            discount: '-20%',
+            image: foto,
             buttonText: t.service3.button,
             color: 'yellow',
             details: t.service3.details,
@@ -93,8 +91,8 @@ function Services({ addToCart, cartItems }: any) {
             // faq: t.service3.faq,
             // faqAnswer: t.service3.faqAnswer,
             packages: [
-                { name: 'კორპორატიული', discount: '-20%', period: 'კორპორატიული', price: '500 ₾', originalPrice: '600 ₾', color: 'blue' },
-                { name: 'ექსკლუზივი', period: 'ექსკლუზივი', price: 'XX ₾', color: 'yellow' },
+                { name: 'კორპორატიული', discount: '-20%', period: 'კორპორატიული', color: 'blue' },
+                { name: 'ექსკლუზივი', period: 'ექსკლუზივი', color: 'yellow' },
             ],
             faq: '',
             faqAnswer: ''
@@ -103,10 +101,7 @@ function Services({ addToCart, cartItems }: any) {
             id: 4,
             title: t.service4.title,
             description: t.service4.description,
-            image: 'https://images.pexels.com/photos/3862632/pexels-photo-3862632.jpeg',
-            price: '300₾',
-            originalPrice: '350₾',
-            discount: '-20%',
+            image: video,
             buttonText: t.service4.button,
             color: 'blue',
             details: t.service4.details,
@@ -114,8 +109,8 @@ function Services({ addToCart, cartItems }: any) {
             // faq: t.service4.faq,
             // faqAnswer: t.service4.faqAnswer,
             packages: [
-                { name: 'ენტერპრაიზ', discount: '-20%', period: 'ენტერპრაიზ', price: '1000 ₾', originalPrice: '1200 ₾', color: 'blue' },
-                { name: 'კასტომ', period: 'კასტომ', price: 'კონტაქტი', color: 'yellow' },
+                { name: 'ენტერპრაიზ', discount: '-20%', period: 'ენტერპრაიზ', color: 'blue' },
+                { name: 'კასტომ', period: 'კასტომ', color: 'yellow' },
             ],
             faq: '',
             faqAnswer: ''
@@ -124,10 +119,7 @@ function Services({ addToCart, cartItems }: any) {
             id: 5,
             title: t.service5.title,
             description: t.service5.description,
-            image: 'https://images.pexels.com/photos/3862632/pexels-photo-3862632.jpeg',
-            price: '300₾',
-            originalPrice: '350₾',
-            discount: '-20%',
+            image: klipi,
             buttonText: t.service5.button,
             color: 'yellow',
             details: t.service5.details,
@@ -135,8 +127,8 @@ function Services({ addToCart, cartItems }: any) {
             // faq: t.service4.faq,
             // faqAnswer: t.service4.faqAnswer,
             packages: [
-                { name: 'ენტერპრაიზ', discount: '-20%', period: 'ენტერპრაიზ', price: '1000 ₾', originalPrice: '1200 ₾', color: 'blue' },
-                { name: 'კასტომ', period: 'კასტომ', price: 'კონტაქტი', color: 'yellow' },
+                { name: 'ენტერპრაიზ', discount: '-20%', period: 'ენტერპრაიზ', color: 'blue' },
+                { name: 'კასტომ', period: 'კასტომ', color: 'yellow' },
             ],
             faq: '',
             faqAnswer: ''
@@ -145,10 +137,7 @@ function Services({ addToCart, cartItems }: any) {
             id: 6,
             title: t.service6.title,
             description: t.service6.description,
-            image: 'https://images.pexels.com/photos/3862632/pexels-photo-3862632.jpeg',
-            price: '300₾',
-            originalPrice: '350₾',
-            discount: '-20%',
+            image: foirverki,
             buttonText: t.service6.button,
             color: 'blue',
             details: t.service6.details,
@@ -156,8 +145,8 @@ function Services({ addToCart, cartItems }: any) {
             // faq: t.service4.faq,
             // faqAnswer: t.service4.faqAnswer,
             packages: [
-                { name: 'ენტერპრაიზ', discount: '-20%', period: 'ენტერპრაიზ', price: '1000 ₾', originalPrice: '1200 ₾', color: 'blue' },
-                { name: 'კასტომ', period: 'კასტომ', price: 'კონტაქტი', color: 'yellow' },
+                { name: 'ენტერპრაიზ', discount: '-20%', period: 'ენტერპრაიზ', color: 'blue' },
+                { name: 'კასტომ', period: 'კასტომ', color: 'yellow' },
             ],
             faq: '',
             faqAnswer: ''
@@ -166,10 +155,7 @@ function Services({ addToCart, cartItems }: any) {
             id: 7,
             title: t.service7.title,
             description: t.service7.description,
-            image: 'https://images.pexels.com/photos/3862632/pexels-photo-3862632.jpeg',
-            price: '300₾',
-            originalPrice: '350₾',
-            discount: '-20%',
+            image: varskvlavi,
             buttonText: t.service7.button,
             color: 'yellow',
             details: t.service7.details,
@@ -177,8 +163,8 @@ function Services({ addToCart, cartItems }: any) {
             // faq: t.service4.faq,
             // faqAnswer: t.service4.faqAnswer,
             packages: [
-                { name: 'ენტერპრაიზ', discount: '-20%', period: 'ენტერპრაიზ', price: '1000 ₾', originalPrice: '1200 ₾', color: 'blue' },
-                { name: 'კასტომ', period: 'კასტომ', price: 'კონტაქტი', color: 'yellow' },
+                { name: 'ენტერპრაიზ', discount: '-20%', period: 'ენტერპრაიზ', color: 'blue' },
+                { name: 'კასტომ', period: 'კასტომ', color: 'yellow' },
             ],
             faq: '',
             faqAnswer: ''
@@ -187,10 +173,7 @@ function Services({ addToCart, cartItems }: any) {
             id: 8,
             title: t.service8.title,
             description: t.service8.description,
-            image: 'https://images.pexels.com/photos/3862632/pexels-photo-3862632.jpeg',
-            price: '300₾',
-            originalPrice: '350₾',
-            discount: '-20%',
+            image: bushtebi,
             buttonText: t.service8.button,
             color: 'blue',
             details: t.service8.details,
@@ -198,8 +181,8 @@ function Services({ addToCart, cartItems }: any) {
             // faq: t.service4.faq,
             // faqAnswer: t.service4.faqAnswer,
             packages: [
-                { name: 'ენტერპრაიზ', discount: '-20%', period: 'ენტერპრაიზ', price: '1000 ₾', originalPrice: '1200 ₾', color: 'blue' },
-                { name: 'კასტომ', period: 'კასტომ', price: 'კონტაქტი', color: 'yellow' },
+                { name: 'ენტერპრაიზ', discount: '-20%', period: 'ენტერპრაიზ', color: 'blue' },
+                { name: 'კასტომ', period: 'კასტომ', color: 'yellow' },
             ],
             faq: '',
             faqAnswer: ''
@@ -208,10 +191,7 @@ function Services({ addToCart, cartItems }: any) {
             id: 9,
             title: t.service9.title,
             description: t.service9.description,
-            image: 'https://images.pexels.com/photos/3862632/pexels-photo-3862632.jpeg',
-            price: '300₾',
-            originalPrice: '350₾',
-            discount: '-20%',
+            image: gaxsna,
             buttonText: t.service9.button,
             color: 'yellow',
             details: t.service9.details,
@@ -219,8 +199,8 @@ function Services({ addToCart, cartItems }: any) {
             // faq: t.service4.faq,
             // faqAnswer: t.service4.faqAnswer,
             packages: [
-                { name: 'ენტერპრაიზ', discount: '-20%', period: 'ენტერპრაიზ', price: '1000 ₾', originalPrice: '1200 ₾', color: 'blue' },
-                { name: 'კასტომ', period: 'კასტომ', price: 'კონტაქტი', color: 'yellow' },
+                { name: 'ენტერპრაიზ', discount: '-20%', period: 'ენტერპრაიზ', color: 'blue' },
+                { name: 'კასტომ', period: 'კასტომ', color: 'yellow' },
             ],
             faq: '',
             faqAnswer: ''
@@ -229,10 +209,7 @@ function Services({ addToCart, cartItems }: any) {
             id: 10,
             title: t.service10.title,
             description: t.service10.description,
-            image: 'https://images.pexels.com/photos/3862632/pexels-photo-3862632.jpeg',
-            price: '300₾',
-            originalPrice: '350₾',
-            discount: '-20%',
+            image: moxatva,
             buttonText: t.service10.button,
             color: 'blue',
             details: t.service10.details,
@@ -240,8 +217,8 @@ function Services({ addToCart, cartItems }: any) {
             // faq: t.service4.faq,
             // faqAnswer: t.service4.faqAnswer,
             packages: [
-                { name: 'ენტერპრაიზ', discount: '-20%', period: 'ენტერპრაიზ', price: '1000 ₾', originalPrice: '1200 ₾', color: 'blue' },
-                { name: 'კასტომ', period: 'კასტომ', price: 'კონტაქტი', color: 'yellow' },
+                { name: 'ენტერპრაიზ', discount: '-20%', period: 'ენტერპრაიზ', color: 'blue' },
+                { name: 'კასტომ', period: 'კასტომ', color: 'yellow' },
             ],
             faq: '',
             faqAnswer: ''
@@ -251,9 +228,6 @@ function Services({ addToCart, cartItems }: any) {
             title: t.service11.title,
             description: t.service11.description,
             image: 'https://images.pexels.com/photos/3862632/pexels-photo-3862632.jpeg',
-            price: '300₾',
-            originalPrice: '350₾',
-            discount: '-20%',
             buttonText: t.service11.button,
             color: 'yellow',
             details: t.service11.details,
@@ -261,8 +235,8 @@ function Services({ addToCart, cartItems }: any) {
             // faq: t.service4.faq,
             // faqAnswer: t.service4.faqAnswer,
             packages: [
-                { name: 'ენტერპრაიზ', discount: '-20%', period: 'ენტერპრაიზ', price: '1000 ₾', originalPrice: '1200 ₾', color: 'blue' },
-                { name: 'კასტომ', period: 'კასტომ', price: 'კონტაქტი', color: 'yellow' },
+                { name: 'ენტერპრაიზ', discount: '-20%', period: 'ენტერპრაიზ', color: 'blue' },
+                { name: 'კასტომ', period: 'კასტომ', color: 'yellow' },
             ],
             faq: '',
             faqAnswer: ''
@@ -272,9 +246,6 @@ function Services({ addToCart, cartItems }: any) {
             title: t.service12.title,
             description: t.service12.description,
             image: 'https://images.pexels.com/photos/3862632/pexels-photo-3862632.jpeg',
-            price: '300₾',
-            originalPrice: '350₾',
-            discount: '-20%',
             buttonText: t.service12.button,
             color: 'blue',
             details: t.service12.details,
@@ -282,8 +253,8 @@ function Services({ addToCart, cartItems }: any) {
             // faq: t.service4.faq,
             // faqAnswer: t.service4.faqAnswer,
             packages: [
-                { name: 'ენტერპრაიზ', discount: '-20%', period: 'ენტერპრაიზ', price: '1000 ₾', originalPrice: '1200 ₾', color: 'blue' },
-                { name: 'კასტომ', period: 'კასტომ', price: 'კონტაქტი', color: 'yellow' },
+                { name: 'ენტერპრაიზ', discount: '-20%', period: 'ენტერპრაიზ', color: 'blue' },
+                { name: 'კასტომ', period: 'კასტომ', color: 'yellow' },
             ],
             faq: '',
             faqAnswer: ''
@@ -292,10 +263,7 @@ function Services({ addToCart, cartItems }: any) {
             id: 13,
             title: t.service13.title,
             description: t.service13.description,
-            image: 'https://images.pexels.com/photos/3862632/pexels-photo-3862632.jpeg',
-            price: '300₾',
-            originalPrice: '350₾',
-            discount: '-20%',
+            image: neonebi,
             buttonText: t.service13.button,
             color: 'yellow',
             details: t.service13.details,
@@ -303,8 +271,8 @@ function Services({ addToCart, cartItems }: any) {
             // faq: t.service4.faq,
             // faqAnswer: t.service4.faqAnswer,
             packages: [
-                { name: 'ენტერპრაიზ', discount: '-20%', period: 'ენტერპრაიზ', price: '1000 ₾', originalPrice: '1200 ₾', color: 'blue' },
-                { name: 'კასტომ', period: 'კასტომ', price: 'კონტაქტი', color: 'yellow' },
+                { name: 'ენტერპრაიზ', discount: '-20%', period: 'ენტერპრაიზ', color: 'blue' },
+                { name: 'კასტომ', period: 'კასტომ', color: 'yellow' },
             ],
             faq: '',
             faqAnswer: ''
@@ -396,7 +364,14 @@ function Services({ addToCart, cartItems }: any) {
                             {selectedService.details}
                         </h2>
 
-                        <div className="w-full h-48 md:h-64 bg-white rounded-xl mb-6 opacity-60"></div>
+                        <div className="w-full h-48 md:h-64 rounded-xl mb-6 overflow-hidden">
+                            <img
+                                src={selectedService.image}
+                                alt={selectedService.title}
+                                className="w-full h-full object-cover"
+                            />
+                        </div>
+
                         <div className='bg-[#FDF7E9] p-5 rounded-2xl'>
                             <h3 className="text-lg md:text-xl font-bold mb-4 text-[#1554A4]">
                                 {t.services.whatIncludes}
@@ -426,10 +401,6 @@ function Services({ addToCart, cartItems }: any) {
                                         addToCart({
                                             id: selectedService.id,
                                             name: selectedService.title,
-                                            price: Number(selectedService.price.replace('₾', '').trim()),
-                                            originalPrice: selectedService.originalPrice
-                                                ? Number(selectedService.originalPrice.replace('₾', '').trim())
-                                                : undefined,
                                             image: selectedService.image,
                                             section: "Service"
                                         })
@@ -487,15 +458,22 @@ function Services({ addToCart, cartItems }: any) {
                                 : 'bg-[#B4C4E5] border-black'
                                 }`}
                         >
-                            <div className="w-full h-32 bg-white rounded-xl mb-4 opacity-60"></div>
-
-                            <div className="flex items-center justify-between mb-3">
-                                <div className="bg-red-500 text-white text-[20px] font-bold px-2 py-1 rounded-full inline-block">
-                                    {services[currentSlide].discount}
-                                </div>
-                                <span className="text-[16px] text-[#1554A4] cursor-pointer">{t.services.viewAll}→</span>
+                            <div className="w-full h-32 rounded-xl mb-4 overflow-hidden">
+                                <img
+                                    src={service.image}
+                                    alt={service.title}
+                                    className="w-full h-full object-cover"
+                                />
                             </div>
 
+
+                            <div className="flex items-center justify-between mb-3">
+                                {/* <div className="bg-red-500 text-white text-[20px] font-bold px-2 py-1 rounded-full inline-block">
+                                    {services[currentSlide].discount}
+                                </div> */}
+                                <span className="text-[16px] text-[#1554A4] cursor-pointer">{t.services.viewAll}→</span>
+                            </div>
+                            {/* 
                             <p className="text-2xl font-bold mb-4 flex items-baseline gap-2">
                                 <span className={service.color === 'yellow' ? 'text-yellow-900' : 'text-blue-900'}>
                                     {service.price}
@@ -503,7 +481,7 @@ function Services({ addToCart, cartItems }: any) {
                                 <span className="text-[20px] line-through text-[#FF2C2C]">
                                     {services[currentSlide].originalPrice}
                                 </span>
-                            </p>
+                            </p> */}
 
                             <button className={`w-full py-3 rounded-full font-bold text-white transition-all duration-300 cursor-pointer ${service.color === 'yellow'
                                 ? 'bg-[#F67524] hover:bg-orange-600'
@@ -520,16 +498,23 @@ function Services({ addToCart, cartItems }: any) {
                         ? 'bg-[#FFD472] border-black'
                         : 'bg-[#B4C4E5] border-black'
                         }`}>
-                        <div className="w-full h-40 bg-white rounded-xl mb-4 opacity-60"></div>
+                        <div className="w-full h-40 bg-white rounded-xl mb-4 overflow-hidden">
+                            <img
+                                src={services[currentSlide].image}
+                                alt={services[currentSlide].title}
+                                className="w-full h-full object-cover"
+                            />
+                        </div>
+
 
                         <div className="flex items-center justify-between" onClick={() => handleServiceClick(services[currentSlide])}>
-                            <div className="bg-red-500 text-white text-[20px] font-bold px-2 py-1 rounded-full inline-block mb-2">
+                            {/* <div className="bg-red-500 text-white text-[20px] font-bold px-2 py-1 rounded-full inline-block mb-2">
                                 {services[currentSlide].discount}
-                            </div>
+                            </div> */}
                             <span className="text-[16px] text-[#1554A4] cursor-pointer">{t.services.viewAll}→</span>
                         </div>
 
-                        <div className="flex items-baseline gap-2 mb-4">
+                        {/* <div className="flex items-baseline gap-2 mb-4">
                             <span className={`text-[30px] font-bold ${services[currentSlide].color === 'yellow'
                                 ? 'text-[#1554A4]'
                                 : 'text-blue-900'
@@ -539,7 +524,7 @@ function Services({ addToCart, cartItems }: any) {
                             <span className="text-[20px] line-through text-[#FF2C2C]">
                                 {services[currentSlide].originalPrice}
                             </span>
-                        </div>
+                        </div> */}
 
                         <button
                             onClick={() => handleServiceClick(services[currentSlide])}

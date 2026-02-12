@@ -52,7 +52,7 @@ export const translations = {
         },
 
         service1: {
-            title: "ბამბის ნაყინი",
+            title: "ბამბის ნაყინის შოუ",
             description: "ბამბის ნაყინი",
             button: "ბამბის ნაყინი",
             details: "ბამბის ნაყინის შოუ",
@@ -71,7 +71,7 @@ export const translations = {
         },
 
         service2: {
-            title: "საპნის ბუშტები",
+            title: "საპნის ბუშტების შოუ",
             description: "საპნის ბუშტები",
             button: "საპნის ბუშტები",
             details: "საპნის ბუშტების შოუ",
@@ -242,7 +242,7 @@ export const translations = {
         },
 
         service11: {
-            title: "კონფეტების წვიმა",
+            title: "ფერადი კონფეტების წვიმა",
             description: "ფერადი კონფეტების წვიმა",
             button: "კონფეტების წვიმა",
             details: "ფერადი კონფეტების წვიმა",
@@ -319,25 +319,22 @@ export const translations = {
             title: "სტანდარტული პროგრამა",
             guests: '2 საათი',
             duration: '10 დამსაქმე',
-            price: '250 ₾',
             features: ['2 წამყვანი', 'DJ', 'Laser Show', 'ეფექტური კვამლი', 'X-BOX', 'კარაოკე'],
             description: '2 საათიანი ასაკზე მორგებული პროგრამა ბავშვებისთვის და მშობლების გართობა',
         },
 
         birthprogram2: {
-            title: "საბავშვო პროგრამა",
+            title: "თოჯინების წარმოდგენა",
             guests: '2 საათი',
             duration: '10 დამსაქმე',
-            price: '250 ₾',
             features: ['1 წამყვანი', 'DJ', 'Laser Show', 'ეფექტური კვამლი', 'X-BOX', 'კარაოკე'],
             description: 'თოჯინების შოუ (წატმოდგენა ქართული მულტფილმებიდან) ასაკზე მორგებული პროგრამა ბავშვებისთვის და მშობლების გართობა (ასაკი 1 წლიდან 5 წლამდე)',
         },
 
         birthprogram3: {
-            title: "პროგრამა სტანდარტი",
+            title: "კალმარის პროგრამა",
             guests: '2 საათი',
             duration: '10 დამსაქმე',
-            price: '250 ₾',
             features: ['1 წამყვანი', 'DJ', 'Laser Show', 'ეფექტური კვამლი', 'X-BOX', 'კარაოკე'],
             description: '(ბავშვების რაოდენობა არ უნდა აღემატებოდეს 10-ს) ასაკზე მორგებული პროგრამა ბავშვებისთვის და მშობლების გართობა',
         },
@@ -346,7 +343,14 @@ export const translations = {
             title: "ფეხბურთის პროგრამა",
             guests: '2 საათი',
             duration: '10 დამსაქმე',
-            price: '250 ₾',
+            features: ['1 წამყვანი', 'DJ', 'Laser Show', 'ეფექტური კვამლი', 'X-BOX', 'კარაოკე'],
+            description: '(პროგრამის სტილი მორგებულია ფეხბურთზე) ასაკზე მორგებული პროგრამა ბავშვებისთვის და მშობლების გართობა რომელშიც შედის 2 (,,ფეხბურთელი" წამყვანი )',
+        },
+
+        birthprogram5: {
+            title: "მეკობრეების პროგრამა",
+            guests: '2 საათი',
+            duration: '10 დამსაქმე',
             features: ['1 წამყვანი', 'DJ', 'Laser Show', 'ეფექტური კვამლი', 'X-BOX', 'კარაოკე'],
             description: '(პროგრამის სტილი მორგებულია ფეხბურთზე) ასაკზე მორგებული პროგრამა ბავშვებისთვის და მშობლების გართობა რომელშიც შედის 2 (,,ფეხბურთელი" წამყვანი )',
         },
@@ -994,6 +998,15 @@ export const translations = {
             description: '(Program style adapted to football) An age-appropriate program for children and entertainment for parents, featuring 2 “football player” hosts.',
         },
 
+        birthprogram5: {
+            title: "Pirate program",
+            guests: "2 hours",
+            duration: "10 participants",
+            price: "250 ₾",
+            features: ['1 host', 'DJ', 'Laser Show', 'Smoke effects', 'X-BOX', 'Karaoke'],
+            description: '(Program style adapted to football) An age-appropriate program for children and entertainment for parents, featuring 2 “football player” hosts.',
+        },
+
 
         // heros
         hero1: {
@@ -1623,6 +1636,15 @@ export const translations = {
 
         birthprogram4: {
             title: "Футбольная программа",
+            guests: "2 часа",
+            duration: "10 участников",
+            price: "250 ₾",
+            features: ['1 ведущий', 'DJ', 'Лазерное шоу', 'Дымовые эффекты', 'X-BOX', 'Караоке'],
+            description: '(Стиль программы адаптирован под футбол) Программа по возрасту для детей и развлечение для родителей, в которой участвуют 2 ведущих «футболиста».',
+        },
+
+        birthprogram5: {
+            title: "Пиратская программа",
             guests: "2 часа",
             duration: "10 участников",
             price: "250 ₾",

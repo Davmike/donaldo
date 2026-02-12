@@ -6,7 +6,7 @@ import BirthdayPrograms from './Components/BirthdayPrograms'
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Heros from './Components/Heros'
 import Menu from './Components/Menu'
-import OtherPrograms from './Components/OtherPrograms'
+// import OtherPrograms from './Components/OtherPrograms'
 import Gallery from './Components/Gallery'
 import Contact from './Components/Contact'
 import { useState } from 'react'
@@ -70,7 +70,7 @@ function App() {
           <Route path="/birthdayPrograms" element={<BirthdayPrograms addToCart={addToCart} cartItems={cartItems} />} />
           <Route path="/heros" element={<Heros addToCart={addToCart} cartItems={cartItems} />} />
           <Route path="/menu" element={<Menu addToCart={addToCart} cartItems={cartItems} />} />
-          <Route path="/otherProgram" element={<OtherPrograms addToCart={addToCart} cartItems={cartItems} />} />
+          {/* <Route path="/otherProgram" element={<OtherPrograms addToCart={addToCart} cartItems={cartItems} />} /> */}
           <Route path="/gallery" element={<Gallery />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
