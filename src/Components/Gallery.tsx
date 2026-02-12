@@ -1,112 +1,126 @@
 import { useState } from 'react';
-import { Play, ChevronLeft, ChevronRight } from 'lucide-react';
+import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { useLanguage } from "../contexts/LanguageContext";
-import photo1 from "../../public/assets/photo1.jpg"
-import photo2 from "../../public/assets/photo2.jpg"
-import photo3 from "../../public/assets/photo3.jpg"
-import photo4 from "../../public/assets/photo4.jpg"
-import photo5 from "../../public/assets/photo5.jpg"
 
 
 function Gallery() {
-    const [selectedCategory, setSelectedCategory] = useState('photo');
+    const [selectedCategory, setSelectedCategory] = useState<CategoryType>('photo');
     const [currentPage, setCurrentPage] = useState(1);
     const [, setActiveSidebar] = useState<string | null>(null);
 
     const { t } = useLanguage();
 
-    const CATEGORIES = [
+    const CATEGORIES: { id: CategoryType; title: string }[] = [
         { id: 'photo', title: t.gallery1.photo },
         { id: 'video', title: t.gallery1.video },
-        { id: 'photo_studio', title: t.gallery1.photo_studio },
+        // { id: 'photo_studio', title: t.gallery1.photo_studio },
     ];
+
+    type CategoryType = 'photo' | 'video';
+
+    type GalleryItem = {
+        id: number;
+        src: string;
+        isVideo: boolean;
+    };
+
 
     const ITEMS_PER_PAGE = 6;
 
 
-    const GALLERY_DATA = {
+    const GALLERY_DATA: Record<CategoryType, GalleryItem[]> = {
         photo: [
             {
                 id: 1,
-                image: photo1,
+                src: '/assets/photo1.jpg',
                 isVideo: false,
             },
             {
                 id: 2,
-                image: photo2,
+                src: '/assets/photo2.jpg',
                 isVideo: false,
             },
             {
                 id: 3,
-                image: photo3,
+                src: '/assets/photo3.jpg',
                 isVideo: false,
             },
             {
                 id: 4,
-                image: photo4,
+                src: '/assets/photo4.jpg',
                 isVideo: false,
             },
             {
                 id: 5,
-                image: photo5,
+                src: '/assets/photo5.jpg',
                 isVideo: false,
             },
-
+            {
+                id: 6,
+                src: '/assets/img6.png',
+                isVideo: false,
+            },
         ],
+
         video: [
             {
                 id: 1,
-                image: 'https://images.pexels.com/photos/1674752/pexels-photo-1674752.jpeg?auto=compress&cs=tinysrgb&w=800',
+                src: '/assets/vid1.mp4',
                 isVideo: true,
             },
             {
                 id: 2,
-                image: 'https://images.pexels.com/photos/1648374/pexels-photo-1648374.jpeg?auto=compress&cs=tinysrgb&w=800',
+                src: '/assets/vid2.mp4',
                 isVideo: true,
             },
             {
                 id: 3,
-                image: 'https://images.pexels.com/photos/1857157/pexels-photo-1857157.jpeg?auto=compress&cs=tinysrgb&w=800',
+                src: '/assets/vid8.mp4',
                 isVideo: true,
             },
             {
                 id: 4,
-                image: 'https://images.pexels.com/photos/1416736/pexels-photo-1416736.jpeg?auto=compress&cs=tinysrgb&w=800',
+                src: '/assets/vid4.mp4',
                 isVideo: true,
             },
             {
                 id: 5,
-                image: 'https://images.pexels.com/photos/1720186/pexels-photo-1720186.jpeg?auto=compress&cs=tinysrgb&w=800',
+                src: '/assets/vid5.mp4',
+                isVideo: true,
+            },
+            {
+                id: 6,
+                src: '/assets/vid9.mp4',
                 isVideo: true,
             },
         ],
-        photo_studio: [
-            {
-                id: 1,
-                image: 'https://images.pexels.com/photos/1720186/pexels-photo-1720186.jpeg?auto=compress&cs=tinysrgb&w=800',
-                isVideo: false,
-            },
-            {
-                id: 2,
-                image: 'https://images.pexels.com/photos/1648374/pexels-photo-1648374.jpeg?auto=compress&cs=tinysrgb&w=800',
-                isVideo: false,
-            },
-            {
-                id: 3,
-                image: 'https://images.pexels.com/photos/1857157/pexels-photo-1857157.jpeg?auto=compress&cs=tinysrgb&w=800',
-                isVideo: false,
-            },
-            {
-                id: 4,
-                image: 'https://images.pexels.com/photos/1729797/pexels-photo-1729797.jpeg?auto=compress&cs=tinysrgb&w=800',
-                isVideo: false,
-            },
-            {
-                id: 5,
-                image: 'https://images.pexels.com/photos/1536619/pexels-photo-1536619.jpeg?auto=compress&cs=tinysrgb&w=800',
-                isVideo: false,
-            },
-        ],
+        // photo_studio: [
+        //     {
+        //         id: 1,
+        //         image: 'https://images.pexels.com/photos/1720186/pexels-photo-1720186.jpeg?auto=compress&cs=tinysrgb&w=800',
+        //         isVideo: false,
+        //     },
+        //     {
+        //         id: 2,
+        //         image: 'https://images.pexels.com/photos/1648374/pexels-photo-1648374.jpeg?auto=compress&cs=tinysrgb&w=800',
+        //         isVideo: false,
+        //     },
+        //     {
+        //         id: 3,
+        //         image: 'https://images.pexels.com/photos/1857157/pexels-photo-1857157.jpeg?auto=compress&cs=tinysrgb&w=800',
+        //         isVideo: false,
+        //     },
+        //     {
+        //         id: 4,
+        //         image: 'https://images.pexels.com/photos/1729797/pexels-photo-1729797.jpeg?auto=compress&cs=tinysrgb&w=800',
+        //         isVideo: false,
+        //     },
+        //     {
+        //         id: 5,
+        //         image: 'https://images.pexels.com/photos/1536619/pexels-photo-1536619.jpeg?auto=compress&cs=tinysrgb&w=800',
+        //         isVideo: false,
+        //     },
+        // ],
     };
 
     const items = selectedCategory ? GALLERY_DATA[selectedCategory as keyof typeof GALLERY_DATA] : [];
@@ -114,7 +128,7 @@ function Gallery() {
     const startIndex = (currentPage - 1) * ITEMS_PER_PAGE;
     const paginatedItems = items.slice(startIndex, startIndex + ITEMS_PER_PAGE);
 
-    const handleCategorySelect = (categoryId: string) => {
+    const handleCategorySelect = (categoryId: CategoryType) => {
         setSelectedCategory(categoryId);
         setCurrentPage(1);
         setActiveSidebar(categoryId);
@@ -254,21 +268,38 @@ function Gallery() {
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 gap-6">
                         {paginatedItems.map((item) => (
                             <div key={item.id} className="relative rounded-3xl overflow-hidden shadow-lg aspect-4/3 cursor-pointer group">
-                                <img
-                                    src={item.image}
-                                    alt={`Gallery item ${item.id}`}
-                                    className="w-full h-full object-cover"
-                                />
-                                {item.isVideo && (
-                                    <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-20 group-hover:bg-opacity-30 transition-all duration-200">
+
+                                {item.isVideo ? (
+                                    <video
+                                        autoPlay
+                                        loop
+                                        muted
+                                        playsInline
+                                        className="w-full h-full object-cover"
+                                    >
+                                        <source src={item.src} type="video/mp4" />
+                                    </video>
+                                ) : (
+                                    <img
+                                        src={item.src}
+                                        alt={`Gallery item ${item.id}`}
+                                        className="w-full h-full object-cover"
+                                    />
+                                )}
+
+
+                                {/* {item.isVideo && (
+                                    <div className="absolute inset-0 flex items-center justify-center bg-opacity-20 group-hover:bg-opacity-30 transition-all duration-200">
                                         <div className="w-14 h-14 rounded-full bg-white bg-opacity-90 flex items-center justify-center">
                                             <Play className="w-6 h-6 text-gray-800 ml-1" fill="currentColor" />
                                         </div>
                                     </div>
-                                )}
+                                )} */}
+
                             </div>
                         ))}
                     </div>
+
 
                     {totalPages > 1 && (
                         <div className="flex items-center justify-center gap-2 mt-8 mb-4">
