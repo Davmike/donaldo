@@ -1,6 +1,6 @@
 import { MapPin, Phone, Mail, Facebook, Instagram, Music2 } from 'lucide-react';
 import { useLanguage } from "../contexts/LanguageContext";
-import logo from "../assets/logo1.png"
+import logo from "../../public/assets/logo1.png"
 
 function Footer() {
 

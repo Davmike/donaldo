@@ -32,32 +32,32 @@ function Gallery() {
         photo: [
             {
                 id: 1,
-                src: 'src/assets/photo1.jpg',
+                src: '/assets/photo1.jpg',
                 isVideo: false,
             },
             {
                 id: 2,
-                src: 'src/assets/photo2.jpg',
+                src: '/assets/photo2.jpg',
                 isVideo: false,
             },
             {
                 id: 3,
-                src: 'src/assets/photo3.jpg',
+                src: '/assets/photo3.jpg',
                 isVideo: false,
             },
             {
                 id: 4,
-                src: 'src/assets/photo4.jpg',
+                src: '/assets/photo4.jpg',
                 isVideo: false,
             },
             {
                 id: 5,
-                src: 'src/assets/photo5.jpg',
+                src: '/assets/photo5.jpg',
                 isVideo: false,
             },
             {
                 id: 6,
-                src: 'src/assets/img6.png',
+                src: '/assets/img6.png',
                 isVideo: false,
             },
         ],
@@ -65,32 +65,32 @@ function Gallery() {
         video: [
             {
                 id: 1,
-                src: 'src/assets/vid1.mp4',
+                src: '/assets/vid1.mp4',
                 isVideo: true,
             },
             {
                 id: 2,
-                src: 'src/assets/vid2.mp4',
+                src: '/assets/vid2.mp4',
                 isVideo: true,
             },
             {
                 id: 3,
-                src: 'src/assets/vid8.mp4',
+                src: '/assets/vid8.mp4',
                 isVideo: true,
             },
             {
                 id: 4,
-                src: 'src/assets/vid4.mp4',
+                src: '/assets/vid4.mp4',
                 isVideo: true,
             },
             {
                 id: 5,
-                src: 'src/assets/vid5.mp4',
+                src: '/assets/vid5.mp4',
                 isVideo: true,
             },
             {
                 id: 6,
-                src: 'src/assets/vid9.mp4',
+                src: '/assets/vid9.mp4',
                 isVideo: true,
             },
         ],

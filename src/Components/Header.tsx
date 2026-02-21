@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import { ShoppingCart, Menu, X, Globe } from 'lucide-react';
 import { useNavigate, useLocation } from "react-router-dom";
 import { useLanguage } from "../contexts/LanguageContext";
-import logo from "../assets/logo1.png"
+import logo from "../../public/assets/logo1.png"
 
 
 function Header({ openCart, setOpenCart, totalItems }: any) {

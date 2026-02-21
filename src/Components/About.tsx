@@ -1,5 +1,5 @@
 import { useLanguage } from "../contexts/LanguageContext";
-import test from "../assets/test.jpg"
+import test from "../../public/assets/test.jpg"
 
 function About() {
     const { t } = useLanguage();

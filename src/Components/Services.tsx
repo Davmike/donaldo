@@ -1,19 +1,19 @@
 import { useState } from 'react';
 import { ChevronLeft, ChevronRight, ArrowLeft, Check, ShoppingCart } from 'lucide-react';
 import { useLanguage } from "../contexts/LanguageContext";
-import nayini from "../assets/bambisnayini.png";
-import sapnis from "../assets/sapnis.png";
-import neonebi from "../assets/neonebi.png";
-import foto from "../assets/photo.png";
-import video from "../assets/video.png";
-import klipi from "../assets/klipi.png";
-import foirverki from "../assets/foiverki.png";
-import varskvlavi from "../assets/varskvlavi.png";
-import bushtebi from "../assets/bushtebi.png";
-import gaxsna from "../assets/gaxsna.png";
-import moxatva from "../assets/moxatva.png";
-import labirinti from "../assets/labirinti.png";
-import marili from "../assets/marili.png";
+import nayini from "../../public/assets/bambisnayini.png";
+import sapnis from "../../public/assets/sapnis.png";
+import neonebi from "../../public/assets/neonebi.png";
+import foto from "../../public/assets/photo.png";
+import video from "../../public/assets/video.png";
+import klipi from "../../public/assets/klipi.png";
+import foirverki from "../../public/assets/foiverki.png";
+import varskvlavi from "../../public/assets/varskvlavi.png";
+import bushtebi from "../../public/assets/bushtebi.png";
+import gaxsna from "../../public/assets/gaxsna.png";
+import moxatva from "../../public/assets/moxatva.png";
+import labirinti from "../../public/assets/labirinti.png";
+import marili from "../../public/assets/marili.png";
 
 
 interface Service {
