@@ -967,24 +967,9 @@ export const translations = {
             ]
         },
 
-        service12: {
-            title: "Band",
-            description: "Band",
-            button: "Band",
-            details: "Band service",
-            benefits: [
-                "All features from all packages",
-                "Enterprise-level cost",
-                "Detailed analytics",
-                "Unlimited storage",
-                "Enhanced security",
-                "Custom integration",
-                "Detailed report",
-                "Dedicated manager"
-            ]
-        },
 
-        service13: {
+
+        service12: {
             title: "Neon Show",
             description: "Neon paper show",
             button: "Neon show",
@@ -1000,6 +985,41 @@ export const translations = {
                 "Dedicated manager"
             ]
         },
+
+        service13: {
+            title: "Salt Room",
+            description: "Therapeutic Salt Room",
+            button: "Salt Room",
+            details: "Therapeutic Salt Room",
+            benefits: [
+                "All features from every package",
+                "Enterprise package",
+                "Detailed analytics",
+                "Unlimited storage",
+                "Advanced security",
+                "Custom integration",
+                "Comprehensive reporting",
+                "Dedicated manager"
+            ]
+        },
+
+        service14: {
+            title: "Maze Room",
+            description: "Entertainment Maze",
+            button: "Maze Room",
+            details: "Entertainment Maze",
+            benefits: [
+                "All features from every package",
+                "Enterprise package",
+                "Detailed analytics",
+                "Unlimited storage",
+                "Advanced security",
+                "Custom integration",
+                "Comprehensive reporting",
+                "Dedicated manager"
+            ]
+        },
+
 
 
 
@@ -1654,24 +1674,8 @@ export const translations = {
             ]
         },
 
-        service12: {
-            title: "Музыкальная группа",
-            description: "Музыкальная группа",
-            button: "Группа",
-            details: "Услуги музыкальной группы",
-            benefits: [
-                "Все функции из всех пакетов",
-                "Корпоративный уровень затрат",
-                "Подробная аналитика",
-                "Безлимитное хранилище",
-                "Расширенная защита",
-                "Кастомная интеграция",
-                "Подробный отчёт",
-                "Персональный менеджер"
-            ]
-        },
 
-        service13: {
+        service12: {
             title: "Неоновое шоу",
             description: "Неоновое бумажное шоу",
             button: "Неоновое шоу",
@@ -1687,6 +1691,41 @@ export const translations = {
                 "Персональный менеджер"
             ]
         },
+
+        service13: {
+            title: "Соляная комната",
+            description: "Терапевтическая соляная комната",
+            button: "Соляная комната",
+            details: "Терапевтическая соляная комната",
+            benefits: [
+                "Все функции из всех пакетов",
+                "Корпоративный пакет",
+                "Детальная аналитика",
+                "Неограниченное хранилище",
+                "Расширенная защита",
+                "Индивидуальная интеграция",
+                "Подробная отчетность",
+                "Персональный менеджер"
+            ]
+        },
+
+        service14: {
+            title: "Комната-лабиринт",
+            description: "Развлекательный лабиринт",
+            button: "Комната-лабиринт",
+            details: "Развлекательный лабиринт",
+            benefits: [
+                "Все функции из всех пакетов",
+                "Корпоративный пакет",
+                "Детальная аналитика",
+                "Неограниченное хранилище",
+                "Расширенная защита",
+                "Индивидуальная интеграция",
+                "Подробная отчетность",
+                "Персональный менеджер"
+            ]
+        },
+
 
 
         // about
