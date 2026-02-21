@@ -2,9 +2,12 @@ import HomeNext from "./HomeNext";
 import Services from "./Services";
 import About from "./About";
 import { useLanguage } from "../contexts/LanguageContext";
+import { useNavigate } from "react-router-dom";
 
 function Home({ addToCart, cartItems }: any) {
     const { t } = useLanguage(); // 👈 აქ იღებ აქტიურ თარგმანს
+    const navigate = useNavigate();
+
 
     return (
         <div id="home">
@@ -16,7 +19,7 @@ function Home({ addToCart, cartItems }: any) {
                     playsInline
                     className="absolute inset-0 w-full h-full object-cover"
                 >
-                    <source src="/assets/intro.mp4" type="video/mp4" />
+                    <source src="src/assets/intro.mp4" type="video/mp4" />
                 </video>
                 <div className="absolute inset-0 bg-black/50"></div>
 
@@ -31,7 +34,9 @@ function Home({ addToCart, cartItems }: any) {
                         </p>
                     </div>
 
-                    <button className="text-guge z-20 px-8 md:px-12 py-3 md:py-4 bg-blue-600 hover:bg-blue-700 transition-colors text-white font-semibold rounded-2xl text-base md:text-lg shadow-lg hover:shadow-xl md:max-w-[300px]">
+                    <button onClick={() => {
+                        navigate("/birthdayPrograms")
+                    }} className="cursor-pointer text-guge z-20 px-8 md:px-12 py-3 md:py-4 bg-blue-600 hover:bg-blue-700 transition-colors text-white font-semibold rounded-2xl text-base md:text-lg shadow-lg hover:shadow-xl md:max-w-[300px]">
                         {t.homeButton}  {/* 👈 აქაც */}
                     </button>
                 </div>

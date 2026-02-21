@@ -1,14 +1,14 @@
 import { useState } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { useNavigate } from "react-router-dom";
-import thumb from "../../public/assets/thumbtack.png"
-import thumbBlue from "../../public/assets/thumbtackBlue.png"
-import vector from "../../public/assets/Vector 1.png"
+import thumb from "../assets/thumbtack.png"
+import thumbBlue from "../assets/thumbtackBlue.png"
+import vector from "../assets/Vector 1.png"
 import { useLanguage } from "../contexts/LanguageContext";
-import programebi from "../../public/assets/programebi.png";
-import gmirebi from "../../public/assets/gmirebi.png";
-import menuu from "../../public/assets/menuu.png";
-import gallerea from "../../public/assets/gallerea.png";
+import programebi from "../assets/programebi.png";
+import gmirebi from "../assets/gmirebi.png";
+import menuu from "../assets/menuu.png";
+import gallerea from "../assets/gallerea.png";
 
 function HomeNext() {
     const { t } = useLanguage();

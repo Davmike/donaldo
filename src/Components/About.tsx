@@ -1,5 +1,5 @@
 import { useLanguage } from "../contexts/LanguageContext";
-import test from "../../public/assets/test.jpg"
+import test from "../assets/test.jpg"
 
 function About() {
     const { t } = useLanguage();
@@ -58,12 +58,12 @@ function About() {
                                     </span>
                                 </li>
                             </ul>
-
+                            {/* 
                             <div className="w-full flex md:justify-end">
                                 <button className="w-full md:w-auto px-12 py-4 bg-[#1554A4] hover:bg-[#3D5A8A] transition-colors text-white font-bold rounded-full text-[24px] shadow-lg text-guge">
                                     {t.about.button}
                                 </button>
-                            </div>
+                            </div> */}
                         </div>
                     </div>
                 </div>

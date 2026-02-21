@@ -1,11 +1,11 @@
 import { useState } from 'react';
 import { ChevronLeft, Check, ArrowRight, ShoppingCart } from 'lucide-react';
 import { useLanguage } from '../contexts/LanguageContext';
-import standart from "../../public/assets/standart.jpg"
-import football from "../../public/assets/footbal.jpg"
-import mekobreebi from "../../public/assets/mekobreebi.png"
-import kalmari from "../../public/assets/squidgame.png"
-import tojinebi from "../../public/assets/tojinebi.jpg"
+import standart from "../assets/standart.jpg"
+import football from "../assets/footbal.jpg"
+import mekobreebi from "../assets/mekobreebi.png"
+import kalmari from "../assets/squidgame.png"
+import tojinebi from "../assets/tojinebi.jpg"
 
 interface Service {
     id: number;

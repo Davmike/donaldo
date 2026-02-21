@@ -1,17 +1,19 @@
 import { useState } from 'react';
 import { ChevronLeft, ChevronRight, ArrowLeft, Check, ShoppingCart } from 'lucide-react';
 import { useLanguage } from "../contexts/LanguageContext";
-import nayini from "../../public/assets/bambisnayini.png";
-import sapnis from "../../public/assets/sapnis.png";
-import neonebi from "../../public/assets/neonebi.png";
-import foto from "../../public/assets/photo.png";
-import video from "../../public/assets/video.png";
-import klipi from "../../public/assets/klipi.png";
-import foirverki from "../../public/assets/foiverki.png";
-import varskvlavi from "../../public/assets/varskvlavi.png";
-import bushtebi from "../../public/assets/bushtebi.png";
-import gaxsna from "../../public/assets/gaxsna.png";
-import moxatva from "../../public/assets/moxatva.png";
+import nayini from "../assets/bambisnayini.png";
+import sapnis from "../assets/sapnis.png";
+import neonebi from "../assets/neonebi.png";
+import foto from "../assets/photo.png";
+import video from "../assets/video.png";
+import klipi from "../assets/klipi.png";
+import foirverki from "../assets/foiverki.png";
+import varskvlavi from "../assets/varskvlavi.png";
+import bushtebi from "../assets/bushtebi.png";
+import gaxsna from "../assets/gaxsna.png";
+import moxatva from "../assets/moxatva.png";
+import labirinti from "../assets/labirinti.png";
+import marili from "../assets/marili.png";
 
 
 interface Service {
@@ -224,14 +226,68 @@ function Services({ addToCart, cartItems }: any) {
             faqAnswer: ''
         },
         {
+            id: 11,
+            title: t.service11.title,
+            description: t.service11.description,
+            image: neonebi,
+            buttonText: t.service11.button,
+            color: 'yellow',
+            details: t.service11.details,
+            benefits: [...t.service11.benefits],
+            // faq: t.service4.faq,
+            // faqAnswer: t.service4.faqAnswer,
+            packages: [
+                { name: 'ენტერპრაიზ', discount: '-20%', period: 'ენტერპრაიზ', color: 'blue' },
+                { name: 'კასტომ', period: 'კასტომ', color: 'yellow' },
+            ],
+            faq: '',
+            faqAnswer: ''
+        },
+        {
+            id: 12,
+            title: t.service12.title,
+            description: t.service12.description,
+            image: moxatva,
+            buttonText: t.service12.button,
+            color: 'blue',
+            details: t.service12.details,
+            benefits: [...t.service12.benefits],
+            // faq: t.service4.faq,
+            // faqAnswer: t.service4.faqAnswer,
+            packages: [
+                { name: 'ენტერპრაიზ', discount: '-20%', period: 'ენტერპრაიზ', color: 'blue' },
+                { name: 'კასტომ', period: 'კასტომ', color: 'yellow' },
+            ],
+            faq: '',
+            faqAnswer: ''
+        },
+        {
             id: 13,
             title: t.service13.title,
             description: t.service13.description,
-            image: neonebi,
+            image: marili,
             buttonText: t.service13.button,
             color: 'yellow',
             details: t.service13.details,
             benefits: [...t.service13.benefits],
+            // faq: t.service4.faq,
+            // faqAnswer: t.service4.faqAnswer,
+            packages: [
+                { name: 'ენტერპრაიზ', discount: '-20%', period: 'ენტერპრაიზ', color: 'blue' },
+                { name: 'კასტომ', period: 'კასტომ', color: 'yellow' },
+            ],
+            faq: '',
+            faqAnswer: ''
+        },
+        {
+            id: 14,
+            title: t.service14.title,
+            description: t.service14.description,
+            image: labirinti,
+            buttonText: t.service14.button,
+            color: 'blue',
+            details: t.service14.details,
+            benefits: [...t.service14.benefits],
             // faq: t.service4.faq,
             // faqAnswer: t.service4.faqAnswer,
             packages: [
